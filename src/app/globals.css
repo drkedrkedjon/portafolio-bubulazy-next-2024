@@ -114,16 +114,8 @@ meter {
   box-sizing: border-box;
 }
 
-body {
-  /* display: flex;
-  flex-direction: column; */
-  min-height: 100vh;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
-  color: #222;
-}
-
-body > * {
+/* SMOL Stuff */
+/* body > * {
   --layout-spacing: max(8vh, 3rem);
   --max-width: 75rem;
   width: min(98%, var(--max-width));
@@ -145,4 +137,13 @@ article * + * {
 
 a {
   text-underline-offset: 0.15em;
+} */
+/* END SMOL Stuff */
+
+body {
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 100vh;
+  line-height: 1.5;
+  color: #222;
 }
