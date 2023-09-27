@@ -5,9 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <h2>Bubulazy.com en ñ y é y ščž</h2>
-      </main>
+      <main></main>
     </>
   );
 }
