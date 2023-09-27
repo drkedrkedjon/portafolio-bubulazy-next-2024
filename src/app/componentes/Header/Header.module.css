@@ -4,6 +4,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .logo {
   text-shadow: 1px 1px 2px hsl(var(--clr-negro));
@@ -14,10 +15,27 @@
 .navContainer {
   display: flex;
   justify-content: flex-end;
+  gap: var(--flex-gap);
   align-items: center;
   font-weight: var(--f-wei-600);
 }
-.ul {
+.desktopLinks {
   display: flex;
   gap: var(--flex-gap, 1rem);
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+.icons button,
+.icons a {
+  display: grid;
+  place-items: center;
+}
+.iconSvg {
+  color: hsl(var(--clr-negro));
+  stroke-width: 3px;
+  height: 30px;
+  width: 30px;
 }

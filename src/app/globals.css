@@ -357,9 +357,13 @@ img {
 
 a {
   text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 3px;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.2em;
 }
 a:where(:hover, :focus) {
-  text-decoration-thickness: 6px;
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.3em;
+}
+button {
+  cursor: pointer;
 }
