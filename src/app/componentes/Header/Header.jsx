@@ -7,7 +7,7 @@ import VisualyHidden from "../VisualyHidden";
 import useToggle from "../useToggle";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useToggle(false);
+  const [isMenuOpen, toggleMenuOpen] = useToggle(false);
 
   return (
     <header className={styles.header}>
@@ -45,7 +45,7 @@ export default function Header() {
             <button
               aria-expanded={isMenuOpen}
               className={styles.menuButton}
-              onClick={setIsMenuOpen}
+              onClick={toggleMenuOpen}
             >
               <Menu
                 aria-hidden="true"
@@ -55,7 +55,7 @@ export default function Header() {
               <VisualyHidden>Abrir menú principal</VisualyHidden>
             </button>
             {isMenuOpen && (
-              <NavMenu>
+              <NavMenu toggleMenuOpen={toggleMenuOpen}>
                 <ul>
                   <li>
                     <Link href={"/"}>Sobre mi</Link>
