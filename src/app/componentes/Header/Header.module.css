@@ -13,6 +13,7 @@
   font-stretch: var(--f-str-75);
 }
 .navContainer {
+  --flex-gap: 2rem;
   display: flex;
   justify-content: flex-end;
   gap: var(--flex-gap);
@@ -21,7 +22,7 @@
 }
 .desktopLinks {
   display: flex;
-  gap: var(--flex-gap, 1rem);
+  gap: 0.8rem;
 }
 
 .desktopLinks a {
@@ -40,4 +41,17 @@
 .iconSvg {
   color: hsl(var(--clr-negro));
   stroke-width: 3px;
+}
+.nav {
+  /* display: grid;
+  place-items: center; */
+}
+.menuButton {
+  display: grid;
+  place-items: center;
+}
+.menuIcon {
+  stroke-width: 4px;
+  width: 35px;
+  height: 35px;
 }

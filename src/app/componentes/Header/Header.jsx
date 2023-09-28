@@ -1,15 +1,23 @@
+"use client";
 import styles from "./Header.module.css";
-import { Sun, Moon, Rss } from "react-feather";
+import { Sun, Moon, Menu, Rss } from "react-feather";
 import Link from "next/link";
 import NavMenu from "../NavMenu";
+import VisualyHidden from "../VisualyHidden";
+import useToggle from "../useToggle";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useToggle(false);
+
   return (
     <header className={styles.header}>
       <div className={`wrapper ${styles.container}`}>
         <p className={styles.logo}>{"{this.sashaSavicPerusina}"}</p>
         <div className={styles.navContainer}>
-          <ul className={styles.desktopLinks}>
+          <ul
+            aria-hidden="true"
+            className={styles.desktopLinks}
+          >
             <li>
               <Link href={"/"}>Sobre mi</Link>
             </li>
@@ -29,7 +37,39 @@ export default function Header() {
               <Rss className={styles.iconSvg} />
             </Link>
           </div>
-          <NavMenu />
+          <nav
+            role="navigation"
+            aria-label="Menu principal"
+            className={styles.nav}
+          >
+            <button
+              aria-expanded={isMenuOpen}
+              className={styles.menuButton}
+              onClick={setIsMenuOpen}
+            >
+              <Menu
+                aria-hidden="true"
+                focusable="false"
+                className={styles.menuIcon}
+              />
+              <VisualyHidden>Abrir menú principal</VisualyHidden>
+            </button>
+            {isMenuOpen && (
+              <NavMenu>
+                <ul>
+                  <li>
+                    <Link href={"/"}>Sobre mi</Link>
+                  </li>
+                  <li>
+                    <Link href={"/"}>Proyectos</Link>
+                  </li>
+                  <li>
+                    <Link href={"/"}>Blog</Link>
+                  </li>
+                </ul>
+              </NavMenu>
+            )}
+          </nav>
         </div>
       </div>
     </header>
