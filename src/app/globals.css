@@ -357,12 +357,12 @@ img {
 
 a {
   text-decoration: underline;
-  text-underline-offset: 0.2em;
-  text-decoration-thickness: 0.2em;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 4px;
 }
 a:where(:hover, :focus) {
-  text-underline-offset: 0.16em;
-  text-decoration-thickness: 0.3em;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 6px;
 }
 button {
   cursor: pointer;

@@ -24,6 +24,10 @@
   gap: var(--flex-gap, 1rem);
 }
 
+.desktopLinks a {
+  text-decoration: none;
+}
+
 .icons {
   display: flex;
   gap: 0.5rem;
@@ -36,6 +40,4 @@
 .iconSvg {
   color: hsl(var(--clr-negro));
   stroke-width: 3px;
-  height: 30px;
-  width: 30px;
 }

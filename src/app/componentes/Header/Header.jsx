@@ -1,22 +1,23 @@
 import styles from "./Header.module.css";
-import { Sun, Moon, Menu, Rss } from "react-feather";
+import { Sun, Moon, Rss } from "react-feather";
 import Link from "next/link";
+import NavMenu from "../NavMenu";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`wrapper ${styles.container}`}>
-        <p className={styles.logo}>{"{this.sasaSavicPerusina}"}</p>
+        <p className={styles.logo}>{"{this.sashaSavicPerusina}"}</p>
         <div className={styles.navContainer}>
           <ul className={styles.desktopLinks}>
             <li>
-              <Link href={"/"}>sasa</Link>
+              <Link href={"/"}>Sobre mi</Link>
             </li>
             <li>
-              <Link href={"/"}>sasa</Link>
+              <Link href={"/"}>Proyectos</Link>
             </li>
             <li>
-              <Link href={"/"}>sasa</Link>
+              <Link href={"/"}>Blog</Link>
             </li>
           </ul>
           <div className={styles.icons}>
@@ -28,9 +29,7 @@ export default function Header() {
               <Rss className={styles.iconSvg} />
             </Link>
           </div>
-          <nav>
-            <Menu className={styles.iconSvg} />
-          </nav>
+          <NavMenu />
         </div>
       </div>
     </header>
