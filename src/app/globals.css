@@ -213,6 +213,10 @@ body {
   color: hsl(var(--clr-blanco));
   min-height: 100vh;
 }
+*:focus {
+  outline: 3px solid hsl(var(--clr-negro));
+  outline-offset: 5px;
+}
 
 /* Colores */
 
