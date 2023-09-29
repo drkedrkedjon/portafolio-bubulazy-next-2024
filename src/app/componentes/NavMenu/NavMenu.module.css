@@ -22,8 +22,16 @@
   justify-content: space-between;
   align-items: flex-end;
   padding: 1rem;
-  text-align: right;
   gap: 1rem;
+}
+.children ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.children a {
+  text-decoration: none;
 }
 .closeBtn {
   align-self: stretch;

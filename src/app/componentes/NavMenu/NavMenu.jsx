@@ -1,9 +1,22 @@
+import { useEffect } from "react";
 import styles from "./NavMenu.module.css";
 import { X as Close } from "react-feather";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
 
 export default function NavMenu({ children, toggleMenuOpen }) {
+  useEffect(() => {
+    function handleEscapeKey(e) {
+      if (e.key === "Escape") {
+        toggleMenuOpen();
+      }
+    }
+    window.addEventListener("keydown", handleEscapeKey);
+    return () => {
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [toggleMenuOpen]);
+
   return (
     <div className={styles.navContainer}>
       <div
@@ -13,7 +26,7 @@ export default function NavMenu({ children, toggleMenuOpen }) {
       <FocusLock>
         <RemoveScroll>
           <div className={styles.navCajon}>
-            <div>{children}</div>
+            <div className={styles.children}>{children}</div>
             <button
               onClick={toggleMenuOpen}
               className={styles.closeBtn}
