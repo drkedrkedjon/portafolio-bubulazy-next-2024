@@ -19,9 +19,11 @@ export default function NavMenu({ children, toggleMenuOpen }) {
               className={styles.closeBtn}
             >
               <Close
+                className={styles.closeIcon}
                 aria-hidden="true"
                 focusable="false"
               />
+              Cerrar menu
             </button>
           </div>
         </RemoveScroll>

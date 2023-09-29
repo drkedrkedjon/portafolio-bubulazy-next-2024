@@ -180,7 +180,7 @@ a {
   /* Varios */
   --padding-block: clamp(3rem, 6vw, 5rem);
   --margin-texto: 1em;
-  --border-radius: 10px;
+  --border-radius: 0.2em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-blanco) / 0.4);
   --container-max: 62rem;
   --flex-gap: 1rem;

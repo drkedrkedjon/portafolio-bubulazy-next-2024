@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`wrapper ${styles.container}`}>
-        <p className={styles.logo}>{"{this.sashaSavicPerusina}"}</p>
+        <p className={styles.logo}>{"{this.sashaSavic}"}</p>
         <div className={styles.navContainer}>
           <ul
             aria-hidden="true"

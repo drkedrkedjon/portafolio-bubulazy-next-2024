@@ -1,5 +1,44 @@
-.iconSvg {
-  stroke-width: 3px;
-  width: 35px;
-  height: 35px;
+.navContainer {
+  position: fixed;
+  inset: 0;
+  padding: 1rem;
+}
+.navFondo {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(var(--clr-uno) / 0.3);
+  backdrop-filter: blur(3px);
+}
+.navCajon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(90%, 300px);
+  background-color: hsl(var(--clr-blanco) / 0.9);
+  color: hsl(var(--clr-negro));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+  text-align: right;
+  gap: 1rem;
+}
+.closeBtn {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: hsl(var(--clr-blanco));
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  background-color: hsl(var(--clr-uno) / 1);
+}
+.closeIcon {
+  color: hsl(var(--clr-negro));
+  stroke-width: 4px;
+  width: 14px;
+  height: 14px;
 }
