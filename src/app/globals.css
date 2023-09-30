@@ -213,9 +213,9 @@ body {
   color: hsl(var(--clr-blanco));
   min-height: 100vh;
 }
-*:focus {
-  outline: 3px solid hsl(var(--clr-negro));
-  outline-offset: 5px;
+*:focus-visible {
+  outline: 2px solid hsl(var(--clr-negro) / 0.6);
+  outline-offset: 2px;
 }
 
 /* Colores */

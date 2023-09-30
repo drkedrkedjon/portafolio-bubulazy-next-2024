@@ -3,6 +3,7 @@ import styles from "./NavMenu.module.css";
 import { X as Close } from "react-feather";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function NavMenu({ children, toggleMenuOpen }) {
   useEffect(() => {
@@ -26,13 +27,33 @@ export default function NavMenu({ children, toggleMenuOpen }) {
 
   return (
     <div className={styles.navContainer}>
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 0.5,
+        }}
+        exit={{ opacity: 0 }}
         className={styles.navFondo}
         onClick={toggleMenuOpen}
       />
       <FocusLock>
         <RemoveScroll>
-          <div className={styles.navCajon}>
+          <motion.div
+            animate={{
+              x: "-100%",
+            }}
+            exit={{
+              x: "0%",
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 27,
+              duration: 0.5,
+            }}
+            className={styles.navCajon}
+          >
             <div className={styles.children}>{children}</div>
             <button
               onClick={toggleMenuOpen}
@@ -45,7 +66,7 @@ export default function NavMenu({ children, toggleMenuOpen }) {
               />
               Cerrar menu
             </button>
-          </div>
+          </motion.div>
         </RemoveScroll>
       </FocusLock>
     </div>

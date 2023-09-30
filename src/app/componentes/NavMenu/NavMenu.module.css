@@ -23,6 +23,7 @@
   align-items: flex-end;
   padding: 1rem;
   gap: 1rem;
+  translate: 100%;
 }
 .children ul {
   display: flex;
