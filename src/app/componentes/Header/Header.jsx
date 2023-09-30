@@ -41,7 +41,7 @@ export default function Header() {
                 className={`${styles.desktopLinks} ${
                   pathname === "/proyectos" ? styles.desktopActiveLink : ""
                 }`}
-                href={"/"}
+                href={"/proyectos"}
               >
                 Proyectos
               </Link>
@@ -51,7 +51,7 @@ export default function Header() {
                 className={`${styles.desktopLinks} ${
                   pathname === "/cv" ? styles.desktopActiveLink : ""
                 }`}
-                href={"/"}
+                href={"/cv"}
               >
                 CV
               </Link>
@@ -61,7 +61,7 @@ export default function Header() {
                 className={`${styles.desktopLinks} ${
                   pathname === "/blog" ? styles.desktopActiveLink : ""
                 }`}
-                href={"/"}
+                href={"/blog"}
               >
                 Blog
               </Link>
