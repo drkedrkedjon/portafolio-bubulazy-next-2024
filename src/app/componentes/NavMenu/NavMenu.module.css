@@ -6,8 +6,8 @@
 .navFondo {
   position: absolute;
   inset: 0;
-  background-color: hsl(var(--clr-uno) / 0.3);
-  backdrop-filter: blur(3px);
+  background-color: hsl(var(--clr-uno) / 0.1);
+  backdrop-filter: blur(2px);
 }
 .navCajon {
   position: absolute;

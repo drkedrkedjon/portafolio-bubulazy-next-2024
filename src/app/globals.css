@@ -178,13 +178,12 @@ a {
   --lh-big: 1.8;
 
   /* Varios */
-  --padding-block: clamp(3rem, 6vw, 5rem);
+  --padding-block: clamp(0.8rem, 4vw, 1.5rem);
   --margin-texto: 1em;
   --border-radius: 0.2em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-blanco) / 0.4);
   --container-max: 62rem;
   --flex-gap: 1rem;
-  --padding-block: 1.5rem;
 
   font-size: 112%;
 }
@@ -338,7 +337,7 @@ body {
 }
 
 .wrapper {
-  width: min(100% - 3rem, var(--container-max, 62rem));
+  width: min(100% - 6vw, var(--container-max, 62rem));
   margin-inline: auto;
   padding-block: var(--padding-block);
 }

@@ -6,27 +6,65 @@ import NavMenu from "../NavMenu";
 import VisualyHidden from "../VisualyHidden";
 import useToggle from "../useToggle";
 import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
+  const pathname = usePathname();
 
   return (
     <header className={styles.header}>
       <div className={`wrapper ${styles.container}`}>
-        <p className={styles.logo}>{"{this.sashaSavic}"}</p>
+        <Link
+          href={"/"}
+          className={styles.logo}
+        >
+          {"{ this.Sasha }"}
+        </Link>
         <div className={styles.navContainer}>
           <ul
             aria-hidden="true"
-            className={styles.desktopLinks}
+            className={styles.desktopNav}
           >
             <li>
-              <Link href={"/"}>Sobre mi</Link>
+              <Link
+                className={`${styles.desktopLinks} ${
+                  pathname === "/" ? styles.desktopActiveLink : ""
+                }`}
+                href={"/"}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href={"/"}>Proyectos</Link>
+              <Link
+                className={`${styles.desktopLinks} ${
+                  pathname === "/proyectos" ? styles.desktopActiveLink : ""
+                }`}
+                href={"/"}
+              >
+                Proyectos
+              </Link>
             </li>
             <li>
-              <Link href={"/"}>Blog</Link>
+              <Link
+                className={`${styles.desktopLinks} ${
+                  pathname === "/cv" ? styles.desktopActiveLink : ""
+                }`}
+                href={"/"}
+              >
+                CV
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${styles.desktopLinks} ${
+                  pathname === "/blog" ? styles.desktopActiveLink : ""
+                }`}
+                href={"/"}
+              >
+                Blog
+              </Link>
             </li>
           </ul>
           <div className={styles.icons}>
@@ -55,6 +93,7 @@ export default function Header() {
               />
               <VisualyHidden>Abrir menú principal</VisualyHidden>
             </button>
+            {/* Animate presence sirva para exit animation en framer motion cuando se dewsmonta la componente */}
             <AnimatePresence>
               {isMenuOpen && (
                 <NavMenu toggleMenuOpen={toggleMenuOpen}>

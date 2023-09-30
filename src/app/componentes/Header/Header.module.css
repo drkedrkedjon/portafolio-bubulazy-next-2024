@@ -9,8 +9,9 @@
 .logo {
   text-shadow: 1px 1px 2px hsl(var(--clr-negro));
   font-size: var(--fs-600);
-  font-weight: var(--f-wei-600);
+  font-weight: var(--f-wei-900);
   font-stretch: var(--f-str-75);
+  text-decoration: none;
 }
 .navContainer {
   --flex-gap: 2rem;
@@ -20,16 +21,21 @@
   align-items: center;
   font-weight: var(--f-wei-600);
 }
-.desktopLinks {
+.desktopNav {
   display: none;
   gap: 0.8rem;
 }
 
-.desktopLinks a {
+.desktopLinks {
   text-decoration: none;
 }
-@media (min-width: 50rem) {
-  .desktopLinks {
+
+.desktopActiveLink {
+  text-decoration: underline;
+}
+
+@media (min-width: 45rem) {
+  .desktopNav {
     display: flex;
   }
 }
@@ -45,10 +51,6 @@
 .iconSvg {
   color: hsl(var(--clr-negro));
   stroke-width: 3px;
-}
-.nav {
-  /* display: grid;
-  place-items: center; */
 }
 .menuButton {
   display: grid;

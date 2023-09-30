@@ -3,7 +3,7 @@ import styles from "./NavMenu.module.css";
 import { X as Close } from "react-feather";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function NavMenu({ children, toggleMenuOpen }) {
   useEffect(() => {
