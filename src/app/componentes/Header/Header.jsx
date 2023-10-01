@@ -19,6 +19,17 @@ export default function Header() {
   const pathname = usePathname();
   const id = useId();
 
+  // Por hacer lo de modo dark
+  // useEffect(() => {
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: light)").matches
+  //   ) {
+  //     togleDarkMode();
+  //     console.log("sasa");
+  //   }
+  // }, []);
+
   useEffect(() => {
     const root = document.querySelector(":root");
     if (darkMode) {
@@ -26,7 +37,7 @@ export default function Header() {
     } else {
       root.style.setProperty("--clr-uno", "45 82% 70%");
     }
-  }, [darkMode]);
+  }, [darkMode, togleDarkMode]);
 
   return (
     <header className={styles.header}>

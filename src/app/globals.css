@@ -188,16 +188,16 @@ a {
   font-size: 112%;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --clr-base-uno: 0 0% 15%;
-    --clr-uno: 7 79% 67%;
+    --clr-uno: 45 82% 70%;
     --clr-dos: 45 82% 70%;
     --clr-acento-uno: 53 72% 80%;
     --clr-acento-dos: 130 37% 75%;
     --clr-base-dos: 0 0% 90%;
   }
-}
+} */
 
 /* **************************/
 /* Clases utiles */
