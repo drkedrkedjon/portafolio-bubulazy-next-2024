@@ -2,6 +2,7 @@
   position: fixed;
   inset: 0;
   padding: 1rem;
+  z-index: 10000;
 }
 .navFondo {
   position: absolute;

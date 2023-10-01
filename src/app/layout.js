@@ -1,16 +1,13 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import { BASE_METADATA } from "@/app/utilities/constants";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
   display: "swap",
 });
 
-export const metadata = {
-  title: "Portafolio y blog personal",
-  description:
-    "Este es mi portafolio y blog personal, donde comparto mis proyectos y artículos sobre tecnología.",
-};
+export const metadata = BASE_METADATA;
 
 export default function RootLayout({ children }) {
   return (

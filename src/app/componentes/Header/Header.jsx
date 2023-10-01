@@ -8,10 +8,14 @@ import useToggle from "../useToggle";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { DESKTOP_LINKS } from "@/app/utilities/constants";
+import { useState, useId } from "react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
+  const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
   const pathname = usePathname();
+  const id = useId();
 
   return (
     <header className={styles.header}>
@@ -24,12 +28,32 @@ export default function Header() {
         </Link>
         <div className={styles.navContainer}>
           <ul
+            onMouseLeave={() => setHoveredDesktopLink(null)}
             aria-hidden="true"
             className={styles.desktopNav}
           >
+            {/* Iteramos y creamos Desktop Links */}
+
             {DESKTOP_LINKS.map(({ href, slug, label }) => (
-              <li key={slug}>
+              <li
+                key={slug}
+                // Un VUDU de z-index que hace que el fondo del link que esta en hover se muestre por debajo de los demas
+                style={{
+                  zIndex: hoveredDesktopLink === slug ? 1 : 2,
+                }}
+              >
+                {hoveredDesktopLink === slug && (
+                  <motion.div
+                    layoutId={id}
+                    className={styles.hoveredFondo}
+                    initial={false}
+                    animate={{
+                      borderRadius: "var(--border-radius",
+                    }}
+                  />
+                )}
                 <Link
+                  onMouseEnter={() => setHoveredDesktopLink(slug)}
                   className={`${styles.desktopLinks} ${
                     pathname === href ? styles.desktopActiveLink : ""
                   }`}
@@ -40,6 +64,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
+
+          {/* Greupo de botones de color y rss */}
+
           <div className={styles.icons}>
             <button>
               <Sun className={styles.iconSvg} />
@@ -49,6 +76,9 @@ export default function Header() {
               <Rss className={styles.iconSvg} />
             </Link>
           </div>
+
+          {/* Navegacion */}
+
           <nav
             role="navigation"
             aria-label="Menu principal"
