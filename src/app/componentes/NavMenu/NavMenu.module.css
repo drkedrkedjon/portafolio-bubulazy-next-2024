@@ -16,8 +16,8 @@
   right: 0;
   bottom: 0;
   width: min(90%, 300px);
-  background-color: hsl(var(--clr-blanco) / 0.9);
-  color: hsl(var(--clr-negro));
+  background-color: hsl(var(--clr-base-dos) / 0.9);
+  color: hsl(var(--clr-base-uno));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,13 +41,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: hsl(var(--clr-blanco));
+  color: hsl(var(--clr-base-dos));
   padding: 0.5rem;
   border-radius: var(--border-radius);
   background-color: hsl(var(--clr-uno) / 1);
 }
 .closeIcon {
-  color: hsl(var(--clr-negro));
+  color: hsl(var(--clr-base-uno));
   stroke-width: 4px;
   width: 14px;
   height: 14px;

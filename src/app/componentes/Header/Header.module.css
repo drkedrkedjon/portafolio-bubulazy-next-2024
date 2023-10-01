@@ -7,7 +7,7 @@
   align-items: center;
 }
 .logo {
-  /* text-shadow: 1px 1px 2px hsl(var(--clr-negro)); */
+  /* text-shadow: 1px 1px 2px hsl(var(--clr-base-uno)); */
   font-size: var(--fs-600);
   font-weight: var(--f-wei-600);
   /* font-stretch: var(--f-str-75); */
@@ -42,7 +42,7 @@
 .hoveredFondo {
   position: absolute;
   inset: 0;
-  background-color: hsl(var(--clr-negro) / 0.2);
+  background-color: hsl(var(--clr-base-uno) / 0.2);
   border-radius: var(--border-radius);
   z-index: -1;
 }
@@ -62,7 +62,7 @@
   place-items: center;
 }
 .iconSvg {
-  color: hsl(var(--clr-negro));
+  color: hsl(var(--clr-base-uno));
   stroke-width: 3px;
 }
 .menuButton {

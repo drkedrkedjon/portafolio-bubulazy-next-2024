@@ -8,14 +8,25 @@ import useToggle from "../useToggle";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { DESKTOP_LINKS } from "@/app/utilities/constants";
-import { useState, useId } from "react";
+import { useState, useId, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
+  const [darkMode, togleDarkMode] = useToggle(true);
+
   const pathname = usePathname();
   const id = useId();
+
+  useEffect(() => {
+    const root = document.querySelector(":root");
+    if (darkMode) {
+      root.style.setProperty("--clr-uno", "7 79% 67%");
+    } else {
+      root.style.setProperty("--clr-uno", "45 82% 70%");
+    }
+  }, [darkMode]);
 
   return (
     <header className={styles.header}>
@@ -68,9 +79,12 @@ export default function Header() {
           {/* Greupo de botones de color y rss */}
 
           <div className={styles.icons}>
-            <button>
-              <Sun className={styles.iconSvg} />
-              {/* <Moon /> */}
+            <button onClick={togleDarkMode}>
+              {darkMode ? (
+                <Sun className={styles.iconSvg} />
+              ) : (
+                <Moon className={styles.iconSvg} />
+              )}
             </button>
             <Link href={"/rss.xml"}>
               <Rss className={styles.iconSvg} />

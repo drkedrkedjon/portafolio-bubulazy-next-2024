@@ -147,8 +147,8 @@ a {
 :root {
   /* Colores */
 
-  --clr-negro: 0 0% 15%;
-  --clr-blanco: 0 0% 90%;
+  --clr-base-uno: 0 0% 15%;
+  --clr-base-dos: 0 0% 90%;
   --clr-uno: 7 79% 67%; /* Naranja clarita */
   --clr-dos: 45 82% 70%; /* Amarillo oscurito */
   --clr-acento-uno: 53 72% 80%; /* Amarillo clarito */
@@ -181,7 +181,7 @@ a {
   --padding-block: clamp(0.8rem, 4vw, 1.5rem);
   --margin-texto: 1em;
   --border-radius: 0.2em;
-  --box-shadow: 10px 10px 0px 0 hsl(var(--clr-blanco) / 0.4);
+  --box-shadow: 10px 10px 0px 0 hsl(var(--clr-base-dos) / 0.4);
   --container-max: 62rem;
   --flex-gap: 1rem;
 
@@ -190,12 +190,12 @@ a {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --clr-negro: 0 0% 15%;
+    --clr-base-uno: 0 0% 15%;
     --clr-uno: 7 79% 67%;
     --clr-dos: 45 82% 70%;
     --clr-acento-uno: 53 72% 80%;
     --clr-acento-dos: 130 37% 75%;
-    --clr-blanco: 0 0% 90%;
+    --clr-base-dos: 0 0% 90%;
   }
 }
 
@@ -208,12 +208,12 @@ body {
   font-weight: 400;
   line-height: var(--lh-normal);
   font-stretch: var(--f-str-100);
-  background-color: hsl(var(--clr-negro));
-  color: hsl(var(--clr-blanco));
+  background-color: hsl(var(--clr-base-uno));
+  color: hsl(var(--clr-base-dos));
   min-height: 100vh;
 }
 *:focus-visible {
-  outline: 2px solid hsl(var(--clr-negro) / 0.6);
+  outline: 2px solid hsl(var(--clr-base-uno) / 0.6);
   outline-offset: 2px;
 }
 
@@ -221,7 +221,7 @@ body {
 
 /* De fondo */
 .fondo-oscuro-negro {
-  background-color: hsl(var(--clr-negro));
+  background-color: hsl(var(--clr-base-uno));
 }
 .fondo-oscuro-uno {
   background-color: hsl(var(--clr-uno));
@@ -239,11 +239,11 @@ body {
   background-color: hsl(var(--clr-acento-claro));
 }
 .fondo-acento-blanco {
-  background-color: hsl(var(--clr-blanco));
+  background-color: hsl(var(--clr-base-dos));
 }
 /* De letras */
 .color-oscuro-negro {
-  color: hsl(var(--clr-negro));
+  color: hsl(var(--clr-base-uno));
 }
 .color-oscuro-uno {
   color: hsl(var(--clr-uno));
@@ -261,7 +261,7 @@ body {
   color: hsl(var(--clr-acento-claro));
 }
 .color-acento-blanco {
-  color: hsl(var(--clr-blanco));
+  color: hsl(var(--clr-base-dos));
 }
 
 /* Formatos de letras */
