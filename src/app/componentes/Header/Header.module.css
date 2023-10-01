@@ -7,10 +7,10 @@
   align-items: center;
 }
 .logo {
-  text-shadow: 1px 1px 2px hsl(var(--clr-negro));
+  /* text-shadow: 1px 1px 2px hsl(var(--clr-negro)); */
   font-size: var(--fs-600);
-  font-weight: var(--f-wei-900);
-  font-stretch: var(--f-str-75);
+  font-weight: var(--f-wei-600);
+  /* font-stretch: var(--f-str-75); */
   text-decoration: none;
 }
 .navContainer {
@@ -32,6 +32,7 @@
 
 .desktopActiveLink {
   text-decoration: underline;
+  text-decoration-thickness: 4px;
 }
 
 @media (min-width: 45rem) {

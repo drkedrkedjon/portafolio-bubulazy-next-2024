@@ -7,6 +7,7 @@ import VisualyHidden from "../VisualyHidden";
 import useToggle from "../useToggle";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { DESKTOP_LINKS } from "@/app/utilities/constants";
 
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
@@ -26,46 +27,18 @@ export default function Header() {
             aria-hidden="true"
             className={styles.desktopNav}
           >
-            <li>
-              <Link
-                className={`${styles.desktopLinks} ${
-                  pathname === "/" ? styles.desktopActiveLink : ""
-                }`}
-                href={"/"}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`${styles.desktopLinks} ${
-                  pathname === "/proyectos" ? styles.desktopActiveLink : ""
-                }`}
-                href={"/proyectos"}
-              >
-                Proyectos
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`${styles.desktopLinks} ${
-                  pathname === "/cv" ? styles.desktopActiveLink : ""
-                }`}
-                href={"/cv"}
-              >
-                CV
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`${styles.desktopLinks} ${
-                  pathname === "/blog" ? styles.desktopActiveLink : ""
-                }`}
-                href={"/blog"}
-              >
-                Blog
-              </Link>
-            </li>
+            {DESKTOP_LINKS.map(({ href, slug, label }) => (
+              <li key={slug}>
+                <Link
+                  className={`${styles.desktopLinks} ${
+                    pathname === href ? styles.desktopActiveLink : ""
+                  }`}
+                  href={href}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className={styles.icons}>
             <button>
