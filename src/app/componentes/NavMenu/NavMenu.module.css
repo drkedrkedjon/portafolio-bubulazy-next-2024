@@ -26,14 +26,21 @@
   gap: 1rem;
   translate: 100%;
 }
+
 .children ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-end;
+  gap: 0.2rem;
+  /* align-items: flex-end; */
+  text-align: right;
+}
+.children li {
+  position: relative;
 }
 .children a {
   text-decoration: none;
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
 }
 .closeBtn {
   align-self: stretch;
@@ -51,4 +58,11 @@
   stroke-width: 4px;
   width: 14px;
   height: 14px;
+}
+.hoveredFondo {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(var(--clr-base-uno) / 0.2);
+  border-radius: var(--border-radius);
+  z-index: -1;
 }

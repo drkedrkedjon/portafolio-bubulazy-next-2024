@@ -3,8 +3,8 @@ import styles from "./Header.module.css";
 import { Sun, Moon, Menu, Rss } from "react-feather";
 import Link from "next/link";
 import NavMenu from "../NavMenu";
-import VisualyHidden from "../VisualyHidden";
-import useToggle from "../useToggle";
+import VisualyHidden from "../../utilities/VisualyHidden";
+import useToggle from "../../utilities/useToggle";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { DESKTOP_LINKS } from "@/app/utilities/constants";
@@ -123,21 +123,7 @@ export default function Header() {
             </button>
             {/* Animate presence sirva para exit animation en framer motion cuando se dewsmonta la componente */}
             <AnimatePresence>
-              {isMenuOpen && (
-                <NavMenu toggleMenuOpen={toggleMenuOpen}>
-                  <ul>
-                    <li>
-                      <Link href={"/"}>Sobre mi</Link>
-                    </li>
-                    <li>
-                      <Link href={"/"}>Proyectos</Link>
-                    </li>
-                    <li>
-                      <Link href={"/"}>Blog</Link>
-                    </li>
-                  </ul>
-                </NavMenu>
-              )}
+              {isMenuOpen && <NavMenu toggleMenuOpen={toggleMenuOpen} />}
             </AnimatePresence>
           </nav>
         </div>

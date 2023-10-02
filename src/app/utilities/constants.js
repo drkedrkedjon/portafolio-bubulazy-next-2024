@@ -26,3 +26,26 @@ export const DESKTOP_LINKS = [
     href: "/blog",
   },
 ];
+
+export const HAMBURGER_LINKS = [
+  {
+    slug: "home",
+    label: "Home",
+    href: "/",
+  },
+  {
+    slug: "proyectos",
+    label: "Proyectos",
+    href: "/proyectos",
+  },
+  {
+    slug: "cv",
+    label: "CV",
+    href: "/cv",
+  },
+  {
+    slug: "blog",
+    label: "Blog",
+    href: "/blog",
+  },
+];
