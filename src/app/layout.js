@@ -1,6 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { BASE_METADATA } from "@/app/utilities/constants";
+import Header from "./componentes/Header";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
@@ -15,7 +16,10 @@ export default function RootLayout({ children }) {
       lang="es"
       className={monaSansFont.className}
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

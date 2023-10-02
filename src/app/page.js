@@ -1,11 +1,10 @@
-import Header from "@/app/componentes/Header";
 import styles from "./page.module.css";
+import Hero from "./componentes/Hero";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main></main>
-    </>
+    <main>
+      <Hero />
+    </main>
   );
 }
