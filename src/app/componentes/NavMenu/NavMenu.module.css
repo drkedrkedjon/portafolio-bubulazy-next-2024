@@ -27,20 +27,26 @@
   translate: 100%;
 }
 
-.children ul {
+.menuLinks ul {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   /* align-items: flex-end; */
   text-align: right;
 }
-.children li {
+.menuLinks li {
   position: relative;
 }
-.children a {
+.menuLinks a {
   text-decoration: none;
   display: inline-block;
   padding: 0.3rem 0.5rem;
+}
+.menuLinks .hamburgerActiveLinks {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
 }
 .closeBtn {
   align-self: stretch;

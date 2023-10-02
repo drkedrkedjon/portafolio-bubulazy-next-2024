@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 export default function NavMenu({ toggleMenuOpen }) {
   const [hoveredHamburgerLink, setHoveredHamburgerLink] = useState(null);
   const pathname = usePathname();
+  console.log(pathname);
   const id = useId();
 
   useEffect(() => {
@@ -61,18 +62,8 @@ export default function NavMenu({ toggleMenuOpen }) {
             }}
             className={styles.navCajon}
           >
-            <div className={styles.children}>
+            <div className={styles.menuLinks}>
               <ul onMouseLeave={() => setHoveredHamburgerLink(null)}>
-                {/* <li>
-                  <Link href={"/"}>Sobre mi</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Proyectos</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Blog</Link>
-                </li> */}
-
                 {HAMBURGER_LINKS.map(({ href, slug, label }) => (
                   <li
                     key={slug}
@@ -92,9 +83,9 @@ export default function NavMenu({ toggleMenuOpen }) {
                     )}
                     <Link
                       onMouseEnter={() => setHoveredHamburgerLink(slug)}
-                      className={`${styles.desktopLinksSSS} ${
-                        pathname === href ? styles.desktopActiveLinkSSS : ""
-                      }`}
+                      className={
+                        pathname === href ? styles.hamburgerActiveLinks : ""
+                      }
                       href={href}
                     >
                       {label}
@@ -119,41 +110,4 @@ export default function NavMenu({ toggleMenuOpen }) {
       </FocusLock>
     </div>
   );
-}
-
-{
-  /* <ul
-                    onMouseLeave={() => setHoveredHamburgerLink(null)}
-                    aria-hidden="true"
-                    className={styles.desktopNav}
-                  >
-                    {HAMBURGER_LINKS.map(({ href, slug, label }) => (
-                      <li
-                        key={slug}
-                        style={{
-                          zIndex: hoveredHamburgerLink === slug ? 1 : 2,
-                        }}
-                      >
-                        {hoveredHamburgerLink === slug && (
-                          <motion.div
-                            layoutId={id}
-                            className={styles.hoveredFondo}
-                            initial={false}
-                            animate={{
-                              borderRadius: "var(--border-radius",
-                            }}
-                          />
-                        )}
-                        <Link
-                          onMouseEnter={() => setHoveredHamburgerLink(slug)}
-                          className={`${styles.desktopLinks} ${
-                            pathname === href ? styles.desktopActiveLink : ""
-                          }`}
-                          href={href}
-                        >
-                          {label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul> */
 }

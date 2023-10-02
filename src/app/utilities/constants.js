@@ -40,7 +40,7 @@ export const HAMBURGER_LINKS = [
   },
   {
     slug: "cv",
-    label: "CV",
+    label: "Curículum",
     href: "/cv",
   },
   {
