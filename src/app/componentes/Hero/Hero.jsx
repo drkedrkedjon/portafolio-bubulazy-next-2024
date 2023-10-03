@@ -1,22 +1,33 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import sasaMemoji from "@/app/assets/images/generales/sasa-memoji.png";
 
 // con-imagen, sin-imagen
-export default function Hero({ type }) {
-  return (
-    <section>
-      <div class={`wrapper ${styles.containerTypeImagen}`}>
-        <div className={styles.imageRoundFrame}>
-          <Image
-            src={sasaMemoji}
-            alt="Foto de mi"
-          />
+export default function Hero({ type, image, alt, title, about }) {
+  if (type === "con-imagen") {
+    return (
+      <section>
+        <div class={`wrapper ${styles.containerTypeImagen}`}>
+          <div className={styles.imageRoundFrame}>
+            <Image
+              src={image}
+              alt={alt}
+            />
+          </div>
+          <h1 className={styles.h1}>{title}</h1>
         </div>
-        <h1 className={styles.h1}>
-          Hola soy Sasa, desarrollador FrontEnd y algo más...
-        </h1>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
+
+  if (type === "sin-imagen") {
+    return (
+      <section>
+        <div class={`wrapper ${styles.containerTypeSinImagen}`}>
+          <h1 className={styles.h1}>
+            <span className={styles.about}>{about}</span> {title}
+          </h1>
+        </div>
+      </section>
+    );
+  }
 }

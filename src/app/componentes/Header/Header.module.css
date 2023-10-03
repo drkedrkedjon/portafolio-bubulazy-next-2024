@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .logo {
   /* text-shadow: 1px 1px 2px hsl(var(--clr-base-uno)); */
@@ -47,7 +48,7 @@
   z-index: -1;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 43rem) {
   .desktopNav {
     display: flex;
   }
