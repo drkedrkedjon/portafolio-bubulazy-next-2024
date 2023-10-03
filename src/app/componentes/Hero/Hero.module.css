@@ -1,0 +1,38 @@
+.containerTypeImagen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 5rem);
+  padding-block: var(--padding-block);
+  text-align: center;
+}
+.imageRoundFrame {
+  flex-basis: clamp(170px, 28vw, 250px);
+  height: auto;
+  flex-shrink: 0;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 10px solid hsla(var(--clr-dos));
+  border-radius: 50%;
+  background-color: hsla(var(--clr-uno));
+}
+.imageRoundFrame > img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.h1 {
+  font-size: var(--fs-hero);
+  color: hsla(var(--clr-dos));
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+}
+
+@media (min-width: 43rem) {
+  .containerTypeImagen {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: left;
+    padding: 6em 3em;
+  }
+}

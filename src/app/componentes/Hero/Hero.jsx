@@ -1,11 +1,22 @@
 import styles from "./Hero.module.css";
+import Image from "next/image";
+import sasaMemoji from "@/app/assets/images/generales/sasa-memoji.png";
 
-export default function Hero() {
+// con-imagen, sin-imagen
+export default function Hero({ type }) {
   return (
-    <div className={styles.hero}>
-      <div className="wrapper">
-        <h1 className={styles.title}>Hero</h1>
+    <section>
+      <div class={`wrapper ${styles.containerTypeImagen}`}>
+        <div className={styles.imageRoundFrame}>
+          <Image
+            src={sasaMemoji}
+            alt="Foto de mi"
+          />
+        </div>
+        <h1 className={styles.h1}>
+          Hola soy Sasa, desarrollador FrontEnd y algo más...
+        </h1>
       </div>
-    </div>
+    </section>
   );
 }

@@ -178,7 +178,7 @@ a {
   --lh-big: 1.8;
 
   /* Varios */
-  --padding-block: clamp(0.8rem, 4vw, 1.5rem);
+  --padding-block: clamp(1rem, 4vw, 1.5rem);
   --margin-texto: 1em;
   --border-radius: 0.2em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-base-dos) / 0.4);
@@ -220,7 +220,7 @@ body {
 /* Colores */
 
 /* De fondo */
-.fondo-oscuro-negro {
+/* .fondo-oscuro-negro {
   background-color: hsl(var(--clr-base-uno));
 }
 .fondo-oscuro-uno {
@@ -240,9 +240,9 @@ body {
 }
 .fondo-acento-blanco {
   background-color: hsl(var(--clr-base-dos));
-}
+} */
 /* De letras */
-.color-oscuro-negro {
+/* .color-oscuro-negro {
   color: hsl(var(--clr-base-uno));
 }
 .color-oscuro-uno {
@@ -262,11 +262,9 @@ body {
 }
 .color-acento-blanco {
   color: hsl(var(--clr-base-dos));
-}
-
+} */
 /* Formatos de letras */
-
-.fs-hero {
+/* .fs-hero {
   font-size: var(--fs-hero);
 }
 .fs-900 {
@@ -330,7 +328,7 @@ body {
 
 .grid {
   display: grid;
-}
+} */
 
 .flow > *:not(:last-child) {
   margin-bottom: var(--margin-texto);
