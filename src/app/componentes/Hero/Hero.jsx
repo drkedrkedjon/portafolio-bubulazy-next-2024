@@ -8,16 +8,15 @@ export default function Hero({ type, image, alt, title, about }) {
   if (type === "con-imagen") {
     return (
       <section>
-        <div class={`wrapper ${styles.containerTypeImagen}`}>
+        <div className={`wrapper ${styles.containerTypeImagen}`}>
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{
               type: "spring",
-              stiffness: 200,
+              stiffness: 100,
               damping: 8,
               duration: 0.8,
-              delay: 0.1,
             }}
             className={styles.imageRoundFrame}
           >
@@ -35,7 +34,7 @@ export default function Hero({ type, image, alt, title, about }) {
   if (type === "sin-imagen") {
     return (
       <section>
-        <div class={`wrapper ${styles.containerTypeSinImagen}`}>
+        <div className={`wrapper ${styles.containerTypeSinImagen}`}>
           <h1 className={styles.h1}>
             <span className={styles.about}>{about}</span> {title}
           </h1>

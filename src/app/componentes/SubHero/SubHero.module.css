@@ -1,0 +1,23 @@
+.sectionSuperior {
+  background-color: hsl(var(--clr-acento-dos));
+  color: hsl(var(--clr-base-uno));
+}
+.sectionInferior {
+  background-color: hsl(var(--clr-acento-dos));
+  color: hsl(var(--clr-base-uno));
+}
+
+.wrapperSuperior {
+  padding-block-start: var(--padding-block-grande);
+  border-block-end: 1px solid black;
+}
+
+.wrapperInferior {
+  padding-block-end: var(--padding-block-grande);
+}
+.h2 {
+  font-size: var(--fs-800);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+  line-height: var(--lh-small);
+}
