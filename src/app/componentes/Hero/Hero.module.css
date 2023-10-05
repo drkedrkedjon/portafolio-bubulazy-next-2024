@@ -11,7 +11,7 @@
   flex-basis: clamp(170px, 28vw, 250px);
   height: auto;
   flex-shrink: 0;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 10px solid hsla(var(--clr-dos));
   border-radius: 50%;
@@ -19,6 +19,8 @@
 }
 .imageRoundFrame > img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .h1 {
   font-size: var(--fs-hero);
