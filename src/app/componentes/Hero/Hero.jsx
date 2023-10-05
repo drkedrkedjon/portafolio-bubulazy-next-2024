@@ -1,5 +1,7 @@
+"use client";
 import styles from "./Hero.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // con-imagen, sin-imagen
 export default function Hero({ type, image, alt, title, about }) {
@@ -7,12 +9,23 @@ export default function Hero({ type, image, alt, title, about }) {
     return (
       <section>
         <div class={`wrapper ${styles.containerTypeImagen}`}>
-          <div className={styles.imageRoundFrame}>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 8,
+              duration: 0.8,
+              delay: 0.1,
+            }}
+            className={styles.imageRoundFrame}
+          >
             <Image
               src={image}
               alt={alt}
             />
-          </div>
+          </motion.div>
           <h1 className={styles.h1}>{title}</h1>
         </div>
       </section>
