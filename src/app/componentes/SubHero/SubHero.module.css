@@ -10,6 +10,8 @@
 .wrapperSuperior {
   padding-block-start: var(--padding-block-grande);
   border-block-end: 1px solid black;
+  display: flex;
+  gap: var(--flex-gap);
 }
 
 .wrapperInferior {
@@ -20,4 +22,6 @@
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
   line-height: var(--lh-small);
+  flex-basis: clamp(200px, 30vw, 400px);
+  flex-shrink: 0;
 }
