@@ -217,8 +217,9 @@ body {
   line-height: var(--lh-small);
 }
 *:focus-visible {
-  outline: 2px solid hsl(var(--clr-base-uno) / 0.6);
-  outline-offset: 2px;
+  /* outline: 2px solid hsl(var(--clr-base-uno) / 0.6); */
+  /* outline-offset: 2px; */
+  outline: revert;
 }
 
 /* Colores */
@@ -359,12 +360,12 @@ img {
 
 a {
   text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 a:where(:hover, :focus) {
-  text-underline-offset: 4px;
-  text-decoration-thickness: 6px;
+  /* text-underline-offset: 4px; */
+  /* text-decoration-thickness: 6px; */
 }
 button {
   cursor: pointer;
