@@ -41,18 +41,18 @@ export default function SubHero({ type, color }) {
         </section>
       )}
       {type === "doble-tres-listas" && (
-        <section className="fondo-asento-dos color-oscuro-negro">
-          <div className="container proyecto-detalles flex color-oscuro">
-            <div className="flow">
-              <h2 className="fs-800 f-str-75 f-wei-600">Tipo:</h2>
-              <ul className="ul-detalles fs-400 f-wei-600">
+        <section className={styles.sectionInferior}>
+          <div className={`wrapper ${styles.wrapperInferiorTresListas}`}>
+            <div>
+              <h2 className={styles.tresListasH2}>Tipo:</h2>
+              <ul className={styles.tresListasUl}>
                 <li>Web App</li>
-                <li>Optimisada para móviles</li>
+                <li>Diseño responsive</li>
               </ul>
             </div>
-            <div className="flow">
-              <h2 className="fs-800 f-str-75 f-wei-600">Herramientas:</h2>
-              <ul className="ul-detalles fs-400 f-wei-600">
+            <div>
+              <h2 className={styles.tresListasH2}>Herramientas:</h2>
+              <ul className={styles.tresListasUl}>
                 <li>CSS & HTML</li>
                 <li>React 18</li>
                 <li>React Router 6</li>
@@ -61,9 +61,9 @@ export default function SubHero({ type, color }) {
                 <li>Netlifly</li>
               </ul>
             </div>
-            <div className="flow">
-              <h2 className="fs-800 f-str-75 f-wei-600">En vivo:</h2>
-              <ul className="ul-detalles fs-400 f-wei-600">
+            <div>
+              <h2 className={styles.tresListasH2}>En vivo:</h2>
+              <ul className={styles.tresListasUl}>
                 <li>
                   <a
                     target="_blank"

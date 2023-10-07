@@ -9,31 +9,35 @@
 
 .wrapperSuperior {
   padding-block-start: var(--padding-block-grande);
-  border-block-end: 1px solid black;
+  border-block-end: 2px solid hsl(var(--clr-base-uno));
   display: flex;
   flex-direction: column;
   gap: var(--flex-gap);
 }
 
-.wrapperInferior {
-  padding-block-end: var(--padding-block-grande);
+.wrapperInferior,
+.wrapperInferiorTresListas {
+  padding-block: var(--padding-block-grande);
   display: flex;
   flex-direction: column;
   gap: var(--flex-gap);
 }
-.h2 {
+.h2,
+.tresListasH2 {
   font-size: var(--fs-800);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
   line-height: var(--lh-small);
   text-align: center;
 }
-.unaListaUl {
+.unaListaUl,
+.tresListasUl {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.unaListaUl li {
+.unaListaUl li,
+.tresListasUl li {
   font-weight: var(--f-wei-600);
 }
 
@@ -42,11 +46,21 @@
   .wrapperInferior {
     flex-direction: row;
   }
-
+  .wrapperInferiorTresListas {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .wrapperInferiorTresListas > div {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
   .h2 {
     flex-basis: clamp(200px, 30vw, 400px);
     flex-shrink: 0;
     text-align: left;
+  }
+  .tresListasH2 {
+    margin-bottom: 0.5em;
   }
   .unaListaUl {
     --flex-gap: 0.4em;
