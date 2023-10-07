@@ -15,10 +15,10 @@
   text-decoration: none;
 }
 .navContainer {
-  --flex-gap: 2rem;
+  --gap-base: 2rem;
   display: flex;
   justify-content: flex-end;
-  gap: var(--flex-gap);
+  gap: var(--gap-base);
   align-items: center;
   font-weight: var(--f-wei-600);
 }

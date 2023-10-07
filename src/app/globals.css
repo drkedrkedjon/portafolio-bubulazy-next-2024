@@ -184,7 +184,7 @@ a {
   --border-radius: 0.2em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-base-dos) / 0.4);
   --container-max: 62rem;
-  --flex-gap: 1rem;
+  --gap-base: 1rem;
 
   font-size: 112%;
 }

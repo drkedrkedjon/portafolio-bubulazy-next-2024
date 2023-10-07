@@ -16,7 +16,7 @@ export default function Home() {
       />
 
       {/* type: single, single-btn, doble-una-lista, doble-tres-listas, */}
-      <SubHero type="doble-tres-listas" />
+      <SubHero type="single-link" />
     </main>
   );
 }

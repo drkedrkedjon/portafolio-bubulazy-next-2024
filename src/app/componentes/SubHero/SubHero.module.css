@@ -12,15 +12,19 @@
   border-block-end: 2px solid hsl(var(--clr-base-uno));
   display: flex;
   flex-direction: column;
-  gap: var(--flex-gap);
+  gap: var(--gap-base);
+}
+.wrapperSuperiorSingle {
+  padding-block-end: var(--padding-block-grande);
+  border-block-end: none;
 }
 
 .wrapperInferior,
 .wrapperInferiorTresListas {
-  padding-block: var(--padding-block-grande);
+  padding-block-end: var(--padding-block-grande);
   display: flex;
   flex-direction: column;
-  gap: var(--flex-gap);
+  gap: var(--gap-base);
 }
 .h2,
 .tresListasH2 {
@@ -39,6 +43,26 @@
 .unaListaUl li,
 .tresListasUl li {
   font-weight: var(--f-wei-600);
+}
+.contenidoSuperior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singleLink {
+  display: inline-block;
+  margin-top: var(--gap-base);
+  background-color: hsl(var(--clr-base-uno));
+  color: hsl(var(--clr-base-dos));
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: var(--f-wei-500);
+  font-size: var(--fs-500);
+  transition: scale 0.2s ease-in-out;
+}
+.singleLink:hover {
+  scale: 1.05;
 }
 
 @media (min-width: 40rem) {
@@ -63,13 +87,16 @@
     margin-bottom: 0.5em;
   }
   .unaListaUl {
-    --flex-gap: 0.4em;
+    --gap-base: 0.4em;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--flex-gap);
+    gap: var(--gap-base);
   }
   .unaListaUl li:not(:last-child)::after {
     content: "•";
     margin-left: 0.4em;
+  }
+  .contenidoSuperior {
+    align-items: flex-start;
   }
 }

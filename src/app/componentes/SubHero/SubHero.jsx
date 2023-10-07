@@ -1,14 +1,19 @@
 import Link from "next/link";
 import styles from "./SubHero.module.css";
 
-// type: single, single-btn, doble-una-lista, doble-tres-listas,
-export default function SubHero({ type, color }) {
+// type: single, single-link, doble-una-lista, doble-tres-listas,
+export default function SubHero({ type }) {
   return (
     <>
       <section className={styles.sectionSuperior}>
-        <div className={`wrapper ${styles.wrapperSuperior}`}>
+        <div
+          className={`wrapper ${styles.wrapperSuperior} ${
+            (type === "single" || type === "single-link") &&
+            styles.wrapperSuperiorSingle
+          }`}
+        >
           <h2 className={styles.h2}>Sobre mi</h2>
-          <div>
+          <div className={styles.contenidoSuperior}>
             <p>
               Me inicié en el mundo del desarrollo FrontEnd en 1997 y hasta 2002
               he trabajado como freelancer. Entonces he cambiado mi profesión a
@@ -20,7 +25,14 @@ export default function SubHero({ type, color }) {
               disposición, determinación y ganas de aprender. Espero a que os
               animéis a contactarme.
             </p>
-            {type === "single-btn" && <button>Button de prueba</button>}
+            {type === "single-link" && (
+              <Link
+                className={styles.singleLink}
+                href="/"
+              >
+                Button de prueba
+              </Link>
+            )}
           </div>
         </div>
       </section>
