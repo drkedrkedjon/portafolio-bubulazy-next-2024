@@ -1,7 +1,15 @@
+.container {
+  container-type: inline-size;
+}
+.proyectsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .h2 {
   font-size: var(--fs-800);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
   line-height: var(--lh-small);
-  /* text-align: center; */
+  color: hsl(var(--clr-acento-uno));
 }

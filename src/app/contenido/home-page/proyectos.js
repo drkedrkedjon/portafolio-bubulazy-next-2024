@@ -6,7 +6,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/",
+    url: "/dasdasd",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -14,7 +14,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/",
+    url: "/dfgdfgdf",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -22,7 +22,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/",
+    url: "/werwer",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -30,7 +30,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/",
+    url: "/ghjghjgh",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -38,7 +38,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/",
+    url: "/erxdgv",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -46,7 +46,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/",
+    url: "/uikk",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
 ];
