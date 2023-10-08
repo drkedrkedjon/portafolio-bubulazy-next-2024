@@ -1,0 +1,7 @@
+.h2 {
+  font-size: var(--fs-800);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+  line-height: var(--lh-small);
+  /* text-align: center; */
+}

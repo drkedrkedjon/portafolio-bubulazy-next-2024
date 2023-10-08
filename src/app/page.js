@@ -2,6 +2,9 @@ import styles from "./page.module.css";
 import Hero from "./componentes/Hero";
 import sasaMemoji from "@/app/assets/images/generales/sasa-memoji.png";
 import SubHero from "./componentes/SubHero";
+import HomeProyects from "./componentes/HomeProyects";
+import { SOBRE_MI } from "@/app/contenido/home-page/sobreMi";
+import { PROYECTOS } from "@/app/contenido/home-page/proyectos";
 
 export default function Home() {
   return (
@@ -16,7 +19,11 @@ export default function Home() {
       />
 
       {/* type: single, single-btn, doble-una-lista, doble-tres-listas, */}
-      <SubHero type="doble-tres-listas" />
+      <SubHero
+        type="doble-una-lista"
+        contenido={SOBRE_MI}
+      />
+      <HomeProyects contenido={PROYECTOS} />
     </main>
   );
 }

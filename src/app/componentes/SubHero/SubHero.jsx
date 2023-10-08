@@ -2,7 +2,14 @@ import Link from "next/link";
 import styles from "./SubHero.module.css";
 
 // type: single, single-link, doble-una-lista, doble-tres-listas,
-export default function SubHero({ type }) {
+export default function SubHero({ type, contenido }) {
+  const {
+    tituloSuperior,
+    contenidoSuperior,
+    tituloInferior,
+    contenidoInferior,
+  } = contenido;
+
   return (
     <>
       <section className={styles.sectionSuperior}>
@@ -12,19 +19,9 @@ export default function SubHero({ type }) {
             styles.wrapperSuperiorSingle
           }`}
         >
-          <h2 className={styles.h2}>Sobre mi</h2>
+          <h2 className={styles.h2}>{tituloSuperior}</h2>
           <div className={styles.contenidoSuperior}>
-            <p>
-              Me inicié en el mundo del desarrollo FrontEnd en 1997 y hasta 2002
-              he trabajado como freelancer. Entonces he cambiado mi profesión a
-              turísmo y ahora regreso con muchas ganas de llevar a cabo todo lo
-              nuevo aprendido en diferentes cursos, como en{" "}
-              <Link href="https://freecodecamp.org">FreeCodeCamp</Link> y{" "}
-              <Link href="https://scrimba.com">Scrimba</Link> de CSS, HTML,
-              JavaScript, React 18, React Router 6 & Firebase. Con mucha
-              disposición, determinación y ganas de aprender. Espero a que os
-              animéis a contactarme.
-            </p>
+            <p>{contenidoSuperior}</p>
             {type === "single-link" && (
               <Link
                 className={styles.singleLink}
@@ -40,14 +37,11 @@ export default function SubHero({ type }) {
       {type === "doble-una-lista" && (
         <section className={styles.sectionInferior}>
           <div className={`wrapper ${styles.wrapperInferior}`}>
-            <h2 className={styles.h2}>Mis habilidades</h2>
+            <h2 className={styles.h2}>{tituloInferior}</h2>
             <ul className={styles.unaListaUl}>
-              <li>JavaScript ES6</li>
-              <li>React 18</li>
-              <li>React Router</li>
-              <li>Git</li>
-              <li>Firebase</li>
-              <li>CSS & HTML</li>
+              {contenidoInferior.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
         </section>
