@@ -1,5 +1,5 @@
 import Card from "../Card";
-import styles from "./HomeProyects.module.css";
+import styles from "./homeProyects.module.css";
 
 export default function HomeProyects({ contenido }) {
   const ultimosProyectos = contenido.slice(0, 3);
