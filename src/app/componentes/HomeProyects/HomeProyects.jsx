@@ -9,7 +9,7 @@ export default function HomeProyects({ contenido }) {
     <section>
       <div className={`wrapper ${styles.proyectsWrapper}`}>
         <h2 className={styles.h2}>Últimos proyectos</h2>
-        <div className={styles.cards}>
+        <div className={styles.cardsContainer}>
           {ultimosProyectos.map((proyecto) => (
             <Card
               type="con-imagen"

@@ -10,12 +10,15 @@ export default function Card({ type, contenido }) {
       <div className={styles.container}>
         <div className={styles.card}>
           <Image
+            className={styles.image}
             src={imageSrc}
             alt="Sasa"
           />
-          <h3>{titulo}</h3>
-          <p>{descripcion}</p>
-          <Link href={url}>{linkText}</Link>
+          <div>
+            <h3>{titulo}</h3>
+            <p>{descripcion}</p>
+            <Link href={url}>{linkText}</Link>
+          </div>
         </div>
       </div>
     );

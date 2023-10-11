@@ -12,7 +12,9 @@
   color: hsl(var(--clr-acento-uno));
   align-self: center;
 }
-.cards {
+.cardsContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-base);
 }

@@ -1,13 +1,21 @@
 .container {
-  /* container-type: inline-size; */
+  container-type: inline-size;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
 }
 .card {
   display: flex;
   flex-direction: column;
   outline: 1px solid red;
+  gap: var(--gap-base);
 }
-@container (max-width: 300px) {
+.image {
+  /* max-width: 50%; */
+}
+@container (min-width: 650px) {
   .card {
     /* max-width: 300px; */
+    flex-direction: row;
   }
 }
