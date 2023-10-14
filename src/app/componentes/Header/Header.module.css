@@ -1,5 +1,6 @@
 .header {
   background-color: hsl(var(--clr-uno));
+  color: hsl(var(--clr-base-uno));
 }
 .container {
   display: flex;
