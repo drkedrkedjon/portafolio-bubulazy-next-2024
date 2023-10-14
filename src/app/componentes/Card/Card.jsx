@@ -14,7 +14,7 @@ export default function Card({ type, contenido }) {
             src={imageSrc}
             alt="Sasa"
           />
-          <div>
+          <div className={`flow ${styles.cardContent}`}>
             <h3>{titulo}</h3>
             <p>{descripcion}</p>
             <Link href={url}>{linkText}</Link>
@@ -26,8 +26,8 @@ export default function Card({ type, contenido }) {
 
   if (type === "sin-imagen") {
     return (
-      <div className={styles.container}>
-        <div className={styles.card}>
+      <div className={styles.containerSinImagen}>
+        <div className={`flow ${styles.cardSinImagen}`}>
           <h3>{titulo}</h3>
           <p>{descripcion}</p>
           <Link href={url}>{linkText}</Link>

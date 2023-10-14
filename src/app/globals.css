@@ -178,10 +178,11 @@ a {
   --lh-big: 1.8;
 
   /* Varios */
+  --padding: 1rem;
   --padding-block: clamp(1rem, 4vw, 1.5rem);
   --padding-block-grande: clamp(2rem, 10vw, 6rem);
   --margin-texto: 1em;
-  --border-radius: 0.2em;
+  --border-radius: 0.4em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-base-dos) / 0.4);
   --container-max: 62rem;
   --gap-base: 1rem;
