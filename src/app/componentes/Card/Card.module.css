@@ -28,7 +28,7 @@
   font-stretch: var(--f-str-75);
 }
 
-@container (min-width: 40.6rem) {
+@container (min-width: 30rem) {
   .card {
     flex-direction: row;
   }

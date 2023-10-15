@@ -1,0 +1,15 @@
+.container {
+  background-color: hsl(var(--clr-acento-dos));
+  color: hsl(var(--clr-base-uno));
+  padding-block: var(--padding-block-grande);
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.formulario h2 {
+  font-size: var(--fs-800);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+}

@@ -29,7 +29,12 @@ export default function HomeProyects({ contenido }) {
             />
           ))}
         </div>
-        <Link href="/proyectos">Ver todos los proyectos</Link>
+        <Link
+          className="link-btn"
+          href="/proyectos"
+        >
+          Ver todos los proyectos
+        </Link>
       </div>
     </section>
   );

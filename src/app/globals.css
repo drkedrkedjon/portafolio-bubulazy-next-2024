@@ -184,7 +184,7 @@ a {
   --margin-texto: 1em;
   --border-radius: 0.4em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-base-dos) / 0.4);
-  --container-max: 62rem;
+  --container-max: 65rem;
   --gap-base: 1rem;
 
   font-size: 112%;
@@ -341,7 +341,7 @@ body {
 }
 
 .wrapper {
-  width: min(100% - 6vw, var(--container-max, 62rem));
+  width: min(100% - 8vw, var(--container-max, 62rem));
   margin-inline: auto;
   padding-block: var(--padding-block);
 }
@@ -349,7 +349,7 @@ body {
 img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   /* object-fit: cover; */
 }
 
@@ -365,9 +365,24 @@ a {
   text-decoration-thickness: 2px;
 }
 a:where(:hover, :focus) {
-  /* text-underline-offset: 4px; */
-  /* text-decoration-thickness: 6px; */
+  opacity: 0.8;
 }
 button {
   cursor: pointer;
+}
+.link-btn {
+  display: block;
+  background-color: hsl(var(--clr-acento-dos));
+  align-self: center;
+  color: hsl(var(--clr-base-uno));
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius);
+  margin-top: var(--margin-texto);
+  transition: all 0.2s ease-in-out;
+}
+.link-btn:hover {
+  background-color: hsl(var(--clr-acento-dos) / 0.4);
+  color: hsl(var(--clr-base-dos));
+  scale: 1.05;
 }

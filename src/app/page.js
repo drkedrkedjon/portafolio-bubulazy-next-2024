@@ -5,6 +5,7 @@ import SubHero from "./componentes/SubHero";
 import HomeProyects from "./componentes/HomeProyects";
 import { SOBRE_MI } from "@/app/contenido/home-page/sobreMi";
 import { PROYECTOS } from "@/app/contenido/home-page/proyectos";
+import Formulario from "./componentes/Formulario";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         contenido={SOBRE_MI}
       />
       <HomeProyects contenido={PROYECTOS} />
+      <Formulario />
     </main>
   );
 }
