@@ -16,12 +16,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--gap-base);
+  gap: 1.5rem;
   padding-bottom: calc(var(--margin-texto) + 0.5rem);
 }
 .cardsSinImagen {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--gap-base);
+  gap: 1.5rem;
 }

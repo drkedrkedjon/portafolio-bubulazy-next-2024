@@ -8,7 +8,7 @@
   text-align: center;
 }
 .imageRoundFrame {
-  flex-basis: clamp(170px, 28vw, 250px);
+  flex-basis: clamp(10.6rem, 28vw, 15rem);
   height: auto;
   flex-shrink: 0;
   aspect-ratio: 1 / 1;
