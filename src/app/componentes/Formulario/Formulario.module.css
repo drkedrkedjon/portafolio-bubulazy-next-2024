@@ -12,4 +12,39 @@
   font-size: var(--fs-800);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
+  text-align: center;
+}
+.misEnlaces {
+  text-align: center;
+  font-weight: var(--f-wei-900);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  /* gap: var(--gap-base); */
+  background-color: hsl(var(--clr-uno));
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--padding-block);
+}
+.input {
+  margin-bottom: var(--gap-base);
+  background-color: hsl(var(--clr-base-dos));
+  border-radius: 0.3em;
+  font-size: var(--fs-400);
+  padding: 0.5rem 0.8em;
+}
+.input::placeholder {
+  font-size: var(--fs-300);
+  opacity: 0.4;
+}
+.label {
+  font-size: var(--fs-300);
+  font-weight: var(--f-wei-900);
+}
+.button {
+  text-align: center;
+  background-color: brown;
+  padding: 1rem;
+  margin-top: 1rem;
 }

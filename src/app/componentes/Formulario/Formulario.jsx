@@ -13,36 +13,54 @@ export default function Formulario() {
             pregunta, no dudes en escribirme.
           </p>
           <div className={styles.misEnlaces}>
-            <Link href="https://github.com/drkedrkedjon">GitHub</Link>{" "}
+            <Link href="https://github.com/drkedrkedjon">GitHub</Link> |{" "}
             <Link href="https://www.linkedin.com/in/sasa-savic-perusina/">
               LinkedIn
             </Link>
           </div>
         </div>
-        <form>
-          <label htmlFor="name">Nombre:</label>
+        <form className={styles.form}>
+          <label
+            className={styles.label}
+            htmlFor="name"
+          >
+            Nombre:
+          </label>
           <input
+            className={styles.input}
             type="text"
             name="Nombre"
             id="name"
             placeholder="¿Cómo te gustaría que te llamara?"
           />
-          <label htmlFor="email">Email:</label>
+          <label
+            className={styles.label}
+            htmlFor="email"
+          >
+            Email:
+          </label>
           <input
+            className={styles.input}
             type="text"
             id="email"
             name="Email"
             placeholder="¿Cuál es tu dirección de correo?"
           />
-          <label htmlFor="mensaje">Mensaje:</label>
+          <label
+            className={styles.label}
+            htmlFor="mensaje"
+          >
+            Mensaje:
+          </label>
           <textarea
+            className={styles.input}
             name="Mensaje"
             id="mensaje"
             cols="30"
             rows="6"
             placeholder="Escribe aquí tu mensaje..."
           />
-          <button>Muchas gracias</button>
+          <button className={styles.button}>Muchas gracias</button>
         </form>
       </div>
     </section>
