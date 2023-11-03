@@ -1,0 +1,26 @@
+.footer {
+  padding-block: var(--padding-block-grande);
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: center;
+}
+.container > * {
+  flex: 1 1 15rem;
+  padding-inline: 2rem;
+  font-size: var(--fs-300);
+  font-weight: var(--f-wei-600);
+}
+.innerCenter {
+  display: flex;
+  flex-direction: column;
+}
+.memoji {
+  height: 5rem;
+  width: auto;
+  align-self: center;
+  display: block;
+}
