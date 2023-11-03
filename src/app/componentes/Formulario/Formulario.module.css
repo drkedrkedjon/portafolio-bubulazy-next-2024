@@ -30,23 +30,49 @@
 .input {
   margin-bottom: var(--gap-base);
   background-color: hsl(var(--clr-base-dos));
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   font-size: var(--fs-400);
   padding: 0.5rem 0.8em;
 }
 .input::placeholder {
   font-size: var(--fs-300);
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .label {
   font-size: var(--fs-300);
-  font-weight: var(--f-wei-900);
+  font-weight: var(--f-wei-600);
 }
 .button {
   text-align: center;
-  background-color: brown;
-  padding: 1rem;
+  background-color: hsl(var(--clr-dos));
+  padding: 0.8rem;
   margin-top: 1rem;
+  font-weight: var(--f-wei-900);
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 50rem) {
+  .formulario {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .formulario > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+  .formulario h2 {
+    text-align: left;
+  }
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contenido > *:is(:last-child) {
+    margin-top: auto;
+  }
 }
 
 /* git bangada */

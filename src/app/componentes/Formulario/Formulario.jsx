@@ -60,7 +60,7 @@ export default function Formulario() {
             rows="6"
             placeholder="Escribe aquí tu mensaje..."
           />
-          <button className={styles.button}>Muchas gracias</button>
+          <button className={styles.button}>Enviar mensaje, gracias</button>
         </form>
       </div>
     </section>
