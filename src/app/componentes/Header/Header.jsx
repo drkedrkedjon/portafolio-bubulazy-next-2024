@@ -11,6 +11,8 @@ import { DESKTOP_LINKS } from "@/app/utilities/constants";
 import { useState, useId, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
@@ -41,13 +43,18 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={`wrapper ${styles.container}`}>
-        <Link
-          href={"/"}
-          className={styles.logo}
+      <div className={` ${styles.container}`}>
+        <video
+          className={styles.memojiVideo}
+          autoPlay
+          loop
+          muted
         >
-          {"{ this.Sasha }"}
-        </Link>
+          <source
+            src="/popo-video.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div className={styles.navContainer}>
           <ul
             onMouseLeave={() => setHoveredDesktopLink(null)}

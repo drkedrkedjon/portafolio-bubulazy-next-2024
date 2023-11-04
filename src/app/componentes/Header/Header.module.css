@@ -7,14 +7,20 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: min(100% - 8vw, var(--container-max, 62rem));
+  margin-inline: auto;
 }
-.logo {
-  /* text-shadow: 1px 1px 2px hsl(var(--clr-base-uno)); */
+/* .logo {
   font-size: var(--fs-600);
   font-weight: var(--f-wei-600);
-  /* font-stretch: var(--f-str-75); */
   text-decoration: none;
+} */
+.memojiVideo {
+  padding-block: clamp(0.6rem, 3vw, 1.2rem);
+  border-radius: 50%;
+  width: 60px;
 }
+
 .navContainer {
   --gap-base: 2rem;
   display: flex;
