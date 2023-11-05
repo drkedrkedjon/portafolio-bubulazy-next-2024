@@ -49,6 +49,7 @@ export default function Header() {
           autoPlay
           loop
           muted
+          playsInline
         >
           <source
             src="/popo-video.mp4"
