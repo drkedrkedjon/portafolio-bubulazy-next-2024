@@ -52,7 +52,7 @@ export default function Header() {
           playsInline
         >
           <source
-            src="/popo-video.mp4"
+            src="/sasa-memoji-video.mp4"
             type="video/mp4"
           />
         </video>
