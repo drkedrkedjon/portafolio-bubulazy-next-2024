@@ -42,15 +42,15 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 14rem;
+  background-color: hsl(var(--clr-uno) / 0.3);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
 }
 .cardSinImagen {
   display: flex;
   flex-direction: column;
   padding: var(--padding);
-  background-color: hsl(var(--clr-uno) / 0.3);
-  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: var(--box-shadow);
 }
 .cardSinImagen h3 {
   font-size: var(--fs-500);
