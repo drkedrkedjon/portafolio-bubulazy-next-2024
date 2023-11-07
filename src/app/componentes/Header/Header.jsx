@@ -32,6 +32,9 @@ export default function Header() {
   //   }
   // }, []);
 
+  // console.log(window.matchMedia("(prefers-color-scheme: light)").matches);
+  // console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+
   useEffect(() => {
     const root = document.querySelector(":root");
     if (darkMode) {
