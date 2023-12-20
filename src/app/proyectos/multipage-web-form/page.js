@@ -1,14 +1,19 @@
 import Hero from "@/app/componentes/Hero";
-import { contenido } from "@/app/contenido/multipage-web-form/contenido";
+import SubHero from "@/app/componentes/SubHero";
+import { contenidoDePagina } from "@/app/contenido/multipage-web-form/contenido";
 
 export default function Page() {
-  const { hero } = contenido;
+  const { hero, subHero } = contenidoDePagina;
   return (
     <>
       <Hero
         type="sin-imagen"
         title={hero.title}
         about={hero.about}
+      />
+      <SubHero
+        type="doble-tres-listas"
+        contenido={subHero}
       />
     </>
   );
