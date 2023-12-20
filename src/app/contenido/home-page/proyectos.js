@@ -12,7 +12,7 @@ export const PROYECTOS = [
     descripcion:
       "Este proyecto es una aplicación web que ha sido desarollada y diseñada utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y Figma. El objetivo principal de este proyecto es mostrar mis habilidades de desarrollo web y diseño de interfaces de usuario.",
     imageSrc: bubulazyPortafolio,
-    url: "/dasdasd",
+    url: "/pdsds",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -20,7 +20,7 @@ export const PROYECTOS = [
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
-    url: "/dfgdfgdf",
+    url: "/proyectos/multipage-web-form",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {

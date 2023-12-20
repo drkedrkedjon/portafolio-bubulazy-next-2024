@@ -19,7 +19,7 @@ export default function Home() {
         alt={"Mi Memoji, frente de un ordenador"}
       />
 
-      {/* type: single, single-btn, doble-una-lista, doble-tres-listas, */}
+      {/* type: single, single-link, doble-una-lista, doble-tres-listas, */}
       <SubHero
         type="doble-una-lista"
         contenido={SOBRE_MI}
