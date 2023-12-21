@@ -1,4 +1,4 @@
-import styles from "./ProyectosMain.module.css";
+import styles from "./proyectosMain.module.css";
 
 export default function ProyectosMain({ contenido }) {
   const { bloqueUno, bloqueDos, bloqueTres, bloqueCuatro, bloqueCinco } =
