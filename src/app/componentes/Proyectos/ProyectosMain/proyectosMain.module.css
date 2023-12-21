@@ -1,0 +1,13 @@
+.proyectosMainWrapper {
+  padding-block: var(--padding-block-grande);
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  gap: 2rem;
+}
+.h3 {
+  font-size: var(--fs-700);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+}
