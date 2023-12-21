@@ -50,34 +50,35 @@ export default function SubHero({ type, contenido }) {
         <section className={styles.sectionInferior}>
           <div className={`wrapper ${styles.wrapperInferiorTresListas}`}>
             <div>
-              <h2 className={styles.tresListasH2}>Tipo:</h2>
+              <h2 className={styles.tresListasH2}>{tituloInferior[0]}</h2>
               <ul className={styles.tresListasUl}>
-                <li>Web App</li>
-                <li>Diseño responsive</li>
+                {contenidoInferior.colUno.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
             <div>
-              <h2 className={styles.tresListasH2}>Herramientas:</h2>
+              <h2 className={styles.tresListasH2}>{tituloInferior[1]}</h2>
               <ul className={styles.tresListasUl}>
-                <li>CSS & HTML</li>
-                <li>React 18</li>
-                <li>React Router 6</li>
-                <li>Firebase backend</li>
-                <li>Git & GitHub</li>
-                <li>Netlifly</li>
+                {contenidoInferior.colDos.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
             <div>
-              <h2 className={styles.tresListasH2}>En vivo:</h2>
+              <h2 className={styles.tresListasH2}>{tituloInferior[2]}</h2>
               <ul className={styles.tresListasUl}>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://reminders-app-sasa.netlify.app"
-                  >
-                    Visitar
-                  </a>
-                </li>
+                {contenidoInferior.colTres.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      target="_blank"
+                      href={item}
+                    >
+                      Visitar
+                    </a>
+                  </li>
+                ))}
+                <li></li>
               </ul>
             </div>
           </div>
