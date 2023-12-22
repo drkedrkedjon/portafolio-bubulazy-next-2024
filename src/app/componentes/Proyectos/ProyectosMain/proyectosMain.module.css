@@ -1,3 +1,8 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
 .proyectosMainWrapper {
   padding-block: var(--padding-block-grande);
 }
@@ -7,13 +12,28 @@
   font-stretch: var(--f-str-75);
   color: hsl(var(--clr-acento-uno));
 }
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.bloqueTres img,
+.bloqueCinco img {
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
 }
-@media (min-width: 50rem) {
+
+@media (min-width: 55rem) {
   .gridContainer {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .bloqueTres {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+  /* .bloqueTres img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: left;
+  } */
+  .bloqueCinco {
+    align-self: end;
   }
 }

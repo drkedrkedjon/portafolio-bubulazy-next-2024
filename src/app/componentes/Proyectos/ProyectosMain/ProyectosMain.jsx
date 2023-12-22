@@ -22,11 +22,11 @@ export default function ProyectosMain({ contenido }) {
         <div className={`flow ${styles.bloqueTres}`}>
           <picture>
             <source
-              media="(max-width: 49.99rem)"
+              media="(max-width: 54.999rem)"
               srcSet={bloqueTres.imgDos.src}
             />
             <source
-              media="(min-width: 50rem)"
+              media="(min-width: 55rem)"
               srcSet={bloqueTres.imgUno.src}
             />
             <Image
@@ -41,10 +41,12 @@ export default function ProyectosMain({ contenido }) {
             <p key={index}>{item}</p>
           ))}
         </div>
-        <Image
-          src={bloqueCinco.imgUno}
-          alt=""
-        />
+        <div className={styles.bloqueCinco}>
+          <Image
+            src={bloqueCinco.imgUno}
+            alt=""
+          />
+        </div>
       </div>
     </main>
   );
