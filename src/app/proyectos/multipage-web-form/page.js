@@ -2,9 +2,10 @@ import Hero from "@/app/componentes/Hero";
 import SubHero from "@/app/componentes/SubHero";
 import { contenidoDePagina } from "@/app/contenido/multipage-web-form/contenido";
 import ProyectosMain from "@/app/componentes/Proyectos/ProyectosMain";
+import ProyectosAside from "@/app/componentes/Proyectos/ProyectosAside";
 
 export default function Page() {
-  const { hero, subHero, main } = contenidoDePagina;
+  const { hero, subHero, main, aside } = contenidoDePagina;
   return (
     <>
       <Hero
@@ -17,6 +18,7 @@ export default function Page() {
         contenido={subHero}
       />
       <ProyectosMain contenido={main} />
+      <ProyectosAside contenido={aside} />
     </>
   );
 }

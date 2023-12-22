@@ -1,6 +1,8 @@
 import proyectoGrande from "@/app/contenido/multipage-web-form/images/proyecto-primera-grande.png";
 import proyectoPequeno from "@/app/contenido/multipage-web-form/images/proyecto-primera-peque.png";
 import proyectoUltima from "@/app/contenido/multipage-web-form/images/proyecto-ultima.png";
+import problemasLargo from "@/app/contenido/multipage-web-form/images/problemas-largo.png";
+import problemasCorto from "@/app/contenido/multipage-web-form/images/problemas-corto.png";
 
 export const contenidoDePagina = {
   hero: {
@@ -54,6 +56,28 @@ export const contenidoDePagina = {
     },
     bloqueCinco: {
       imgUno: proyectoUltima,
+    },
+  },
+  aside: {
+    bloqueUno: {
+      title: "Problemas y soluciones",
+      contenido: [
+        "Durante todo el proceso de desarrollo, me encontré con una serie de desafíos que surgieron en diversas etapas.",
+        "En numerosas ocasiones, me vi enfrentado a puntos de bloqueo donde el avance parecía detenerse por completo. En esos momentos, tuve que recurrir a estrategias como regresar a commits anteriores para poder comenzar de nuevo desde un punto más sólido.",
+        "Una lección valiosa que extraigo de este proceso continuo de superar obstáculos es la adquisición de un enfoque mental hacia la resolución de problemas.",
+      ],
+    },
+    bloqueDos: {
+      imgUno: problemasLargo,
+      imgDos: problemasCorto,
+    },
+    bloqueTres: {
+      title: "Lecciones aprendidas",
+      contenido: [
+        "Trabajar en equipo. Compartir ideas. Aceptar que el otro tiene la razón. Respetar cuando uno no sabe.",
+        "Buscar soluciones en la web. Conectar puntos claves de documentación para adaptar a necesidades de este proyecto. Tomar decisiones sobre próximos pasos.",
+        "Refactorar y mejorar el código. Escribirlo de una manera que se entienda. Dedicar tiempo para los detalles, especialmente en CSS. Escribir HTML semántico y así mismo accesible para los lectores de pantalla.",
+      ],
     },
   },
 };
