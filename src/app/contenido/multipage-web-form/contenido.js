@@ -1,3 +1,7 @@
+import proyectoGrande from "@/app/contenido/multipage-web-form/images/proyecto-primera-grande.png";
+import proyectoPequeno from "@/app/contenido/multipage-web-form/images/proyecto-primera-peque.png";
+import proyectoUltima from "@/app/contenido/multipage-web-form/images/proyecto-ultima.png";
+
 export const contenidoDePagina = {
   hero: {
     about: "Proyecto:",
@@ -32,8 +36,8 @@ export const contenidoDePagina = {
       ],
     },
     bloqueTres: {
-      imgUno: "",
-      imgDos: "",
+      imgUno: proyectoGrande,
+      imgDos: proyectoPequeno,
     },
     bloqueCuatro: {
       title: "Mi papel en el proyecto",
@@ -49,8 +53,7 @@ export const contenidoDePagina = {
       ],
     },
     bloqueCinco: {
-      imgUno: "",
-      imgDos: "",
+      imgUno: proyectoUltima,
     },
   },
 };

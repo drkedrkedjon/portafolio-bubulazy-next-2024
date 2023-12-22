@@ -1,13 +1,19 @@
 .proyectosMainWrapper {
   padding-block: var(--padding-block-grande);
 }
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
-  gap: 2rem;
-}
 .h3 {
   font-size: var(--fs-700);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
+  color: hsl(var(--clr-acento-uno));
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 50rem) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
