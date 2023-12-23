@@ -1,6 +1,7 @@
 import Hero from "@/app/componentes/Hero";
 import SubHero from "@/app/componentes/SubHero";
 import { contenidoDePagina } from "@/app/contenido/multipage-web-form/contenido";
+import { PROYECTOS } from "@/app/contenido/home-page/proyectos";
 import ProyectosMain from "@/app/componentes/Proyectos/ProyectosMain";
 import ProyectosAside from "@/app/componentes/Proyectos/ProyectosAside";
 import ProyectosOtros from "@/app/componentes/Proyectos/ProyectosOtros";
@@ -20,7 +21,7 @@ export default function Page() {
       />
       <ProyectosMain contenido={main} />
       <ProyectosAside contenido={aside} />
-      <ProyectosOtros />
+      <ProyectosOtros contenido={PROYECTOS} />
     </>
   );
 }
