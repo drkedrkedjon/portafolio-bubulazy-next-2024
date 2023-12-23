@@ -1,0 +1,34 @@
+.asideContainer {
+  background-color: hsl(var(--clr-acento-dos));
+  padding-block: var(--padding-block-grande);
+  color: hsl(var(--clr-base-uno));
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.h3 {
+  font-size: var(--fs-700);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+}
+.bloqueDosImage {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+@media (min-width: 55rem) {
+  .flexContainer {
+    flex-direction: row;
+  }
+  .bloqueUno,
+  .bloqueTres {
+    flex-grow: 1;
+    flex-basis: 0px;
+    padding-top: 5vw;
+  }
+  .bloqueDos {
+    flex-shrink: 0;
+    flex-basis: 10rem;
+  }
+}
