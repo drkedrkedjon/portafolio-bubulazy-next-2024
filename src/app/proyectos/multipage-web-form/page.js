@@ -7,7 +7,7 @@ import ProyectosAside from "@/app/componentes/Proyectos/ProyectosAside";
 import ProyectosOtros from "@/app/componentes/Proyectos/ProyectosOtros";
 
 export default function Page() {
-  const { hero, subHero, main, aside } = contenidoDePagina;
+  const { id, hero, subHero, main, aside } = contenidoDePagina;
   return (
     <>
       <Hero
@@ -21,7 +21,10 @@ export default function Page() {
       />
       <ProyectosMain contenido={main} />
       <ProyectosAside contenido={aside} />
-      <ProyectosOtros contenido={PROYECTOS} />
+      <ProyectosOtros
+        contenido={PROYECTOS}
+        id={id}
+      />
     </>
   );
 }

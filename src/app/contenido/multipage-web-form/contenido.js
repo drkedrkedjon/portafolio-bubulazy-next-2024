@@ -5,6 +5,7 @@ import problemasLargo from "@/app/contenido/multipage-web-form/images/problemas-
 import problemasCorto from "@/app/contenido/multipage-web-form/images/problemas-corto.png";
 
 export const contenidoDePagina = {
+  id: "015",
   hero: {
     about: "Proyecto:",
     title: "Formulario web de varias paginas",
