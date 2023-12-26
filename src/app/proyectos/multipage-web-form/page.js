@@ -5,9 +5,11 @@ import { PROYECTOS } from "@/app/contenido/home-page/proyectos";
 import ProyectosMain from "@/app/componentes/Proyectos/ProyectosMain";
 import ProyectosAside from "@/app/componentes/Proyectos/ProyectosAside";
 import ProyectosOtros from "@/app/componentes/Proyectos/ProyectosOtros";
+import InfoLink from "@/app/componentes/InfoLink";
 
 export default function Page() {
-  const { id, hero, subHero, main, aside } = contenidoDePagina;
+  const { id, hero, subHero, main, aside, infoLink } = contenidoDePagina;
+
   return (
     <>
       <Hero
@@ -24,6 +26,10 @@ export default function Page() {
       <ProyectosOtros
         contenido={PROYECTOS}
         id={id}
+      />
+      <InfoLink
+        contenido={infoLink}
+        type="single-link"
       />
     </>
   );

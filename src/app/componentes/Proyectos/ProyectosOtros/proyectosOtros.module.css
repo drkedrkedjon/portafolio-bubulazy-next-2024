@@ -6,6 +6,7 @@
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
   text-align: center;
+  color: var(--clr-acento-dos);
 }
 .h3 {
   font-size: var(--fs-700);
@@ -21,7 +22,6 @@
 @media (min-width: 50rem) {
   .flexContainer {
     flex-direction: row;
-    justify-content: space-between;
   }
   .flexContainer > * {
     flex-grow: 1;

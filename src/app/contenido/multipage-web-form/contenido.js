@@ -81,4 +81,11 @@ export const contenidoDePagina = {
       ],
     },
   },
+  infoLink: {
+    titulo: "Vamos a trabajar juntos",
+    content:
+      "Si estás buscando a un desarrollador junior con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
+    url: "/contacto",
+    urlText: "Contáctame",
+  },
 };

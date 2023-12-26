@@ -58,7 +58,7 @@ export const PROYECTOS = [
     descripcion:
       "Conexion con la API de OpenAI (3.5-turbo model) para crear un chatbot. Firebase realtime database para backend & Auth. Netlify env. variables para proteger la API key. Netlify functions para conectar con API from OpenAI y obtener las respuestas.",
     imageSrc: listillo,
-    url: "/uikk",
+    url: "https://listillo-openai-api.netlify.app/",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -67,7 +67,7 @@ export const PROYECTOS = [
     descripcion:
       "Uno de mis primeros proyectos en JavaScript, aprendiendo a manipular DOM, insertando CSS desde JS, usando modus operator, etc... Necesitarás el teclado por lo que deberías hacerlo desde un ordenador.",
     imageSrc: pacMan,
-    url: "/uikk",
+    url: "https://drkedrkedjon.github.io/juego-pac-man/",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
 ];
