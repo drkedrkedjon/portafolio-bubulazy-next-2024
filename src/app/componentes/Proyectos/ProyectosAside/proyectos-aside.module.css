@@ -6,7 +6,7 @@
 .flexContainer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--gap-grande);
 }
 .h3 {
   font-size: var(--fs-700);

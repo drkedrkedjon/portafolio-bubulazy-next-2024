@@ -1,7 +1,7 @@
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  gap: var(--gap-grande);
 }
 .proyectosMainWrapper {
   padding-block: var(--padding-block-grande);

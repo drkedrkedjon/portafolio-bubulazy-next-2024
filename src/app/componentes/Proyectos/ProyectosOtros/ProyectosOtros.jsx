@@ -1,4 +1,6 @@
 import Card from "@/app/componentes/Card";
+import styles from "./proyectosOtros.module.css";
+import Link from "next/link";
 
 export default function Otros({ contenido, id }) {
   let firstProyectID = "";
@@ -8,12 +10,11 @@ export default function Otros({ contenido, id }) {
     const randomNum = Math.floor(Math.random() * contenido.length);
 
     // Si el proyecto A es el mismo que el que se está mostrando, se vuelve a generar un número aleatorio
-    if (contenido[randomNum].id === id) {
-      i--;
-      continue;
-    }
     // Si el proyecto A es el mismo que el proyecto B, se vuelve a generar un número aleatorio
-    if (firstProyectID === contenido[randomNum].id) {
+    if (
+      contenido[randomNum].id === id ||
+      firstProyectID === contenido[randomNum].id
+    ) {
       i--;
       continue;
     }
@@ -23,7 +24,7 @@ export default function Otros({ contenido, id }) {
       continue;
     }
     // Se guarda el id del segundo proyecto
-    const secondProyectID = contenido[randomNum].id;
+    secondProyectID = contenido[randomNum].id;
   }
 
   const firstProyect = contenido.find(
@@ -34,8 +35,22 @@ export default function Otros({ contenido, id }) {
   );
 
   return (
-    <div>
-      <h1>Proyectos Otros</h1>
-    </div>
+    <aside>
+      <div className={`wrapper flow ${styles.container}`}>
+        <h2 className={styles.h2}>Otros Proyectos</h2>
+        <div className={styles.flexContainer}>
+          <div className="flow">
+            <h3 className={styles.h3}>{firstProyect.titulo}</h3>
+            <p>{firstProyect.descripcion}</p>
+            <Link href={firstProyect.url}>{firstProyect.linkText}</Link>
+          </div>
+          <div className="flow">
+            <h3 className={styles.h3}>{secondProyect.titulo}</h3>
+            <p>{secondProyect.descripcion}</p>
+            <Link href={secondProyect.url}>{secondProyect.linkText}</Link>
+          </div>
+        </div>
+      </div>
+    </aside>
   );
 }

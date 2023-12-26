@@ -1,0 +1,30 @@
+.container {
+  padding-block: var(--padding-block-grande);
+}
+.h2 {
+  font-size: var(--fs-800);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+  text-align: center;
+}
+.h3 {
+  font-size: var(--fs-700);
+  font-weight: var(--f-wei-600);
+  font-stretch: var(--f-str-75);
+  color: hsl(var(--clr-acento-uno));
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-grande);
+}
+@media (min-width: 50rem) {
+  .flexContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .flexContainer > * {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
