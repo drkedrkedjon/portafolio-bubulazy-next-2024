@@ -38,27 +38,51 @@ export default function Header() {
   useEffect(() => {
     const root = document.querySelector(":root");
     if (darkMode) {
+      /* Color negro */
+      root.style.setProperty("--clr-base-uno", "0 0% 15%");
+      /* Color blanco */
+      root.style.setProperty("--clr-base-dos", "0 0% 90%");
+      /* Naranja clarita */
       root.style.setProperty("--clr-uno", "7 79% 67%");
+      /* Amarillo oscurito */
+      root.style.setProperty("--clr-dos", "45 82% 70%");
+      /* Amarillo clarito */
+      root.style.setProperty("--clr-acento-uno", "53 72% 80%");
+      /* Verde clarito */
+      root.style.setProperty("--clr-acento-dos", "130 37% 75%");
     } else {
-      root.style.setProperty("--clr-uno", "45 82% 70%");
+      /* Color negro */
+      root.style.setProperty("--clr-base-uno", "0 0% 90%");
+      /* Color blanco */
+      root.style.setProperty("--clr-base-dos", "0 0% 15%");
+      /* Naranja clarita */
+      root.style.setProperty("--clr-uno", "7 79% 67%");
+      /* Amarillo oscurito */
+      root.style.setProperty("--clr-dos", "230, 33%, 15%");
+      /* Amarillo clarito */
+      root.style.setProperty("--clr-acento-uno", "45, 100%, 48%");
+      /* Verde clarito */
+      root.style.setProperty("--clr-acento-dos", "200, 15%, 43%");
     }
   }, [darkMode, togleDarkMode]);
 
   return (
     <header className={styles.header}>
       <div className={` ${styles.container}`}>
-        <video
-          className={styles.memojiVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source
-            src="/sasa-memoji-video.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <Link href={"/"}>
+          <video
+            className={styles.memojiVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src="/sasa-memoji-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </Link>
         <div className={styles.navContainer}>
           <ul
             onMouseLeave={() => setHoveredDesktopLink(null)}
@@ -108,9 +132,9 @@ export default function Header() {
                 <Moon className={styles.iconSvg} />
               )}
             </button>
-            <Link href={"/rss.xml"}>
+            {/* <Link href={"/rss.xml"}>
               <Rss className={styles.iconSvg} />
-            </Link>
+            </Link> */}
           </div>
 
           {/* Navegacion */}
