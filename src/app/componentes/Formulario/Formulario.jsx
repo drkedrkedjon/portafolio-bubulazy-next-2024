@@ -3,7 +3,10 @@ import styles from "./Formulario.module.css";
 
 export default function Formulario() {
   return (
-    <section className={styles.container}>
+    <section
+      id="contact-form"
+      className={styles.container}
+    >
       <div className={`wrapper ${styles.formulario}`}>
         <div className={`flow ${styles.contenido}`}>
           <h2>Vamos a ver sí juntos podemos hacer que funcione...</h2>

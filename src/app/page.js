@@ -24,7 +24,10 @@ export default function Home() {
         type="doble-una-lista"
         contenido={SOBRE_MI}
       />
-      <HomeProyects contenido={PROYECTOS} />
+      <HomeProyects
+        contenido={PROYECTOS}
+        type="reduced"
+      />
       <Formulario />
     </main>
   );
