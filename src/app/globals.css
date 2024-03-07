@@ -253,6 +253,10 @@ a {
 a:where(:hover, :focus) {
   opacity: 0.8;
 }
+.bold-text {
+  font-weight: var(--f-wei-600);
+}
+
 button {
   cursor: pointer;
 }

@@ -60,7 +60,7 @@ export default function Header() {
       /* Amarillo oscurito */
       root.style.setProperty("--clr-dos", "230, 33%, 15%");
       /* Amarillo clarito */
-      root.style.setProperty("--clr-acento-uno", "45, 100%, 48%");
+      root.style.setProperty("--clr-acento-uno", "322, 91%, 23%");
       /* Verde clarito */
       root.style.setProperty("--clr-acento-dos", "200, 15%, 43%");
     }

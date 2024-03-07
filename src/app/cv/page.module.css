@@ -1,0 +1,43 @@
+.containerQuery {
+  container-type: inline-size;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.flexContainer > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+}
+
+@container (min-width: 35rem) {
+  .flexContainer {
+    flex-direction: row;
+  }
+}
+
+.h2 {
+  font-size: var(--fs-900);
+  font-weight: var(--f-wei-600);
+  line-height: var(--lh-small);
+  font-stretch: var(--f-str-75);
+}
+.h3 {
+  font-size: var(--fs-600);
+  font-weight: var(--f-wei-600);
+  line-height: var(--lh-small);
+  font-stretch: var(--f-str-75);
+}
+.jobDetails {
+  background-color: hsl(var(--clr-base-dos) / 0.2);
+  padding: var(--padding);
+}
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}

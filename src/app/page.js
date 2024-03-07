@@ -16,7 +16,7 @@ export default function Home() {
         image={sasaMemoji}
         about="Proyecto:"
         title="Hola, soy Sasha desarrollador FrontEnd y algo más..."
-        alt={"Mi Memoji, frente de un ordenador"}
+        alt="Mi Memoji, frente de un ordenador"
       />
 
       {/* type: single, single-link, doble-una-lista, doble-tres-listas, */}
