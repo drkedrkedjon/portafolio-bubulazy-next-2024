@@ -31,8 +31,8 @@ export default function CvPage() {
       </section>
 
       <section className={`wrapper ${styles.containerQuery}`}>
-        <div className={styles.flexContainer}>
-          <h2 className={`${styles.h2} ${styles.right}`}>Experencia laboral</h2>
+        <div className={`${styles.flexContainer} ${styles.regularCard}`}>
+          <h2 className={styles.h2}>Experencia laboral</h2>
           <div className={styles.jobDetails}>
             <h3 className={styles.h3}>Clinica Dental Blancodent</h3>
             <p>Freelance | 2021 - Actualidad</p>
@@ -41,18 +41,8 @@ export default function CvPage() {
         </div>
       </section>
       <section className={`wrapper ${styles.containerQuery}`}>
-        <div className={styles.flexContainer}>
-          <div className={styles.jobDetails}>
-            <h3 className={styles.h3}>Clinica Dental Blancodent</h3>
-            <p>Freelance | 2021 - Actualidad</p>
-            <p>Desarrollo de la pagina web con HTML y CSS</p>
-          </div>
-          <h2 className={`${styles.h2} ${styles.left}`}>Experencia laboral</h2>
-        </div>
-      </section>
-      <section className={`wrapper ${styles.containerQuery}`}>
-        <div className={styles.flexContainer}>
-          <h2 className={`${styles.h2} ${styles.right}`}>Experencia laboral</h2>
+        <div className={`${styles.flexContainer} ${styles.invertedCard}`}>
+          <h2 className={styles.h2}>Experencia laboral</h2>
           <div className={styles.jobDetails}>
             <h3 className={styles.h3}>Clinica Dental Blancodent</h3>
             <p>Freelance | 2021 - Actualidad</p>

@@ -16,6 +16,16 @@
   .flexContainer {
     flex-direction: row;
   }
+  .regularCard h2 {
+    text-align: right;
+  }
+  .invertedCard .jobDetails {
+    text-align: right;
+  }
+
+  .invertedCard {
+    flex-direction: row-reverse;
+  }
 }
 
 .h2 {
@@ -31,13 +41,6 @@
   font-stretch: var(--f-str-75);
 }
 .jobDetails {
-  background-color: hsl(var(--clr-base-dos) / 0.2);
+  background-color: hsl(var(--clr-base-dos) / 0.1);
   padding: var(--padding);
-}
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
 }
