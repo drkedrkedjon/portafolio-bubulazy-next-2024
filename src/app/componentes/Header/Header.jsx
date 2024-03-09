@@ -39,30 +39,30 @@ export default function Header() {
     const root = document.querySelector(":root");
     if (darkMode) {
       /* Color negro */
-      root.style.setProperty("--clr-base-uno", "0 0% 15%");
+      root.style.setProperty("--clr-fondo", "0 0% 15%");
       /* Color blanco */
-      root.style.setProperty("--clr-base-dos", "0 0% 90%");
+      root.style.setProperty("--clr-texto", "0 0% 90%");
       /* Naranja clarita */
-      root.style.setProperty("--clr-uno", "7 79% 67%");
+      root.style.setProperty("--clr-acentado", "7 79% 67%");
       /* Amarillo oscurito */
-      root.style.setProperty("--clr-dos", "45 82% 70%");
+      root.style.setProperty("--clr-secundario", "45 82% 70%");
       /* Amarillo clarito */
       root.style.setProperty("--clr-acento-uno", "53 72% 80%");
       /* Verde clarito */
-      root.style.setProperty("--clr-acento-dos", "130 37% 75%");
+      root.style.setProperty("--clr-primario", "130 37% 75%");
     } else {
       /* Color negro */
-      root.style.setProperty("--clr-base-uno", "0 0% 90%");
+      root.style.setProperty("--clr-fondo", "0 0% 90%");
       /* Color blanco */
-      root.style.setProperty("--clr-base-dos", "0 0% 15%");
+      root.style.setProperty("--clr-texto", "0 0% 15%");
       /* Naranja clarita */
-      root.style.setProperty("--clr-uno", "7 79% 67%");
+      root.style.setProperty("--clr-acentado", "7 79% 67%");
       /* Amarillo oscurito */
-      root.style.setProperty("--clr-dos", "230, 33%, 15%");
+      root.style.setProperty("--clr-secundario", "230, 33%, 15%");
       /* Amarillo clarito */
       root.style.setProperty("--clr-acento-uno", "322, 91%, 23%");
       /* Verde clarito */
-      root.style.setProperty("--clr-acento-dos", "200, 15%, 43%");
+      root.style.setProperty("--clr-primario", "200, 15%, 43%");
     }
   }, [darkMode, togleDarkMode]);
 

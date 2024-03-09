@@ -6,7 +6,7 @@
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
   text-align: center;
-  color: var(--clr-acento-dos);
+  color: var(--clr-primario);
 }
 .h3 {
   font-size: var(--fs-700);

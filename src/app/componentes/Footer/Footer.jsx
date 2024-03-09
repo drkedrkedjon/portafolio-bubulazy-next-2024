@@ -42,18 +42,27 @@ export default function Footer() {
             <li>
               <Link
                 rel="me"
+                target="_blank"
                 href={"https://mastodon.social/@Drkedrkedjon"}
               >
                 Mastodon
               </Link>
             </li>
             <li>
-              <Link href={"https://www.linkedin.com/in/sasa-savic-perusina/"}>
+              <Link
+                target="_blank"
+                href={"https://www.linkedin.com/in/sasa-savic-perusina/"}
+              >
                 LinkedIn
               </Link>
             </li>
             <li>
-              <Link href={"https://github.com/drkedrkedjon"}>GitHub</Link>
+              <Link
+                target="_blank"
+                href={"https://github.com/drkedrkedjon"}
+              >
+                GitHub
+              </Link>
             </li>
           </ul>
           <p>

@@ -34,7 +34,7 @@
   font-weight: var(--f-wei-600);
   line-height: var(--lh-small);
   font-stretch: var(--f-str-75);
-  /* text-shadow: 5px 5px 0rem hsl(var(--clr-acento-dos) / 0.5); */
+  /* text-shadow: 5px 5px 0rem hsl(var(--clr-primario) / 0.5); */
 }
 .h3 {
   font-size: var(--fs-600);
@@ -43,6 +43,6 @@
   font-stretch: var(--f-str-75);
 }
 .jobDetails {
-  background-color: hsl(var(--clr-base-dos) / 0.1);
+  background-color: hsl(var(--clr-texto) / 0.1);
   padding: var(--padding);
 }

@@ -6,7 +6,7 @@
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   overflow: hidden;
-  background-color: hsl(var(--clr-dos));
+  background-color: hsl(var(--clr-secundario));
 }
 .card {
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .cardContent {
-  color: hsl(var(--clr-base-uno));
+  color: hsl(var(--clr-fondo));
   padding: var(--padding);
 }
 .cardContent h3 {
@@ -42,7 +42,7 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 14rem;
-  background-color: hsl(var(--clr-uno) / 0.3);
+  background-color: hsl(var(--clr-acentado) / 0.3);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }

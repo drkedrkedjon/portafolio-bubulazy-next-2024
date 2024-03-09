@@ -1,7 +1,7 @@
 .asideContainer {
-  background-color: hsl(var(--clr-acento-dos));
+  background-color: hsl(var(--clr-primario));
   padding-block: var(--padding-block-grande);
-  color: hsl(var(--clr-base-uno));
+  color: hsl(var(--clr-fondo));
 }
 .flexContainer {
   display: flex;

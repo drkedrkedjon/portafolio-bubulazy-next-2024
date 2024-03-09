@@ -13,13 +13,13 @@
   flex-shrink: 0;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border: 10px solid hsla(var(--clr-dos));
+  border: 10px solid hsla(var(--clr-secundario));
   border-radius: 50%;
-  background-color: hsla(var(--clr-uno));
+  background-color: hsla(var(--clr-acentado));
 }
 .h1 {
   font-size: var(--fs-hero);
-  color: hsla(var(--clr-dos));
+  color: hsla(var(--clr-secundario));
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
 }
@@ -30,7 +30,7 @@
 .about {
   display: block;
   font-size: var(--fs-800);
-  color: hsla(var(--clr-acento-dos));
+  color: hsla(var(--clr-primario));
 }
 
 @media (min-width: 43rem) {

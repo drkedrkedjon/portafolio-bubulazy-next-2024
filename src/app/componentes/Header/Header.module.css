@@ -1,6 +1,6 @@
 .header {
-  background-color: hsl(var(--clr-uno));
-  color: hsl(var(--clr-base-uno));
+  background-color: hsl(var(--clr-acentado));
+  color: hsl(var(--clr-fondo));
 }
 .container {
   display: flex;
@@ -20,7 +20,7 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 2px solid hsl(var(--clr-dos));
+  border: 2px solid hsl(var(--clr-secundario));
 }
 
 .navContainer {
@@ -52,7 +52,7 @@
 .hoveredFondo {
   position: absolute;
   inset: 0;
-  background-color: hsl(var(--clr-base-uno) / 0.2);
+  background-color: hsl(var(--clr-fondo) / 0.2);
   border-radius: var(--border-radius);
   z-index: -1;
 }
@@ -72,7 +72,7 @@
   place-items: center;
 }
 .iconSvg {
-  color: hsl(var(--clr-base-uno));
+  color: hsl(var(--clr-fondo));
   stroke-width: 3px;
 }
 .menuButton {
