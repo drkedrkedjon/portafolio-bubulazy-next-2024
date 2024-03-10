@@ -43,7 +43,7 @@ export const contenidoDePagina = {
       imgDos: proyectoPequeno,
     },
     bloqueCuatro: {
-      title: "Mi papel en el proyecto",
+      title: "Web stack y la explicación",
       contenido: [
         "Lugar de trabajo: Visual Studio Code. Utilicé Vite como entorno de desarrollo rápido junto con EsLint y Prettier para mantener un código limpio y consistente.",
         "Figma: Utilicé Figma para diseñar y crear interfaces de usuario atractivas, centrándome en la experiencia del usuario y la interfaz de usuario.",

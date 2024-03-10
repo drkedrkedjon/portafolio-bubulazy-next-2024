@@ -31,7 +31,7 @@ export const PROYECTOS = [
     descripcion:
       "Inspirado por app de Recordatorios de iOS. Uso de las siguientes tehnologias: React, React Router, Firebase Realtime DB, Auth y Storage. Funcionalidad basica implementada, se iran implementando varias ideas sobre como mejorar la funcionalidad",
     imageSrc: recordatorios,
-    url: "/werwer",
+    url: "/proyectos/recordatorios",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -40,7 +40,7 @@ export const PROYECTOS = [
     descripcion:
       "Proyecto de una tienda online ficticia. Hecha con React, React Router + Firebase Firestore y Auth como backend. Diseño propio con Figma. Uso de: Flexbox, Grid, Container Query, Nested Routes, Relative Path, Query parameters, Stateful Forms, useEffect, useState, createContext, useRef, y etc...",
     imageSrc: sarajevoTours,
-    url: "/ghjghjgh",
+    url: "/proyectos/sarajevo-tours",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
