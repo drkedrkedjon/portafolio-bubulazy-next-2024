@@ -125,9 +125,9 @@ meter {
   --clr-secundario: 45 82% 70%; /* Amarillo oscurito */
   --clr-acentado: 7 79% 67%; /* Naranja clarita */
   --clr-texto: 0 0% 90%;
-  --clr-fondo: 0 0% 15%;
-  --clr-negro: 0 0% 15%;
-  --clr-blanco: 0 0% 90%;
+  --clr-fondo: 0 0% 13%;
+  --clr-negro: 0 0% 13%;
+  --clr-blanco: 180 14% 97%;
 
   /* Formatos de letras */
   --fs-hero: clamp(3.052rem, 6vw, 4.5rem);
@@ -228,7 +228,6 @@ a {
   text-decoration-thickness: 2px;
 }
 a:where(:hover, :focus) {
-  /* opacity: 0.8; */
   text-decoration-thickness: 4px;
 }
 .bold-text {
@@ -242,7 +241,7 @@ button {
   display: block;
   background-color: hsl(var(--clr-primario));
   align-self: center;
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
   text-decoration: none;
   padding: 0.8rem 2rem;
   border-radius: var(--border-radius);
@@ -250,7 +249,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 .link-btn:hover {
-  background-color: hsl(var(--clr-primario) / 0.4);
+  box-shadow: var(--box-shadow);
   color: hsl(var(--clr-texto));
-  scale: 1.05;
+  scale: 1.03;
 }

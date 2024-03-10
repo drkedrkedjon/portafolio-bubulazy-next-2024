@@ -1,15 +1,15 @@
 .sectionSuperior {
   background-color: hsl(var(--clr-primario));
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
 }
 .sectionInferior {
   background-color: hsl(var(--clr-primario));
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
 }
 
 .wrapperSuperior {
   padding-block-start: var(--padding-block-grande);
-  border-block-end: 2px solid hsl(var(--clr-fondo));
+  border-block-end: 2px solid hsl(var(--clr-texto));
   display: flex;
   flex-direction: column;
   gap: var(--gap-base);

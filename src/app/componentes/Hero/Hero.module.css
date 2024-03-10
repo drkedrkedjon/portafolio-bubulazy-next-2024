@@ -19,7 +19,7 @@
 }
 .h1 {
   font-size: var(--fs-hero);
-  color: hsla(var(--clr-secundario));
+  color: hsla(var(--clr-texto));
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
 }

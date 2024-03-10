@@ -10,7 +10,7 @@
   font-size: var(--fs-700);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
-  color: hsl(var(--clr-acento-uno));
+  color: hsl(var(--clr-texto));
 }
 .bloqueTres img,
 .bloqueCinco img {

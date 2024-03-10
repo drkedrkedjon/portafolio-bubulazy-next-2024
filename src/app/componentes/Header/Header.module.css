@@ -1,6 +1,6 @@
 .header {
   background-color: hsl(var(--clr-acentado));
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
 }
 .container {
   display: flex;
@@ -10,17 +10,13 @@
   width: min(100% - 8vw, var(--container-max, 62rem));
   margin-inline: auto;
 }
-/* .logo {
-  font-size: var(--fs-600);
-  font-weight: var(--f-wei-600);
-  text-decoration: none;
-} */
+
 .memojiVideo {
   margin-block: clamp(0.6rem, 3vw, 1.2rem);
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 2px solid hsl(var(--clr-secundario));
+  border: 2px solid hsl(var(--clr-blanco));
 }
 
 .navContainer {
@@ -52,7 +48,7 @@
 .hoveredFondo {
   position: absolute;
   inset: 0;
-  background-color: hsl(var(--clr-fondo) / 0.2);
+  background-color: hsl(var(--clr-fondo) / 0.3);
   border-radius: var(--border-radius);
   z-index: -1;
 }
@@ -72,7 +68,7 @@
   place-items: center;
 }
 .iconSvg {
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
   stroke-width: 3px;
 }
 .menuButton {

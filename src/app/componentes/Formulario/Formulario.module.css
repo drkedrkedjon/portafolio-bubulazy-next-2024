@@ -1,6 +1,6 @@
 .container {
   background-color: hsl(var(--clr-primario));
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
   padding-block: var(--padding-block-grande);
 }
 .formulario {
@@ -22,14 +22,14 @@
   display: flex;
   flex-direction: column;
   /* gap: var(--gap-base); */
-  background-color: hsl(var(--clr-acentado));
+  background-color: hsl(var(--clr-secundario));
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: var(--padding-block);
 }
 .input {
   margin-bottom: var(--gap-base);
-  background-color: hsl(var(--clr-texto));
+  background-color: hsl(var(--clr-blanco));
   border-radius: 0.3rem;
   font-size: var(--fs-400);
   padding: 0.5rem 0.8em;
@@ -44,11 +44,17 @@
 }
 .button {
   text-align: center;
-  background-color: hsl(var(--clr-secundario));
+  background-color: hsl(var(--clr-acentado));
   padding: 0.8rem;
   margin-top: 1rem;
   font-weight: var(--f-wei-900);
   border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  scale: 1.03;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
 }
 
 @media (min-width: 50rem) {

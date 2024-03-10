@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import Hero from "./componentes/Hero";
 import sasaMemoji from "@/app/assets/images/generales/sasa-memoji.png";
 import SubHero from "./componentes/SubHero";

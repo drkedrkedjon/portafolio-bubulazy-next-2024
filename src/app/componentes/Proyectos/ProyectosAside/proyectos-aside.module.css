@@ -1,7 +1,7 @@
 .asideContainer {
   background-color: hsl(var(--clr-primario));
   padding-block: var(--padding-block-grande);
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
 }
 .flexContainer {
   display: flex;
