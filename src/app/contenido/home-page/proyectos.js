@@ -13,7 +13,7 @@ export const PROYECTOS = [
     descripcion:
       "Este proyecto es una aplicación web que ha sido desarollada y diseñada utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y Figma. El objetivo principal de este proyecto es mostrar mis habilidades de desarrollo web y diseño de interfaces de usuario.",
     imageSrc: bubulazyPortafolio,
-    url: "/pdsds",
+    url: "/proyectos/portafolio",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -49,7 +49,7 @@ export const PROYECTOS = [
     descripcion:
       "Web de una clínica dental (cliente comercial) diseño + UX/UI utilizando Figma. Un nuevo codigo de CSS, HTML y un poco de JS. La web original estaba en Squarespace y la hemos transferido a Netlify. En la próxima fase se pasará a utilizar NEXT.js y React.js manteniendo el diseño original.",
     imageSrc: blancodent,
-    url: "/erxdgv",
+    url: "/proyectos/clinica-dental-blancodent",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {
@@ -59,7 +59,7 @@ export const PROYECTOS = [
       "Conexion con la API de OpenAI (3.5-turbo model) para crear un chatbot. Firebase realtime database para backend & Auth. Netlify env. variables para proteger la API key. Netlify functions para conectar con API from OpenAI y obtener las respuestas.",
     imageSrc: listillo,
     url: "https://listillo-openai-api.netlify.app/",
-    linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
+    linkText: "Enlace a la app =>",
   },
   {
     id: "010",
@@ -68,6 +68,6 @@ export const PROYECTOS = [
       "Uno de mis primeros proyectos en JavaScript, aprendiendo a manipular DOM, insertando CSS desde JS, usando modus operator, etc... Necesitarás el teclado por lo que deberías hacerlo desde un ordenador.",
     imageSrc: pacMan,
     url: "https://drkedrkedjon.github.io/juego-pac-man/",
-    linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
+    linkText: "Enlace a la página del juego =>",
   },
 ];

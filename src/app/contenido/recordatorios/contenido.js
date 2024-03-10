@@ -5,7 +5,7 @@ import asideDesktop from "@/app/contenido/recordatorios/images/problemas-largo.p
 import asideMovil from "@/app/contenido/recordatorios/images/problemas-corto.png";
 
 export const contenidoDePagina = {
-  id: "015",
+  id: "014",
   hero: {
     about: "Proyecto:",
     title: "App de Recordatorios para moviles",

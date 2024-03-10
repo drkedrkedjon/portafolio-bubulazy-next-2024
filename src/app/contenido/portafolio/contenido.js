@@ -5,7 +5,7 @@ import asideDesktop from "@/app/contenido/sarajevo-tours/images/problemas-largo.
 import asideMovil from "@/app/contenido/sarajevo-tours/images/problemas-corto.png";
 
 export const contenidoDePagina = {
-  id: "013",
+  id: "016",
   hero: {
     about: "Proyecto:",
     title: "Sarajevo Tours, App con React y Firebase",
