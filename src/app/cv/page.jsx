@@ -54,7 +54,7 @@ export default function CvPage() {
                 Git, GitHub, Accesibilidad Web y Agile{" "}
               </p>
             </div>
-            <div>
+            <div className={styles.cvLinks}>
               <h3 className={styles.h3}>Datos de contacto:</h3>
               <p>
                 <Link href="/#contact-form">Formulario de contacto</Link>

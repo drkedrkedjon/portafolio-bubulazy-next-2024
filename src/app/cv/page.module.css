@@ -34,7 +34,6 @@
   font-weight: var(--f-wei-600);
   line-height: var(--lh-small);
   font-stretch: var(--f-str-75);
-  /* text-shadow: 5px 5px 0rem hsl(var(--clr-primario) / 0.5); */
 }
 .h3 {
   font-size: var(--fs-600);
@@ -45,4 +44,8 @@
 .jobDetails {
   background-color: hsl(var(--clr-texto) / 0.1);
   padding: var(--padding);
+  box-shadow: var(--box-shadow);
+}
+.cvLinks p:not(:last-child) {
+  margin-bottom: 0.2rem;
 }

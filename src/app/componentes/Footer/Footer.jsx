@@ -12,7 +12,7 @@ export default function Footer() {
       <div className={`wrapper ${styles.container}`}>
         <div className={styles.left}>
           <div className="flow">
-            <h4 className={styles.h4}>Menú</h4>
+            <h3 className={styles.h3}>Menú</h3>
             <ul className="flow">
               {HAMBURGER_LINKS.map((link) => (
                 <li key={link.slug}>
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         <div className={styles.center}>
           <div className={`flow ${styles.innerCenter}`}>
-            <h4 className={styles.h4}>Bubulazy.com</h4>
+            <h3 className={styles.h3}>Bubulazy.com</h3>
             <Image
               className={styles.memoji}
               src={memoji}
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={`flow ${styles.right}`}>
-          <h4 className={styles.h4}>Social</h4>
+          <h3 className={styles.h3}>Social</h3>
           <ul className="flow">
             <li>
               <Link

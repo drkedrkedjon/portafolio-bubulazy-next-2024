@@ -118,16 +118,39 @@ meter {
 /*      Variables            */
 /* ************************* */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-primario: 130 37% 75%;
+    --clr-secundario: 45 82% 70%;
+    --clr-acentado: 7 79% 67%;
+    --clr-texto: 0 0% 90%;
+    --clr-fondo: 0 0% 15%;
+    --clr-negro: 0 0% 13%;
+    --clr-blanco: 180 14% 97%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-primario: 197, 100%, 69%;
+    --clr-secundario: 171, 25%, 80%;
+    --clr-acentado: 181 54% 66%;
+    --clr-texto: 0 0% 15%;
+    --clr-fondo: 180 14% 97%;
+    --clr-negro: 0 0% 13%;
+    --clr-blanco: 180 14% 97%;
+  }
+}
+
 :root {
   /* Colores */
 
-  --clr-primario: 130 37% 75%; /* Verde clarito */
-  --clr-secundario: 45 82% 70%; /* Amarillo oscurito */
-  --clr-acentado: 7 79% 67%; /* Naranja clarita */
+  /* --clr-primario: 130 37% 75%;
+  --clr-secundario: 45 82% 70%;
+  --clr-acentado: 7 79% 67%;
   --clr-texto: 0 0% 90%;
   --clr-fondo: 0 0% 13%;
   --clr-negro: 0 0% 13%;
-  --clr-blanco: 180 14% 97%;
+  --clr-blanco: 180 14% 97%; */
 
   /* Formatos de letras */
   --fs-hero: clamp(3.052rem, 6vw, 4.5rem);
@@ -159,23 +182,13 @@ meter {
   --margin-texto: 1em;
   --border-radius: 0.4em;
   --box-shadow: 10px 10px 0px 0 hsl(var(--clr-texto) / 0.4);
+  --text-shadow: 5px 5px 0rem hsl(var(--clr-texto) / 0.2);
   --container-max: 65rem;
   --gap-base: 1rem;
   --gap-grande: 4rem;
 
   font-size: 112%;
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --clr-fondo: 0 0% 15%;
-    --clr-acentado: 45 82% 70%;
-    --clr-secundario: 45 82% 70%;
-    --clr-acento-uno: 53 72% 80%;
-    --clr-primario: 130 37% 75%;
-    --clr-texto: 0 0% 90%;
-  }
-} */
 
 /* **************************/
 /* Clases utiles */

@@ -55,7 +55,7 @@ export default function HomeProyects({ contenido, type }) {
             about="Mis proyectos personales."
             title="Todos los proyectos."
           />
-          {/* <h2 className={styles.h2}>Últimos proyectos</h2> */}
+          <h2 className={styles.h2}>Últimos proyectos</h2>
           <div className={styles.cardsContainer}>
             {ultimosProyectos.map((proyecto) => (
               <Card
@@ -65,7 +65,7 @@ export default function HomeProyects({ contenido, type }) {
               />
             ))}
           </div>
-          {/* <h2 className={styles.h2}>Otros proyectos</h2> */}
+          <h2 className={styles.h2}>Otros proyectos</h2>
           <div className={styles.cardsSinImagen}>
             {otrosProyectos.map((proyecto) => (
               <Card

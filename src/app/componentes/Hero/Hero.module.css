@@ -30,7 +30,7 @@
 .about {
   display: block;
   font-size: var(--fs-800);
-  color: hsla(var(--clr-primario));
+  color: hsla(var(--clr-texto));
 }
 
 @media (min-width: 43rem) {

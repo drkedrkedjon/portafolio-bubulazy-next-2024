@@ -16,24 +16,25 @@ import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
-  const [darkMode, togleDarkMode] = useToggle(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const pathname = usePathname();
   const id = useId();
 
-  // Por hacer lo de modo dark
-  // useEffect(() => {
-  //   if (
-  //     window.matchMedia &&
-  //     window.matchMedia("(prefers-color-scheme: light)").matches
-  //   ) {
-  //     togleDarkMode();
-  //     console.log("sasa");
-  //   }
-  // }, []);
-
-  // console.log(window.matchMedia("(prefers-color-scheme: light)").matches);
-  // console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+  // Dark mode stuff
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true);
+    } else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      setDarkMode(false);
+    }
+  }, []);
 
   useEffect(() => {
     const root = document.querySelector(":root");
@@ -50,12 +51,15 @@ export default function Header() {
       root.style.setProperty("--clr-texto", "0 0% 15%");
       root.style.setProperty("--clr-fondo", "180 14% 97%");
     }
-  }, [darkMode, togleDarkMode]);
+  }, [darkMode, setDarkMode]);
 
   return (
     <header className={styles.header}>
       <div className={` ${styles.container}`}>
-        <Link href={"/"}>
+        <Link
+          aria-label="Logo, una animación de memoji sonriendo"
+          href={"/"}
+        >
           <video
             className={styles.memojiVideo}
             autoPlay
@@ -111,7 +115,11 @@ export default function Header() {
           {/* Greupo de botones de color y rss */}
 
           <div className={styles.icons}>
-            <button onClick={togleDarkMode}>
+            <button
+              id="toggle-color-mode"
+              aria-label="toggle-color-mode"
+              onClick={() => setDarkMode((darkMode) => !darkMode)}
+            >
               {darkMode ? (
                 <Sun className={styles.iconSvg} />
               ) : (
