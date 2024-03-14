@@ -39,17 +39,17 @@ export default function Header() {
   useEffect(() => {
     const root = document.querySelector(":root");
     if (darkMode) {
-      root.style.setProperty("--clr-primario", "130 37% 75%");
-      root.style.setProperty("--clr-secundario", "45 82% 70%");
-      root.style.setProperty("--clr-acentado", "7 79% 67%");
+      root.style.setProperty("--clr-primario", "198, 37%, 15%");
+      root.style.setProperty("--clr-secundario", "198, 31%, 12%");
+      root.style.setProperty("--clr-acentado", "199, 44%, 17%");
       root.style.setProperty("--clr-texto", "0 0% 90%");
-      root.style.setProperty("--clr-fondo", "0 0% 15%");
+      root.style.setProperty("--clr-fondo", "198, 25%, 10%");
     } else {
-      root.style.setProperty("--clr-primario", "197, 100%, 69%");
-      root.style.setProperty("--clr-secundario", "171, 25%, 80%");
-      root.style.setProperty("--clr-acentado", "181 54% 66%");
-      root.style.setProperty("--clr-texto", "0 0% 15%");
-      root.style.setProperty("--clr-fondo", "180 14% 97%");
+      root.style.setProperty("--clr-primario", "0, 0%, 90%");
+      root.style.setProperty("--clr-secundario", "0, 0%, 80%");
+      root.style.setProperty("--clr-acentado", "0, 0%, 75%");
+      root.style.setProperty("--clr-texto", "0 0% 10%");
+      root.style.setProperty("--clr-fondo", "0, 0%, 95");
     }
   }, [darkMode, setDarkMode]);
 
