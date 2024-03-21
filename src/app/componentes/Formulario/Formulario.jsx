@@ -91,7 +91,6 @@ export default function Formulario() {
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className={styles.input}
-            required={true}
             type="text"
             id="email"
             name="Email"
@@ -112,7 +111,6 @@ export default function Formulario() {
             value={form.mensaje}
             onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
             className={styles.input}
-            required={true}
             name="Mensaje"
             id="mensaje"
             cols="30"
