@@ -85,6 +85,11 @@ export default function Formulario() {
           >
             Mensaje:
           </label>
+          <input
+            type="text"
+            name="_honey"
+            style={{ display: "none" }}
+          ></input>
           <textarea
             value={form.mensaje}
             onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
