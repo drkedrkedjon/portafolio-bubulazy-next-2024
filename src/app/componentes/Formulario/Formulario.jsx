@@ -12,7 +12,7 @@ export default function Formulario() {
 
   const submitForm = (e) => {
     e.preventDefault();
-    fetch("https://formsubmit.co/ajax/forms-and-stuff@bubulazy.com", {
+    fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
