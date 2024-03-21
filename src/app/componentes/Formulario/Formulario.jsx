@@ -8,7 +8,7 @@ export default function Formulario() {
     name: "",
     email: "",
     mensaje: "",
-    formMessage: "Jkfs ;sflks dfksldfksdfk",
+    formMessage: "",
   });
 
   const submitForm = (e) => {
@@ -19,9 +19,7 @@ export default function Formulario() {
       mensaje: form.mensaje,
     };
     setForm({
-      name: "",
-      email: "",
-      mensaje: "",
+      ...form,
       formMessage: "Enviando mensaje... esto puede tardar unos segundos",
     });
     fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
@@ -33,7 +31,14 @@ export default function Formulario() {
       body: JSON.stringify(toSend),
     })
       .then((response) => response.json())
-      .then(setForm({ formMessage: "Mensaje enviado, gracias" }))
+      .then(
+        setForm({
+          name: "",
+          email: "",
+          mensaje: "",
+          formMessage: "Mensaje enviado, gracias",
+        })
+      )
       .catch((error) => console.log(error));
   };
 
