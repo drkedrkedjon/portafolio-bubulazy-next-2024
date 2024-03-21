@@ -1,7 +1,30 @@
+"use client";
 import Link from "next/link";
 import styles from "./Formulario.module.css";
+import { useState } from "react";
 
 export default function Formulario() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    mensaje: "",
+  });
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    fetch("https://formsubmit.co/ajax/forms-and-stuff@bubulazy.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <section
       id="contact-form"
@@ -22,7 +45,10 @@ export default function Formulario() {
             </Link>
           </div>
         </div>
-        <form className={styles.form}>
+        <form
+          onSubmit={submitForm}
+          className={styles.form}
+        >
           <label
             className={styles.label}
             htmlFor="name"
@@ -30,6 +56,8 @@ export default function Formulario() {
             Nombre:
           </label>
           <input
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
             className={styles.input}
             type="text"
             name="Nombre"
@@ -43,6 +71,8 @@ export default function Formulario() {
             Email:
           </label>
           <input
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
             className={styles.input}
             type="text"
             id="email"
@@ -56,6 +86,8 @@ export default function Formulario() {
             Mensaje:
           </label>
           <textarea
+            value={form.mensaje}
+            onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
             className={styles.input}
             name="Mensaje"
             id="mensaje"

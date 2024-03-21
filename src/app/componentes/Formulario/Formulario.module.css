@@ -3,21 +3,25 @@
   color: hsl(var(--clr-texto));
   padding-block: var(--padding-block-grande);
 }
+
 .formulario {
   display: flex;
   flex-direction: column;
   gap: var(--gap-base);
 }
+
 .formulario h2 {
   font-size: var(--fs-800);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
   text-align: center;
 }
+
 .misEnlaces {
   text-align: center;
   font-weight: var(--f-wei-900);
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -27,21 +31,27 @@
   box-shadow: var(--box-shadow);
   padding: var(--padding-block);
 }
+
 .input {
   margin-bottom: var(--gap-base);
   background-color: hsl(var(--clr-blanco));
   border-radius: 0.3rem;
   font-size: var(--fs-400);
+  color: hsl(var(--clr-negro));
+  background-color: hsl(var(--clr-blanco));
   padding: 0.5rem 0.8em;
 }
+
 .input::placeholder {
   font-size: var(--fs-300);
-  opacity: 0.5;
+  opacity: 0.6;
 }
+
 .label {
   font-size: var(--fs-300);
   font-weight: var(--f-wei-600);
 }
+
 .button {
   text-align: center;
   background-color: hsl(var(--clr-acentado));
@@ -51,6 +61,7 @@
   border-radius: 0.3rem;
   transition: all 0.3s ease-in-out;
 }
+
 .button:hover {
   scale: 1.03;
   box-shadow: var(--box-shadow);
@@ -63,20 +74,24 @@
     justify-content: space-between;
     gap: 3rem;
   }
-  .formulario > * {
+
+  .formulario>* {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 50%;
   }
+
   .formulario h2 {
     text-align: left;
   }
+
   .contenido {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .contenido > *:is(:last-child) {
+
+  .contenido>*:is(:last-child) {
     margin-top: auto;
   }
 }
