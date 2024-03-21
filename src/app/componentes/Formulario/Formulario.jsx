@@ -8,7 +8,7 @@ export default function Formulario() {
     name: "",
     email: "",
     mensaje: "",
-    formMessage: "",
+    formMessage: "Jkfs ;sflks dfksldfksdfk",
   });
 
   const submitForm = (e) => {
@@ -33,7 +33,7 @@ export default function Formulario() {
       body: JSON.stringify(toSend),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then(setForm({ formMessage: "Mensaje enviado, gracias" }))
       .catch((error) => console.log(error));
   };
 
@@ -86,6 +86,7 @@ export default function Formulario() {
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className={styles.input}
+            required={true}
             type="text"
             id="email"
             name="Email"
@@ -106,13 +107,14 @@ export default function Formulario() {
             value={form.mensaje}
             onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
             className={styles.input}
+            required={true}
             name="Mensaje"
             id="mensaje"
             cols="30"
             rows="6"
             placeholder="Escribe aquí tu mensaje..."
           />
-          <p className="form-message">{form.formMessage}</p>
+          <p className={styles.formMessage}>{form.formMessage}</p>
           <button className={styles.button}>Enviar mensaje, gracias</button>
         </form>
       </div>

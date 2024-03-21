@@ -52,6 +52,10 @@
   font-weight: var(--f-wei-600);
 }
 
+.formMessage {
+  font-size: var(--fs-200);
+}
+
 .button {
   text-align: center;
   background-color: hsl(var(--clr-acentado));
