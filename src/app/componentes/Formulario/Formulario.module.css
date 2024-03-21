@@ -54,6 +54,7 @@
 
 .formMessage {
   font-size: var(--fs-200);
+  text-align: center;
 }
 
 .button {

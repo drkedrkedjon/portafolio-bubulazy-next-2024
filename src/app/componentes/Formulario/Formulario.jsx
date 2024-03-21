@@ -18,10 +18,6 @@ export default function Formulario() {
       email: form.email,
       mensaje: form.mensaje,
     };
-    setForm({
-      ...form,
-      formMessage: "Enviando mensaje... esto puede tardar unos segundos",
-    });
     fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
       method: "POST",
       headers: {
