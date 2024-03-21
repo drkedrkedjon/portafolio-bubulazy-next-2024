@@ -8,17 +8,29 @@ export default function Formulario() {
     name: "",
     email: "",
     mensaje: "",
+    formMessage: "",
   });
 
   const submitForm = (e) => {
     e.preventDefault();
+    const toSend = {
+      name: form.name,
+      email: form.email,
+      mensaje: form.mensaje,
+    };
+    setForm({
+      name: "",
+      email: "",
+      mensaje: "",
+      formMessage: "Enviando mensaje... esto puede tardar unos segundos",
+    });
     fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify(toSend),
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
@@ -100,6 +112,7 @@ export default function Formulario() {
             rows="6"
             placeholder="Escribe aquí tu mensaje..."
           />
+          <p className="form-message">{form.formMessage}</p>
           <button className={styles.button}>Enviar mensaje, gracias</button>
         </form>
       </div>
