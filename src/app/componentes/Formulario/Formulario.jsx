@@ -37,8 +37,10 @@ export default function Formulario() {
       )
       .catch(
         setForm({
-          ...form,
-          formMessage: "Ha ocurido un error...",
+          name: "",
+          email: "",
+          mensaje: "",
+          formMessage: "Mensaje enviado, gracias",
         })
       );
   };
