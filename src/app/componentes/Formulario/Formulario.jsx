@@ -11,7 +11,7 @@ export default function Formulario() {
     formMessage: "",
   });
 
-  const submitForm = (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
     const toSend = {
       name: form.name,
@@ -27,6 +27,7 @@ export default function Formulario() {
       body: JSON.stringify(toSend),
     })
       .then((response) => response.json())
+      .then((data) => console.log(data))
       .then(
         setForm({
           name: "",
@@ -35,7 +36,12 @@ export default function Formulario() {
           formMessage: "Mensaje enviado, gracias",
         })
       )
-      .catch((error) => console.log(error));
+      .catch(
+        setForm({
+          ...form,
+          formMessage: "Ha ocurido un error...",
+        })
+      );
   };
 
   return (
@@ -59,7 +65,7 @@ export default function Formulario() {
           </div>
         </div>
         <form
-          onSubmit={submitForm}
+          onSubmit={handleSubmitForm}
           className={styles.form}
         >
           <label
