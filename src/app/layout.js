@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { BASE_METADATA } from "@/app/utilities/constants";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
