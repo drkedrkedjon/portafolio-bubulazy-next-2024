@@ -119,8 +119,8 @@ meter {
 @media (prefers-color-scheme: dark) {
   :root {
     --clr-primario: 198, 37%, 15%;
-    --clr-secundario: 198, 31%, 12%;
-    --clr-acentado: 199, 44%, 17%;
+    --clr-secundario: 198, 31%, 17%;
+    --clr-acentado: 198, 44%, 22%;
     --clr-texto: 0 0% 90%;
     --clr-fondo: 198, 25%, 10%;
     --clr-negro: 0 0% 13%;

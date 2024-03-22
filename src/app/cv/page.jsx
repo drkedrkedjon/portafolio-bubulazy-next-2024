@@ -1,13 +1,13 @@
 import Hero from "@/app/componentes/Hero";
 import styles from "./page.module.css";
-import sasaMemoji from "@/app/assets/images/generales/sasa-memoji.png";
+import sasaFoto from "@/app/assets/images/generales/sasa-web-cv.png";
 import Link from "next/link";
 
 export default function CvPage() {
   return (
     <main>
       <Hero
-        image={sasaMemoji}
+        image={sasaFoto}
         alt="Mi foto de CV"
         type="con-imagen"
         title="Currículum Vitae: Sasha Savic Perusina"
@@ -137,9 +137,9 @@ export default function CvPage() {
                 Desarollo FrontEnd:{" "}
                 <Link
                   about="_blank"
-                  href="https://bubulazy.com"
+                  href="https://bubulazy.com/proyectos"
                 >
-                  GitHub
+                  Proyectos
                 </Link>
               </p>
             </div>
@@ -167,8 +167,7 @@ export default function CvPage() {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>
-                Practical Accessibility for web designers and developers by Sara
-                Soueidan
+                Practical Accessibility for developers by Sara Soueidan
               </h3>
               <p>Curso Online USA | 2024 - Actualidad</p>
               <p>
@@ -236,7 +235,11 @@ export default function CvPage() {
                 - 1991
               </p>
               <p>
-                Industrial Design:{" "}
+                Completado la mitad de los créditos, sin terminar por razones de
+                la guerra.
+              </p>
+              <p>
+                Product Design:{" "}
                 <Link
                   about="_blank"
                   href="https://alu.unsa.ba/"
@@ -250,7 +253,35 @@ export default function CvPage() {
       </section>
       <section className={`wrapper ${styles.containerQuery}`}>
         <div className={`${styles.flexContainer} ${styles.invertedCard}`}>
-          <h2 className={styles.h2}>Datos de interés</h2>
+          <h2 className={styles.h2}>Idiomas</h2>
+          <div className={`flow ${styles.jobDetails}`}>
+            <div>
+              <h3 className={styles.h3}>Castellano</h3>
+              <p>Nivel Avanzado</p>
+              <p>Vivo en España desde 1995 - Actualidad</p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>Inglés</h3>
+              <p>Nivel C1+</p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>Alemåan</h3>
+              <p>Nivel basico, conversacional</p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>Bosnio</h3>
+              <p>Nativo</p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>Croata & Serbio</h3>
+              <p>Bilingüe</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={`wrapper ${styles.containerQuery}`}>
+        <div className={`${styles.flexContainer} ${styles.regularCard}`}>
+          <h2 className={styles.h2}>Otros detalles</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div className="flow">
               <p>
@@ -263,8 +294,8 @@ export default function CvPage() {
                 documentación de todo aquello que estoy aprendiendo.
               </p>
               <p>
-                Toco la guitarra, hago fotografías, vídeos y ediciones de los
-                mismos.
+                Toco la guitarra, hago fotografías, grabo vídeos y edito los
+                mismos con DaVinci Resolve y Pixelmator Pro.
               </p>
             </div>
           </div>

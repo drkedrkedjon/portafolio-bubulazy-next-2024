@@ -2,7 +2,7 @@ import styles from "./footer.module.css";
 import { HAMBURGER_LINKS } from "@/app/utilities/constants";
 import Link from "next/link";
 import Image from "next/image";
-import memoji from "@/app/assets/images/generales/header-memoji.png";
+import memoji from "@/app/assets/images/generales/footer-memoji.png";
 
 const thisYear = new Date().getFullYear();
 

@@ -4,23 +4,24 @@
   padding: 1rem;
   z-index: 10000;
 }
+
 .navFondo {
   position: absolute;
   inset: 0;
   background-color: hsl(var(--clr-acentado) / 0.2);
   backdrop-filter: blur(3px);
 }
+
 .navCajon {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: min(90%, 300px);
-  background-color: hsl(var(--clr-texto) / 1);
-  color: hsl(var(--clr-fondo));
+  background-color: hsl(var(--clr-primario));
+  /* color: hsl(var(--clr-texto)); */
   display: flex;
   flex-direction: column;
-
   padding: 1rem;
   gap: 1rem;
   translate: 100%;
@@ -32,20 +33,24 @@
   gap: 0.2rem;
   text-align: right;
 }
+
 .menuLinks li {
   position: relative;
 }
+
 .menuLinks a {
   text-decoration: none;
   display: block;
   padding: 0.3rem 0.5rem;
 }
+
 .menuLinks .hamburgerActiveLinks {
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 1px;
-  text-decoration-color: black;
+  text-decoration-color: var(--clr-texto);
 }
+
 .closeBtn {
   align-self: stretch;
   display: flex;
@@ -55,14 +60,22 @@
   color: hsl(var(--clr-texto));
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  background-color: hsl(var(--clr-acentado) / 1);
+  background-color: hsl(var(--clr-acentado));
+  transition: all 0.3s ease-in-out;
 }
+
+.closeBtn:hover {
+  scale: 1.01;
+  box-shadow: var(--box-shadow);
+}
+
 .closeIcon {
-  color: hsl(var(--clr-fondo));
+  color: hsl(var(--clr-texto));
   stroke-width: 4px;
   width: 14px;
   height: 14px;
 }
+
 .hoveredFondo {
   position: absolute;
   inset: 0;

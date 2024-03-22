@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 export default function NavMenu({ toggleMenuOpen }) {
   const [hoveredHamburgerLink, setHoveredHamburgerLink] = useState(null);
   const pathname = usePathname();
-  console.log(pathname);
   const id = useId();
 
   useEffect(() => {
