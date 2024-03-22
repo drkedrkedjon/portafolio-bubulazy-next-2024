@@ -27,7 +27,6 @@ export default function Formulario() {
       body: JSON.stringify(toSend),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
       .then(
         setForm({
           name: "",
