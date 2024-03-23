@@ -5,7 +5,7 @@
 .flexContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-grande);
+  gap: var(--gap-base);
 }
 
 .flexContainer>* {
@@ -14,9 +14,10 @@
   /* flex-basis: 50%; */
 }
 
-@container (min-width: 35rem) {
+@container (min-width: 40rem) {
   .flexContainer {
     flex-direction: row;
+    gap: var(--gap-grande);
   }
 
   .regularCard h2 {

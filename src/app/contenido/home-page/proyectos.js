@@ -9,20 +9,20 @@ import pacMan from "@/app/contenido/home-page/images/pacman-card.png";
 export const PROYECTOS = [
   {
     id: "016",
-    titulo: "Portafolio y Blog personal",
-    descripcion:
-      "Este proyecto es una aplicación web que ha sido desarollada y diseñada utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y Figma. El objetivo principal de este proyecto es mostrar mis habilidades de desarrollo web y diseño de interfaces de usuario.",
-    imageSrc: bubulazyPortafolio,
-    url: "/proyectos/portafolio",
-    linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
-  },
-  {
-    id: "015",
     titulo: "Multipage Web Form",
     descripcion:
       "Esta aplicación sirve como un proyecto de ejercicio dirigido a construir un formulario de varias páginas con autenticación de Firebase, almacenamiento e integración de bases de datos como backend. Esencialmente, simula el proceso de solicitud de una oportunidad de trabajo..",
     imageSrc: multiPageWebForm,
     url: "/proyectos/multipage-web-form",
+    linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
+  },
+  {
+    id: "015",
+    titulo: "Portafolio y Blog personal",
+    descripcion:
+      "Este proyecto es una aplicación web que ha sido desarollada y diseñada utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y Figma. El objetivo principal de este proyecto es mostrar mis habilidades de desarrollo web y diseño de interfaces de usuario.",
+    imageSrc: bubulazyPortafolio,
+    url: "/proyectos/portafolio",
     linkText: "Ver la descripción detallada del proyecto y mi trabajo =>",
   },
   {

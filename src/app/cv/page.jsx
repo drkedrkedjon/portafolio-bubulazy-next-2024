@@ -60,7 +60,7 @@ export default function CvPage() {
               <h3 className={styles.h3}>Conocimientos:</h3>
               <p>
                 React, NEXT.js, React Router, JavaScript, CSS, HTML, Firebase,
-                Git, GitHub, Accesibilidad Web, Agile, Web Design y Figma{" "}
+                Git, GitHub, Accesibilidad Web, Web Design y Figma{" "}
               </p>
             </div>
             <div className={styles.cvLinks}>
@@ -111,17 +111,17 @@ export default function CvPage() {
             <div>
               <h3 className={styles.h3}>Gran Canaria Segway Tours</h3>
               <p>Autónomo, Empresa propia. | 2006 / 2008</p>
-              <p>Servicio de excursiones turisticas con Segways</p>
+              <p>Excursiones turísticas con Segways.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Holiday World Centro de Ocio</h3>
-              <p>Administrativo, Recepción. | 2003 / 2006</p>
-              <p>Sector de turismo</p>
+              <p>Informático, Recepción. | 2003 / 2006</p>
+              <p>Sector de turismo.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Clínica Dental Blancodent</h3>
               <p>Informático. Relaciones publicas. | 2000 / 2003</p>
-              <p>Sector de Salud</p>
+              <p>Sector de Salud.</p>
             </div>
           </div>
         </div>
@@ -169,9 +169,9 @@ export default function CvPage() {
               <h3 className={styles.h3}>
                 Practical Accessibility for developers by Sara Soueidan
               </h3>
-              <p>Curso Online USA | 2024 - Actualidad</p>
+              <p>Curso Online - USA | 2024 - Actualidad</p>
               <p>
-                Accessibilidad Web:{" "}
+                Accesibilidad Web:{" "}
                 <Link
                   about="_blank"
                   href="http://practical-accessibility.today"
@@ -184,7 +184,7 @@ export default function CvPage() {
               <h3 className={styles.h3}>
                 Joy of React by Josh W Comeau: React Framework
               </h3>
-              <p>Curso Online Canada | 2023 - Actualidad</p>
+              <p>Curso Online - Canada | 2023 - Actualidad</p>
               <p>
                 React framework:{" "}
                 <Link
@@ -200,7 +200,7 @@ export default function CvPage() {
                 Scrimba FrontEnd bootcamp: React / React Router / JS / HTML /
                 CSS
               </h3>
-              <p>Cursos Online Norway | 2021 - 2023</p>
+              <p>Bootcamp Online - Norway | 2021 - 2023</p>
               <p>
                 Web Developer Bootcamp:{" "}
                 <Link
@@ -215,7 +215,7 @@ export default function CvPage() {
               <h3 className={styles.h3}>
                 FreeCodeCamp FrontEnd developer: React / JavaScript / HTML / CSS
               </h3>
-              <p>Cursos Online USA | 2020 - 2023</p>
+              <p>Cursos Online - USA | 2020 - 2023</p>
               <p>
                 Web Developer Bootcamp:{" "}
                 <Link
@@ -231,7 +231,7 @@ export default function CvPage() {
                 Grado de Industrial & Product Design
               </h3>
               <p>
-                The Academy of Fine Arts, University of Sarajevo, Bosnia | 1988
+                The Academy of Fine Arts, University of Sarajevo - Bosnia | 1988
                 - 1991
               </p>
               <p>
@@ -262,10 +262,10 @@ export default function CvPage() {
             </div>
             <div>
               <h3 className={styles.h3}>Inglés</h3>
-              <p>Nivel C1+</p>
+              <p>Nivel C1</p>
             </div>
             <div>
-              <h3 className={styles.h3}>Alemåan</h3>
+              <h3 className={styles.h3}>Alemán</h3>
               <p>Nivel basico, conversacional</p>
             </div>
             <div>
@@ -285,8 +285,8 @@ export default function CvPage() {
           <div className={`flow ${styles.jobDetails}`}>
             <div className="flow">
               <p>
-                En mis tiempos libres practico varios deportes: esquí alpino,
-                ciclismo de touring, senderismo...
+                Practico varios deportes: esquí alpino, ciclismo de touring y
+                senderismo.
               </p>
               <p>
                 Disfruto de la lectura, especialmente historia y filosofía.
