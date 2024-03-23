@@ -52,8 +52,8 @@ export default function HomeProyects({ contenido, type }) {
         <div className={`wrapper flow ${styles.proyectsWrapperFull}`}>
           <Hero
             type="sin-imagen"
-            about="Mis proyectos personales."
-            title="Todos los proyectos."
+            about="Prácticas de FrontEnd"
+            title="Todos los trabajos"
           />
           <h2 className={styles.h2}>Últimos proyectos</h2>
           <div className={styles.cardsContainer}>

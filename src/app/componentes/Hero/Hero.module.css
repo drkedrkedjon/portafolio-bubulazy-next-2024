@@ -7,6 +7,7 @@
   padding-block: var(--padding-block-grande);
   text-align: center;
 }
+
 .imageRoundFrame {
   flex-basis: clamp(10.6rem, 28vw, 15rem);
   height: auto;
@@ -17,20 +18,22 @@
   border-radius: 50%;
   background-color: hsla(var(--clr-acentado));
 }
+
 .h1 {
   font-size: var(--fs-hero);
   color: hsla(var(--clr-texto));
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
 }
+
 /* SIN IMAGEN */
 .containerTypeSinImagen {
   max-width: 30rem;
 }
+
 .about {
   display: block;
-  font-size: var(--fs-800);
-  color: hsla(var(--clr-texto));
+  font-size: clamp(1.5rem, 3vw, var(--fs-800));
 }
 
 @media (min-width: 43rem) {

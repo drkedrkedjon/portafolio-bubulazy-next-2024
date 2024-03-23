@@ -170,8 +170,8 @@ meter {
   --padding-block-grande: clamp(2rem, 10vw, 6rem);
   --margin-texto: 1em;
   --border-radius: 0.4em;
-  --box-shadow: 10px 10px 0px 0 hsl(var(--clr-texto) / 0.4);
-  --text-shadow: 5px 5px 0rem hsl(var(--clr-texto) / 0.2);
+  --box-shadow: 5px 8px 0px 0 hsl(var(--clr-texto) / 0.4);
+  --text-shadow: 5px 4px 0rem hsl(var(--clr-texto) / 0.2);
   --container-max: 65rem;
   --gap-base: 1rem;
   --gap-grande: 4rem;
@@ -216,9 +216,8 @@ body {
 
 img {
   display: block;
-  width: 100%;
+  /* width: 100%; */
   height: auto;
-  /* object-fit: cover; */
 }
 
 .img-container {

@@ -8,10 +8,12 @@
   overflow: hidden;
   background-color: hsl(var(--clr-acentado));
 }
+
 .card {
   display: flex;
   flex-direction: column;
 }
+
 .image {
   aspect-ratio: 3 / 2;
   object-fit: cover;
@@ -20,8 +22,9 @@
 
 .cardContent {
   color: hsl(var(--clr-texto));
-  padding: var(--padding);
+  padding: clamp(var(--padding), 3vw, 2rem);
 }
+
 .cardContent h3 {
   font-size: var(--fs-600);
   font-weight: var(--f-wei-600);
@@ -32,11 +35,13 @@
   .card {
     flex-direction: row;
   }
+
   .image {
     max-width: 33%;
     aspect-ratio: 3 / 4;
   }
 }
+
 .containerSinImagen {
   container-type: inline-size;
   flex-grow: 1;
@@ -46,21 +51,25 @@
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
+
 .cardSinImagen {
   display: flex;
   flex-direction: column;
   padding: var(--padding);
   overflow: hidden;
 }
+
 .cardSinImagen h3 {
   font-size: var(--fs-500);
   font-weight: var(--f-wei-600);
   font-stretch: var(--f-str-75);
 }
+
 .cardSinImagen p,
 .cardSinImagen a {
   font-size: var(--fs-300);
 }
+
 @container (min-width: 34rem) {
   .cardSinImagen {
     text-align: center;
