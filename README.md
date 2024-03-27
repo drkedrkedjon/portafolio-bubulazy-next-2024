@@ -10,6 +10,6 @@ Tecnologías usadas: NEXT.js, React.js, Markdown, MDX, Vercel.
 
 Technologies used: NEXT.js, React.js, Markdown, MDX, Vercel.
 
-[Visitar sitio en desarollo ->](https://portafolio-bubulazy-next-2024.vercel.app)
+[Visitar sitio ->](https://bubulazy.com)
 
-[Visit development site ->](https://portafolio-bubulazy-next-2024.vercel.app)
+[Visit site ->](https://bubulazy.com)
