@@ -126,9 +126,9 @@ export default function Header() {
                 <Moon className={styles.iconSvg} />
               )}
             </button>
-            {/* <Link href={"/rss.xml"}>
+            <Link href={"/rss.xml"}>
               <Rss className={styles.iconSvg} />
-            </Link> */}
+            </Link>
           </div>
 
           {/* Navegacion */}
@@ -150,7 +150,7 @@ export default function Header() {
               />
               <VisualyHidden>Abrir menú principal</VisualyHidden>
             </button>
-            {/* Animate presence sirva para exit animation en framer motion cuando se dewsmonta la componente */}
+            {/* Animate presence sirva para exit animation en framer motion cuando se desmonta la componente */}
             <AnimatePresence>
               {isMenuOpen && <NavMenu toggleMenuOpen={toggleMenuOpen} />}
             </AnimatePresence>

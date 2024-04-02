@@ -20,11 +20,11 @@ export const DESKTOP_LINKS = [
     label: "CV",
     href: "/cv",
   },
-  // {
-  //   slug: "blog",
-  //   label: "Blog",
-  //   href: "/blog",
-  // },
+  {
+    slug: "drafts",
+    label: "Drafts",
+    href: "/drafts",
+  },
 ];
 
 export const HAMBURGER_LINKS = [
@@ -43,9 +43,9 @@ export const HAMBURGER_LINKS = [
     label: "Curículum",
     href: "/cv",
   },
-  // {
-  //   slug: "blog",
-  //   label: "Blog",
-  //   href: "/blog",
-  // },
+  {
+    slug: "drafts",
+    label: "Drafts",
+    href: "/drafts",
+  },
 ];
