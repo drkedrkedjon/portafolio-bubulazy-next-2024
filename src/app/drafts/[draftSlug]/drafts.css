@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
 
-  & *+* {
+  & *+*:not(li) {
     margin-block: var(--gap-base);
   }
 
@@ -35,8 +35,33 @@
     text-align: right;
   }
 
-  & pre {
-    background-color: hsl(var(--clr-acentado-color));
+  & strong {
+    font-weight: var(--f-wei-600);
+  }
+
+  & blockquote {
+    background-color: hsl(var(--clr-secundario));
+    padding: var(--gap-base);
+    border-inline-start: 1vw solid hsl(var(--clr-acentado-color));
+    margin-inline-start: 3vw;
+  }
+
+  & :is(ol, ul) {
+    margin-inline-start: 2rem;
+    list-style-position: outside;
+  }
+
+  & ol {
+    list-style-type: decimal;
+  }
+
+  & ul {
+    list-style-type: disc;
+  }
+
+  & hr {
+    height: 1px;
+    background: hsl(var(--clr-acentado-color));
   }
 
   & article {

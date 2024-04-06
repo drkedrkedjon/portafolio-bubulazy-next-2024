@@ -4,6 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { formatDate } from "@/app/utilities/varias-utilidades";
 import { BASE_METADATA } from "@/app/utilities/constants";
 import { Code } from "bright";
+import Link from "next/link";
 
 //  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
 export async function generateMetadata({ params }) {
@@ -27,6 +28,7 @@ export default async function DraftPage({ params }) {
           source={content}
           components={{
             pre: Code,
+            a: Link,
           }}
         />
       </article>
