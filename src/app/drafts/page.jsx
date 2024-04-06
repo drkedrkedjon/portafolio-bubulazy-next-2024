@@ -1,18 +1,18 @@
+import styles from "./page.module.css";
 import { getBlogPostList } from "../utilities/node-helpers/node-fs-helpers";
-import Link from "next/link";
+import DraftsCard from "../componentes/DraftsCard";
 
 export default async function BlogPostList() {
-  const blogPostList = await getBlogPostList();
+  const draftPostList = await getBlogPostList();
 
   return (
-    <div>
-      {blogPostList.map(({ slug, title, publishedOn, excerpt }) => (
-        <div key={slug}>
-          <Link href={`/drafts/${slug}`}>{title}</Link>
-          <p>{publishedOn}</p>
-          <p>{excerpt}</p>
-        </div>
+    <main className={`wrapper ${styles.draftsFlow} ${styles.container}`}>
+      {draftPostList.map((draft) => (
+        <DraftsCard
+          key={draft.slug}
+          {...draft}
+        />
       ))}
-    </div>
+    </main>
   );
 }

@@ -81,6 +81,7 @@ export default function NavMenu({ toggleMenuOpen }) {
                       />
                     )}
                     <Link
+                      onClick={toggleMenuOpen}
                       onMouseEnter={() => setHoveredHamburgerLink(slug)}
                       className={
                         pathname === href ? styles.hamburgerActiveLinks : ""

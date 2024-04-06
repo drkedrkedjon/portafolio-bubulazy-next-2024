@@ -1,13 +1,35 @@
-import { loadBlogPost } from "../../utilities/node-helpers/node-fs-helpers.js";
+import "./drafts.css";
+import { loadBlogPost } from "@/app//utilities/node-helpers/node-fs-helpers.js";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { formatDate } from "@/app/utilities/varias-utilidades";
+import { BASE_METADATA } from "@/app/utilities/constants";
+import { Code } from "bright";
+
+//  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
+export async function generateMetadata({ params }) {
+  const { frontmatter } = await loadBlogPost(params.draftSlug);
+  return {
+    title: `${frontmatter.title} • ${BASE_METADATA.title}`,
+    description: frontmatter.abstract,
+  };
+}
+
+Code.theme = "dracula-soft";
 
 export default async function DraftPage({ params }) {
   const { frontmatter, content } = await loadBlogPost(params.draftSlug);
   return (
-    <div>
+    <main className="wrapper drafts-styles">
       <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.publishedOn}</p>
-      <MDXRemote source={content} />
-    </div>
+      <time>{formatDate(frontmatter.publishedOn, frontmatter.language)}</time>
+      <article className="wrapper">
+        <MDXRemote
+          source={content}
+          components={{
+            pre: Code,
+          }}
+        />
+      </article>
+    </main>
   );
 }

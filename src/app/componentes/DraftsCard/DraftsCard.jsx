@@ -1,0 +1,24 @@
+import styles from "./DraftsCard.module.css";
+import Link from "next/link";
+import { formatDate } from "@/app/utilities/varias-utilidades";
+
+export default function DraftsCard({
+  slug,
+  title,
+  publishedOn,
+  abstract,
+  language,
+}) {
+  return (
+    <div>
+      <Link
+        aria-label={slug}
+        href={`/drafts/${slug}`}
+      >
+        <h2 className={styles.title}>{title}</h2>
+      </Link>
+      <p className={styles.date}>{formatDate(publishedOn, language)}</p>
+      <p className={styles.abstract}>{abstract}</p>
+    </div>
+  );
+}

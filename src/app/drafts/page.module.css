@@ -1,0 +1,7 @@
+  .draftsFlow>*:not(:last-child) {
+    margin-bottom: 10vw;
+  }
+
+  .container {
+    padding-block: var(--padding-block-grande);
+  }

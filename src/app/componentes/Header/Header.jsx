@@ -95,7 +95,7 @@ export default function Header() {
                     className={styles.hoveredFondo}
                     initial={false}
                     animate={{
-                      borderRadius: "var(--border-radius",
+                      borderRadius: "var(--border-radius)",
                     }}
                   />
                 )}
@@ -117,7 +117,7 @@ export default function Header() {
           <div className={styles.icons}>
             <button
               id="toggle-color-mode"
-              aria-label="toggle-color-mode"
+              aria-label="toggle color mode"
               onClick={() => setDarkMode((darkMode) => !darkMode)}
             >
               {darkMode ? (
@@ -126,7 +126,10 @@ export default function Header() {
                 <Moon className={styles.iconSvg} />
               )}
             </button>
-            <Link href={"/rss.xml"}>
+            <Link
+              aria-label="RSS Feed"
+              href={"/rss.xml"}
+            >
               <Rss className={styles.iconSvg} />
             </Link>
           </div>

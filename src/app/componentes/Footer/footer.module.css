@@ -33,5 +33,5 @@
   font-weight: var(--f-wei-900);
   font-size: var(--fs-500);
   padding-bottom: 1rem;
-  border-bottom: 4px solid hsl(var(--clr-acentado));
+  border-bottom: 4px solid hsl(var(--clr-acentado-color));
 }

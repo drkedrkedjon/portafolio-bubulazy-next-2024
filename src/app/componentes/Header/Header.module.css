@@ -56,7 +56,7 @@
 .hoveredFondo {
   position: absolute;
   inset: 0;
-  background-color: hsl(var(--clr-fondo) / 0.3);
+  background-color: hsla(var(--clr-secundario));
   border-radius: var(--border-radius);
   z-index: -1;
 }
