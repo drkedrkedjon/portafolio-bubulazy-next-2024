@@ -21,7 +21,7 @@ export async function GET() {
       title: post.title,
       description: post.abstract,
       date: post.publishedOn,
-      url: `http://some-website.com/${post.slug}`,
+      url: `https://bubulazy.com/drafts/${post.slug}`,
     });
   });
 
