@@ -265,3 +265,19 @@ button {
   color: hsl(var(--clr-texto));
   scale: 1.03;
 }
+
+.error404 {
+  min-height: 30vh;
+  display: grid;
+  place-content: center;
+
+  & h1 {
+    font-size: var(--fs-900);
+    font-weight: var(--f-wei-900);
+    text-align: center;
+  }
+
+  & p {
+    text-align: center;
+  }
+}
