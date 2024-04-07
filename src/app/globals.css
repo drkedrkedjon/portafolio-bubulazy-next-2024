@@ -199,6 +199,7 @@ body {
 :is(h1, h2, h3) {
   line-height: var(--lh-small);
   text-wrap: balance;
+  text-transform: capitalize;
 }
 
 *:focus-visible {

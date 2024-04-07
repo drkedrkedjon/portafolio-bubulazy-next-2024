@@ -131,6 +131,7 @@ export default function Header() {
               href={"/rss.xml"}
             >
               <Rss className={styles.iconSvg} />
+              <VisualyHidden>RSS Feed</VisualyHidden>
             </Link>
           </div>
 

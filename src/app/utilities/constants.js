@@ -1,7 +1,7 @@
 export const BASE_METADATA = {
   title: "Home of Bubulazy",
   description:
-    "Portafolio y blog personal de Sasha S.P. donde comparto mis proyectos de desarrollo FrontEnd y también borradores sobre algunos otros temas que me interesan...",
+    "Portafolio y blog personal donde comparto mis proyectos de desarrollo FrontEnd y también borradores sobre algunas que otras temas que me interesan...",
 };
 
 export const DESKTOP_LINKS = [
