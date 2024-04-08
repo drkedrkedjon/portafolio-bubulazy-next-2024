@@ -13,7 +13,6 @@ function readDirectory(localPath) {
 
 export async function getBlogPostList() {
   const fileNames = await readDirectory("/blog-mdx-files");
-
   const blogPosts = [];
 
   for (let fileName of fileNames) {
@@ -27,26 +26,26 @@ export async function getBlogPostList() {
     });
   }
   return blogPosts.sort((p1, p2) => (p1.publishedOn > p2.publishedOn ? 1 : -1));
-  // return blogPosts.sort((p1, p2) =>
-  //   new Date(p1.publishedOn) > new Date(p2.publishedOn) ? 1 : -1
-  // );
-  // return blogPosts.sort((p1, p2) => {
-  //   const date1 = new Date(p1.publishedOn);
-  //   const date2 = new Date(p2.publishedOn);
-  //   return date1 < date2 ? 1 : -1;
-  // });
 }
 
-export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
-  let rawContent;
-
-  try {
-    rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
-  } catch (error) {
-    return null;
-  }
+export async function loadBlogPost(slug) {
+  const rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
 
   const { data: frontmatter, content } = matter(rawContent);
 
   return { frontmatter, content };
-});
+}
+
+// export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
+//   let rawContent;
+
+//   try {
+//     rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
+//   } catch (error) {
+//     return null;
+//   }
+
+//   const { data: frontmatter, content } = matter(rawContent);
+
+//   return { frontmatter, content };
+// });
