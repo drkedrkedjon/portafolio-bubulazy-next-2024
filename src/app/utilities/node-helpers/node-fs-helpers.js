@@ -7,8 +7,6 @@ function readFile(localPath) {
   return fs.readFile(path.join(process.cwd(), localPath), "utf8");
 }
 
-const rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
-
 function readDirectory(localPath) {
   return fs.readdir(path.join(process.cwd(), localPath));
 }
@@ -39,8 +37,6 @@ export async function loadBlogPost(slug) {
   return { frontmatter, content };
 }
 
-//  Sin cache
-
 // export async function loadBlogPost(slug) {
 //   const rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
 
@@ -49,14 +45,13 @@ export async function loadBlogPost(slug) {
 //   return { frontmatter, content };
 // }
 
-//  Cache the result of the function
-
 // export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
 //   let rawContent;
 
 //   try {
 //     rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
 //   } catch (error) {
+
 //     return null;
 //   }
 
