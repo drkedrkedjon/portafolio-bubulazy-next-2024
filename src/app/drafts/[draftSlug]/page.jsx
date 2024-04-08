@@ -12,9 +12,9 @@ Code.theme = "dracula-soft";
 export async function generateMetadata({ params }) {
   const draftPostData = await loadBlogPost(params.draftSlug);
 
-  if (!draftPostData) {
-    return null;
-  }
+  // if (!draftPostData) {
+  //   return null;
+  // }
 
   const { frontmatter } = draftPostData;
 
@@ -27,9 +27,9 @@ export async function generateMetadata({ params }) {
 export default async function DraftPage({ params }) {
   const draftsPostData = await loadBlogPost(params.draftSlug);
 
-  if (!draftsPostData) {
-    return notFound();
-  }
+  // if (!draftsPostData) {
+  //   return notFound();
+  // }
 
   const { frontmatter, content } = draftsPostData;
 
