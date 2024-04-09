@@ -28,34 +28,25 @@ export async function getBlogPostList() {
   return blogPosts.sort((p1, p2) => (p1.publishedOn > p2.publishedOn ? 1 : -1));
 }
 
-export async function loadBlogPost(slug) {
+export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
   const filePath = path.join(process.cwd(), "/blog-mdx-files/", `${slug}.mdx`);
-  const rawContent = await fs.readFile(filePath, "utf8");
+  let rawContent;
+
+  try {
+    rawContent = await fs.readFile(filePath, "utf8");
+  } catch (error) {
+    return null;
+  }
 
   const { data: frontmatter, content } = matter(rawContent);
-
   return { frontmatter, content };
-}
+});
 
 // export async function loadBlogPost(slug) {
-//   const rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
+//   const filePath = path.join(process.cwd(), "/blog-mdx-files/", `${slug}.mdx`);
+//   const rawContent = await fs.readFile(filePath, "utf8");
 
 //   const { data: frontmatter, content } = matter(rawContent);
 
 //   return { frontmatter, content };
-// }
-
-// export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
-//   let rawContent;
-
-//   try {
-//     rawContent = await readFile(`/blog-mdx-files/${slug}.mdx`);
-//   } catch (error) {
-
-//     return null;
-//   }
-
-//   const { data: frontmatter, content } = matter(rawContent);
-
-//   return { frontmatter, content };
-// });
+// };
