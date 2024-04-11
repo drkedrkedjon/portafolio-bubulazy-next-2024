@@ -36,7 +36,15 @@ export default async function DraftPage({ params }) {
   return (
     <main className="wrapper drafts-styles">
       <h1>{frontmatter.title}</h1>
-      <time>{formatDate(frontmatter.publishedOn, frontmatter.language)}</time>
+      <div className="draft-details">
+        <time>{formatDate(frontmatter.lastEdited, frontmatter.language)}</time>
+        <p>
+          First draft:{" "}
+          {formatDate(frontmatter.initialDate, frontmatter.language)} • Stage:{" "}
+          {frontmatter.stage} • Certainty: {frontmatter.certainty} • Importance:{" "}
+          {frontmatter.importance}
+        </p>
+      </div>
       <article className="wrapper">
         <MDXRemote
           source={content}

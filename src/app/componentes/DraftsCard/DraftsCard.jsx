@@ -5,7 +5,7 @@ import { formatDate } from "@/app/utilities/varias-utilidades";
 export default function DraftsCard({
   slug,
   title,
-  publishedOn,
+  lastEdited,
   abstract,
   language,
 }) {
@@ -17,7 +17,7 @@ export default function DraftsCard({
       >
         <h2 className={styles.title}>{title}</h2>
       </Link>
-      <p className={styles.date}>{formatDate(publishedOn, language)}</p>
+      <p className={styles.date}>{formatDate(lastEdited, language)}</p>
       <p className={styles.abstract}>{abstract}</p>
     </div>
   );

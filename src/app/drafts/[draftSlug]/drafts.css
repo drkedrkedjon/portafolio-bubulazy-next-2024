@@ -29,6 +29,10 @@
     font-stretch: var(--f-str-125);
   }
 
+  & .draft-details {
+    text-align: right;
+  }
+
   & time {
     font-size: var(--fs-600);
     color: hsl(var(--clr-acentado-color));

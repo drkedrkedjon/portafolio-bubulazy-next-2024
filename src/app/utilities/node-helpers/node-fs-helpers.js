@@ -25,7 +25,7 @@ export async function getBlogPostList() {
       ...frontmatter,
     });
   }
-  return blogPosts.sort((p1, p2) => (p1.publishedOn > p2.publishedOn ? 1 : -1));
+  return blogPosts.sort((p1, p2) => (p1.lastEdited < p2.lastEdited ? 1 : -1));
 }
 
 export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
