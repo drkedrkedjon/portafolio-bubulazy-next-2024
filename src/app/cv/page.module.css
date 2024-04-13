@@ -1,3 +1,7 @@
+.main {
+  padding-block-end: var(--padding-block-grande);
+}
+
 .containerQuery {
   container-type: inline-size;
 }

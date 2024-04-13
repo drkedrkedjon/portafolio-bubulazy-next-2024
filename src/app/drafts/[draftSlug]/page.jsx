@@ -37,12 +37,17 @@ export default async function DraftPage({ params }) {
     <main className="wrapper drafts-styles">
       <h1>{frontmatter.title}</h1>
       <div className="draft-details">
-        <time>{formatDate(frontmatter.lastEdited, frontmatter.language)}</time>
+        <time>
+          Last edit: {formatDate(frontmatter.lastEdited, frontmatter.language)}
+        </time>
         <p>
-          First draft:{" "}
-          {formatDate(frontmatter.initialDate, frontmatter.language)} • Stage:{" "}
-          {frontmatter.stage} • Certainty: {frontmatter.certainty} • Importance:{" "}
-          {frontmatter.importance}
+          First edit:{" "}
+          <strong>
+            {formatDate(frontmatter.initialDate, frontmatter.language)}
+          </strong>{" "}
+          • Stage: <strong>{frontmatter.stage}</strong> • Certainty:{" "}
+          <strong>{frontmatter.certainty}</strong> • Importance:{" "}
+          <strong>{frontmatter.importance}</strong>
         </p>
       </div>
       <article className="wrapper">

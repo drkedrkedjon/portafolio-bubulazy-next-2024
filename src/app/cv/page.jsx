@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CvPage() {
   return (
-    <main>
+    <main className={styles.main}>
       <Hero
         image={sasaFoto}
         alt="Mi foto de CV"

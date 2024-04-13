@@ -1,6 +1,6 @@
 .footer {
   padding-block: var(--padding-block-grande);
-  /* background-color: hsl(var(--clr-acentado)); */
+  background-color: hsl(var(--clr-acentado));
 }
 
 .container {

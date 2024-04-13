@@ -4,9 +4,15 @@
   flex-direction: column;
   gap: var(--gap-base);
 }
+
+.proyectsWrapperFull {
+  padding-block-end: var(--padding-block-grande);
+}
+
 .proyectsWrapper {
   padding-block: var(--padding-block-grande);
 }
+
 .h2 {
   font-size: var(--fs-800);
   font-weight: var(--f-wei-600);
@@ -15,6 +21,7 @@
   color: hsl(var(--clr-acento-uno));
   align-self: center;
 }
+
 .cardsContainer {
   display: flex;
   flex-direction: row;
@@ -22,6 +29,7 @@
   gap: 2rem;
   padding-bottom: calc(var(--margin-texto) + 0.5rem);
 }
+
 .cardsSinImagen {
   display: flex;
   flex-direction: row;

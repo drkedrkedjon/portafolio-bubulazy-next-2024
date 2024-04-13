@@ -123,7 +123,8 @@ meter {
     --clr-primario: 198, 37%, 15%;
     --clr-secundario: 198, 31%, 17%;
     --clr-acentado: 198, 44%, 22%;
-    --clr-acentado-color: 18, 45%, 42%;
+    /* 18, 45%, 42% */
+    --clr-acentado-color: 22, 100%, 41%;
     --clr-texto: 0 0% 90%;
     --clr-fondo: 198, 25%, 10%;
     --clr-negro: 0 0% 13%;
@@ -136,6 +137,7 @@ meter {
     --clr-primario: 0, 0%, 90%;
     --clr-secundario: 0, 0%, 80%;
     --clr-acentado: 0, 0%, 75%;
+    --clr-acentado-color: 22, 100%, 41%;
     --clr-texto: 0 0% 10%;
     --clr-fondo: 0, 0%, 95%;
     --clr-negro: 0 0% 13%;

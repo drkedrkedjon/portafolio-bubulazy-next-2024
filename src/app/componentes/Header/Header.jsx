@@ -19,6 +19,7 @@ export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
 
   const pathname = usePathname();
+
   const id = useId();
 
   // Dark mode stuff
@@ -42,12 +43,14 @@ export default function Header() {
       root.style.setProperty("--clr-primario", "198, 37%, 15%");
       root.style.setProperty("--clr-secundario", "198, 31%, 17%");
       root.style.setProperty("--clr-acentado", "198, 44%, 22%");
+      root.style.setProperty("--clr-acentado-color", "22, 100%, 41%");
       root.style.setProperty("--clr-texto", "0 0% 90%");
       root.style.setProperty("--clr-fondo", "198, 25%, 10%");
     } else {
-      root.style.setProperty("--clr-primario", "0, 0%, 94%");
-      root.style.setProperty("--clr-secundario", "0, 0%, 86%");
-      root.style.setProperty("--clr-acentado", "0, 0%, 78%");
+      root.style.setProperty("--clr-primario", "0, 0%, 90%");
+      root.style.setProperty("--clr-secundario", "0, 0%, 80%");
+      root.style.setProperty("--clr-acentado", "0, 0%, 75%");
+      root.style.setProperty("--clr-acentado-color", "22, 100%, 41%");
       root.style.setProperty("--clr-texto", "0 0% 10%");
       root.style.setProperty("--clr-fondo", "0, 0%, 95");
     }
@@ -102,7 +105,10 @@ export default function Header() {
                 <Link
                   onMouseEnter={() => setHoveredDesktopLink(slug)}
                   className={`${styles.desktopLinks} ${
-                    pathname === href ? styles.desktopActiveLink : ""
+                    pathname.includes(href) && href !== "/"
+                      ? styles.desktopActiveLink
+                      : ""
+                    // pathname === "/" ? styles.desktopActiveLink : ""
                   }`}
                   href={href}
                 >
