@@ -40,19 +40,22 @@ export default function Header() {
   useEffect(() => {
     const root = document.querySelector(":root");
     if (darkMode) {
-      root.style.setProperty("--clr-primario", "198, 37%, 15%");
-      root.style.setProperty("--clr-secundario", "198, 31%, 17%");
-      root.style.setProperty("--clr-acentado", "198, 44%, 22%");
-      root.style.setProperty("--clr-acentado-color", "22, 100%, 41%");
+      root.style.setProperty("--clr-primario", "198 37% 15%");
+      root.style.setProperty("--clr-secundario", "198 31% 17%");
+      root.style.setProperty("--clr-acentado", "198 44% 22%");
+      root.style.setProperty("--clr-acentado-color", "22 100% 41%");
       root.style.setProperty("--clr-texto", "0 0% 90%");
-      root.style.setProperty("--clr-fondo", "198, 25%, 10%");
+      root.style.setProperty("--clr-fondo", "198 25% 10%");
     } else {
-      root.style.setProperty("--clr-primario", "0, 0%, 90%");
-      root.style.setProperty("--clr-secundario", "0, 0%, 80%");
-      root.style.setProperty("--clr-acentado", "0, 0%, 75%");
-      root.style.setProperty("--clr-acentado-color", "22, 100%, 41%");
-      root.style.setProperty("--clr-texto", "0 0% 10%");
-      root.style.setProperty("--clr-fondo", "0, 0%, 95");
+      root.style.setProperty("--clr-primario", "0 100% 96%");
+      root.style.setProperty("--clr-secundario", "340 18% 87%");
+      root.style.setProperty("--clr-acentado", "200 31% 68%");
+      // root.style.setProperty("--clr-primario", "0 0% 90%");
+      // root.style.setProperty("--clr-secundario", "0 0% 80%");
+      // root.style.setProperty("--clr-acentado", "0 0% 75%");
+      root.style.setProperty("--clr-acentado-color", "22 100% 41%");
+      root.style.setProperty("--clr-texto", "0 0% 5%");
+      root.style.setProperty("--clr-fondo", "0 0% 97");
     }
   }, [darkMode, setDarkMode]);
 
