@@ -20,6 +20,12 @@ export default function RootLayout({ children }) {
     >
       <head>
         <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Example Feed"
+          href="/rss.xml"
+        />
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
