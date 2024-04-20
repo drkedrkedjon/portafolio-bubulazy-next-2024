@@ -21,7 +21,7 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 2px solid hsl(var(--clr-texto));
+  border: 2px solid hsl(var(--clr-acentado-color));
 }
 
 .navContainer {
@@ -49,6 +49,7 @@
 
 .desktopActiveLink {
   text-decoration: underline;
+  text-decoration-color: hsl(var(--clr-acentado-color));
   text-underline-offset: 15px;
   text-decoration-thickness: 1px;
 }

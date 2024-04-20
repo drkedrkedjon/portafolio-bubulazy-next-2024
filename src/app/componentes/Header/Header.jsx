@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import { DESKTOP_LINKS } from "@/app/utilities/constants";
 import { useState, useId, useEffect } from "react";
 import { motion } from "framer-motion";
+import logo from "@/app/contenido/header-footer/sasa-memoji-video.webp";
 
 import Image from "next/image";
 
@@ -62,7 +63,7 @@ export default function Header() {
           aria-label="Logo, una animación de memoji sonriendo"
           href={"/"}
         >
-          <video
+          {/* <video
             className={styles.memojiVideo}
             autoPlay
             loop
@@ -73,7 +74,14 @@ export default function Header() {
               src="/sasa-memoji-video.mp4"
               type="video/mp4"
             />
-          </video>
+          </video> */}
+          <Image
+            src={logo}
+            alt="Logo, una animación de memoji sonriendo"
+            width={60}
+            height={60}
+            className={styles.memojiVideo}
+          />
         </Link>
         <div className={styles.navContainer}>
           <ul
