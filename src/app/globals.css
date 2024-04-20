@@ -123,8 +123,7 @@ meter {
     --clr-primario: 198 37% 15%;
     --clr-secundario: 198 31% 17%;
     --clr-acentado: 198 44% 22%;
-    /* 18, 45%, 42% */
-    --clr-acentado-color: 22 100% 41%;
+    --clr-acentado-color: 7 80% 64%;
     --clr-texto: 0 0% 90%;
     --clr-fondo: 198 25% 10%;
     --clr-negro: 0 0% 13%;
@@ -134,12 +133,12 @@ meter {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --clr-primario: 0 100% 96%;
-    --clr-secundario: 340 18% 87%;
-    --clr-acentado: 200 31% 68%;
-    --clr-acentado-color: 22 100% 41%;
-    --clr-texto: 0 0% 10%;
-    --clr-fondo: 0 0% 95%;
+    --clr-primario: 175 42% 90%;
+    --clr-secundario: 161 40% 90%;
+    --clr-acentado: 172 14% 78%;
+    --clr-acentado-color: 7 80% 40%;
+    --clr-texto: 130 5% 24%;
+    --clr-fondo: 0 0% 96%;
     --clr-negro: 0 0% 13%;
     --clr-blanco: 180, 14%, 97%;
   }
@@ -234,11 +233,13 @@ img {
 
 a {
   text-decoration: underline;
+  text-decoration-color: hsl(var(--clr-acentado-color));
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
 
 a:where(:hover, :focus) {
+  text-underline-offset: 3px;
   text-decoration-thickness: 4px;
 }
 
@@ -252,7 +253,7 @@ button {
 
 .link-btn {
   display: block;
-  background-color: hsl(var(--clr-primario));
+  background-color: hsl(var(--clr-acentado));
   align-self: center;
   color: hsl(var(--clr-texto));
   text-decoration: none;

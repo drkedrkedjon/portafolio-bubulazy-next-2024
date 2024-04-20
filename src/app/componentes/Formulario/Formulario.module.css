@@ -59,7 +59,8 @@
 
 .button {
   text-align: center;
-  background-color: hsl(var(--clr-secundario));
+  background-color: hsl(var(--clr-acentado-color));
+  color: hsl(var(--clr-fondo));
   padding: 0.8rem;
   margin-top: 1rem;
   font-weight: var(--f-wei-900);

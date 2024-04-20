@@ -16,26 +16,57 @@ import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(handleInitialTheme());
 
   const pathname = usePathname();
-
   const id = useId();
 
-  // Dark mode stuff
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setDarkMode(true);
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches
-    ) {
-      setDarkMode(false);
+  function handleInitialTheme() {
+    if (typeof window !== "undefined") {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        return true;
+      } else if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+      ) {
+        return false;
+      }
     }
-  }, []);
+    // default value when window is not defined (e.g., on the server)
+    return false;
+  }
+
+  // function handleInitialTheme() {
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   ) {
+  //     return true;
+  //   } else if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: light)").matches
+  //   ) {
+  //     return false;
+  //   }
+  // }
+
+  // Dark mode stuff
+  // useEffect(() => {
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   ) {
+  //     setDarkMode(true);
+  //   } else if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: light)").matches
+  //   ) {
+  //     setDarkMode(false);
+  //   }
+  // }, []);
 
   useEffect(() => {
     const root = document.querySelector(":root");
@@ -43,19 +74,16 @@ export default function Header() {
       root.style.setProperty("--clr-primario", "198 37% 15%");
       root.style.setProperty("--clr-secundario", "198 31% 17%");
       root.style.setProperty("--clr-acentado", "198 44% 22%");
-      root.style.setProperty("--clr-acentado-color", "22 100% 41%");
+      root.style.setProperty("--clr-acentado-color", "7, 80%, 64%");
       root.style.setProperty("--clr-texto", "0 0% 90%");
       root.style.setProperty("--clr-fondo", "198 25% 10%");
     } else {
-      root.style.setProperty("--clr-primario", "0 100% 96%");
-      root.style.setProperty("--clr-secundario", "340 18% 87%");
-      root.style.setProperty("--clr-acentado", "200 31% 68%");
-      // root.style.setProperty("--clr-primario", "0 0% 90%");
-      // root.style.setProperty("--clr-secundario", "0 0% 80%");
-      // root.style.setProperty("--clr-acentado", "0 0% 75%");
-      root.style.setProperty("--clr-acentado-color", "22 100% 41%");
-      root.style.setProperty("--clr-texto", "0 0% 5%");
-      root.style.setProperty("--clr-fondo", "0 0% 97");
+      root.style.setProperty("--clr-primario", "175 42% 90%");
+      root.style.setProperty("--clr-secundario", "161 40% 90%");
+      root.style.setProperty("--clr-acentado", "172 14% 78%");
+      root.style.setProperty("--clr-acentado-color", "7, 80%, 40%");
+      root.style.setProperty("--clr-texto", "130 5% 24%");
+      root.style.setProperty("--clr-fondo", "0 0% 96%");
     }
   }, [darkMode, setDarkMode]);
 
