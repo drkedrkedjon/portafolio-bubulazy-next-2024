@@ -16,57 +16,25 @@ import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
-  const [darkMode, setDarkMode] = useState(handleInitialTheme());
+  const [darkMode, setDarkMode] = useState(true);
 
   const pathname = usePathname();
   const id = useId();
 
-  function handleInitialTheme() {
-    if (typeof window !== "undefined") {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        return true;
-      } else if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: light)").matches
-      ) {
-        return false;
-      }
-    }
-    // default value when window is not defined (e.g., on the server)
-    return false;
-  }
-
-  // function handleInitialTheme() {
-  //   if (
-  //     window.matchMedia &&
-  //     window.matchMedia("(prefers-color-scheme: dark)").matches
-  //   ) {
-  //     return true;
-  //   } else if (
-  //     window.matchMedia &&
-  //     window.matchMedia("(prefers-color-scheme: light)").matches
-  //   ) {
-  //     return false;
-  //   }
-  // }
-
   // Dark mode stuff
-  // useEffect(() => {
-  //   if (
-  //     window.matchMedia &&
-  //     window.matchMedia("(prefers-color-scheme: dark)").matches
-  //   ) {
-  //     setDarkMode(true);
-  //   } else if (
-  //     window.matchMedia &&
-  //     window.matchMedia("(prefers-color-scheme: light)").matches
-  //   ) {
-  //     setDarkMode(false);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true);
+    } else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      setDarkMode(false);
+    }
+  }, []);
 
   useEffect(() => {
     const root = document.querySelector(":root");

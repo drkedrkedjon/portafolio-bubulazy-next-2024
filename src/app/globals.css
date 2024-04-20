@@ -207,6 +207,7 @@ body {
   outline: revert;
   outline: 2px dashed;
   outline-offset: 8px;
+  outline-color: hsl(var(--clr-acentado-color));
 }
 
 .flow>*:not(:last-child) {
