@@ -205,9 +205,8 @@ body {
 
 *:focus-visible {
   outline: revert;
-  outline: 2px dashed;
-  outline-offset: 8px;
-  outline-color: hsl(var(--clr-acentado-color));
+  outline: 2px dashed hsl(var(--clr-acentado-color));
+  outline-offset: 2px;
 }
 
 .flow>*:not(:last-child) {
@@ -225,6 +224,10 @@ img {
   /* width: 100%; */
   height: auto;
 }
+
+/* textarea {
+  field-sizing: content;
+} */
 
 .img-container {
   aspect-ratio: 3/2;
