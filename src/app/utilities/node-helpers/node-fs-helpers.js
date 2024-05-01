@@ -25,6 +25,7 @@ export async function getBlogPostList() {
       ...frontmatter,
     });
   }
+  // Error, hay que coregir el orden de los posts
   return blogPosts.sort((p1, p2) => (p1.lastEdited < p2.lastEdited ? 1 : -1));
 }
 
