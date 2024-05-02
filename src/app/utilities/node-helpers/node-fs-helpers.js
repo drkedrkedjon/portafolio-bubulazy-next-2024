@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import React from "react";
+import { parseDate } from "../varias-utilidades";
 
 function readFile(localPath) {
   return fs.readFile(path.join(process.cwd(), localPath), "utf8");
@@ -26,7 +27,12 @@ export async function getBlogPostList() {
     });
   }
   // Error, hay que coregir el orden de los posts
-  return blogPosts.sort((p1, p2) => (p1.lastEdited < p2.lastEdited ? 1 : -1));
+  // return blogPosts.sort((p1, p2) => (p1.lastEdited < p2.lastEdited ? 1 : -1));
+  return blogPosts.sort((p1, p2) => {
+    const date1 = parseDate(p1.lastEdited);
+    const date2 = parseDate(p2.lastEdited);
+    return date1 < date2 ? 1 : -1;
+  });
 }
 
 export const loadBlogPost = React.cache(async function loadBlogPost(slug) {

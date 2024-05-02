@@ -1,3 +1,4 @@
+// Format date depending on the language on Draft listing page
 export const formatDate = (dateString, language) => {
   const options = { year: "numeric", month: "long", day: "numeric" };
   const dateParts = dateString.split("-").map((part) => parseInt(part, 10));
@@ -13,3 +14,8 @@ export const formatDate = (dateString, language) => {
     return date.toLocaleDateString("en-UK", options);
   }
 };
+// Take DD-MM-YYYY and return a Date object in getPostList in node-helpers
+export function parseDate(dateString) {
+  const [day, month, year] = dateString.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
