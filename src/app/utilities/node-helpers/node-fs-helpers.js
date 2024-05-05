@@ -27,9 +27,9 @@ export async function getBlogPostList() {
     });
   }
   // Error, hay que coregir el orden de los posts
-  // Old version of sort, still unsure if it works well now with new one
-
+  // Old version of sort, still unsure if it works well now with the new one
   // return blogPosts.sort((p1, p2) => (p1.lastEdited < p2.lastEdited ? 1 : -1));
+
   return blogPosts.sort((p1, p2) => {
     const date1 = parseDate(p1.lastEdited);
     const date2 = parseDate(p2.lastEdited);
