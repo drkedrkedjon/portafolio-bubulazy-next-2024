@@ -51,6 +51,7 @@ export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
   return { frontmatter, content };
 });
 
+// Lo mismo pero sin React.cache
 // export async function loadBlogPost(slug) {
 //   const filePath = path.join(process.cwd(), "/blog-mdx-files/", `${slug}.mdx`);
 //   const rawContent = await fs.readFile(filePath, "utf8");
