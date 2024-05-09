@@ -3,23 +3,33 @@ title: How I Solved Dark/Light Mode in React.
 abstract: This is how I solved the dark/light theme with CSS, JS, and React. You can read about my thought process and how I implemented it with code examples. There are better ways to achieve the same result, but this is my approach given my current level of programming knowledge.
 language: en
 initialDate: 01-05-2024
-lastEdited: 05-05-2024
-stage: Half finished
-certainty: Not perfect, code is functional
+lastEdited: 09-05-2024
+stage: Initial draft, half is missing
+certainty: Far from perfect, the code is functional
 importance: Personal
 ---
 
 ## Disclaimer
 
-> If you are an experienced developer, you might find this article basic. In that case, I will appreciate your comment.
+> If you are an experienced developer, you might find this article basic.
 >
-> This is how I solved the dark/light theme with CSS, JS, and React. You can read about my thought process and how I implemented it with code examples. There are better ways to achieve the same result, but this is my approach given my current level of programming knowledge.
+> My solution to the the dark/light theme with CSS, JS, and React. You can read about my thought process and how I implemented it with code examples. There are better ways to achieve the same result, but this is my approach given my current level of programming knowledge.
 >
 > Thanks for visiting!
 
 ## Though process
 
-Since my blog is built with React and NEXT.js, there was no need to implement the theme switchers using plain CSS without JS. I utilise Server-Side Rendering and Server-Side Components, where the HTML is rendered on the server and sent to the client. Certain parts of the navigation and a few other elements rely on React hydration, but the user can see the full UI with HTML and CSS even without JS.
+Since my blog is built with React and NEXT.js, there was no reason to insist on implementing the theme switcher using plain CSS without any JS. I utilise Server-Side Rendering and Server-Side Components, where the HTML & CSS are rendered on the server and sent to the client. Certain parts of the navigation and a few other elements rely on React hydration, but the user can see the full UI with HTML and CSS even without JS.
+
+In a progressive sense, this is a flow:
+
+- HTML & CSS are sent to the user.
+- If the browser is old, light theme custom properties will be applied.
+- If the browser is modern, using `prefers-color-scheme`, we will detect in CSS their operating system preferences and apply the corresponding variation of custom properties. Either light, either dark theme. Up until here, we do not need JS.
+- After the initial load and the header component is hydrated, we use React's `useEffect()` to ask the same question: what theme do you prefer? This time, however, we utilise JavaScript. With that, we update the React state controlling the theme switcher and synchronise the user's OS preference with the app state, ensuring that the state updates custom properties correctly.
+- The final component is a button that allows the user to toggle the theme state from light to dark and vice versa. This action triggers a re-render, changing values in custom properties if desired.
+
+Let's see in more detail...
 
 ### CSS
 
@@ -41,7 +51,7 @@ If a user has JS disabled and prefers their chosen OS theme, that's the initial 
 }
 ```
 
-I use custom properties for colors and as light theme is by default chosen by majority of users that’s what is in :root. And older browsers that do not understand `@media (prefers-color-scheme: dark)` can load variables fine and light theme will be available.
+I use custom properties for colours and as light theme is by default chosen by majority of users that’s what is in :root. And older browsers that do not understand `@media (prefers-color-scheme: dark)` can load variables fine and light theme will be available.
 
 Inside `@media` we have same custom properties with different values for dark theme and for modern browsers that du understand `prefers-color-scheme: dark`.
 
