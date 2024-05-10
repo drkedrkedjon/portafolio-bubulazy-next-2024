@@ -17,7 +17,7 @@ import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const pathname = usePathname();
   const id = useId();
@@ -54,7 +54,7 @@ export default function Header() {
       root.style.setProperty("--clr-texto", "130 5% 24%");
       root.style.setProperty("--clr-fondo", "0 0% 96%");
     }
-  }, [darkMode, setDarkMode]);
+  }, [darkMode]);
 
   return (
     <header className={styles.header}>
@@ -86,7 +86,6 @@ export default function Header() {
         <div className={styles.navContainer}>
           <ul
             onMouseLeave={() => setHoveredDesktopLink(null)}
-            aria-hidden="true"
             className={styles.desktopNav}
           >
             {/* Iteramos y creamos Desktop Links */}
@@ -95,9 +94,9 @@ export default function Header() {
               <li
                 key={slug}
                 // Un VUDU de z-index que hace que el fondo del link que esta en hover se muestre por debajo de los demas
-                style={{
-                  zIndex: hoveredDesktopLink === slug ? 1 : 2,
-                }}
+                // style={{
+                //   zIndex: hoveredDesktopLink === slug ? 1 : 2,
+                // }}
               >
                 {hoveredDesktopLink === slug && (
                   <motion.div

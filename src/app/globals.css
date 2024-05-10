@@ -118,20 +118,9 @@ meter {
 
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --clr-primario: 198 37% 15%;
-    --clr-secundario: 198 31% 17%;
-    --clr-acentado: 198 44% 22%;
-    --clr-acentado-color: 7 80% 64%;
-    --clr-texto: 0 0% 90%;
-    --clr-fondo: 198 25% 10%;
-    --clr-negro: 0 0% 13%;
-    --clr-blanco: 180 14% 97%;
-  }
-}
 
-@media (prefers-color-scheme: light) {
+
+/* @media (prefers-color-scheme: light) {
   :root {
     --clr-primario: 175 42% 90%;
     --clr-secundario: 161 40% 90%;
@@ -142,9 +131,19 @@ meter {
     --clr-negro: 0 0% 13%;
     --clr-blanco: 180, 14%, 97%;
   }
-}
+} */
 
 :root {
+  /* Colours */
+  --clr-primario: 175 42% 90%;
+  --clr-secundario: 161 40% 90%;
+  --clr-acentado: 172 14% 78%;
+  --clr-acentado-color: 7 80% 40%;
+  --clr-texto: 130 5% 24%;
+  --clr-fondo: 0 0% 96%;
+  --clr-negro: 0 0% 13%;
+  --clr-blanco: 180, 14%, 97%;
+
   /* Formatos de letras */
   --fs-hero: clamp(3.052rem, 6vw, 4.5rem);
   --fs-900: 3.052rem;
@@ -181,6 +180,19 @@ meter {
   --gap-grande: 4rem;
 
   font-size: 112%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-primario: 198 37% 15%;
+    --clr-secundario: 198 31% 17%;
+    --clr-acentado: 198 44% 22%;
+    --clr-acentado-color: 7 80% 64%;
+    --clr-texto: 0 0% 90%;
+    --clr-fondo: 198 25% 10%;
+    --clr-negro: 0 0% 13%;
+    --clr-blanco: 180 14% 97%;
+  }
 }
 
 /* **************************/
