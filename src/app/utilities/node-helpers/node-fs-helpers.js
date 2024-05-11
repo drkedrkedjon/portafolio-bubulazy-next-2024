@@ -26,9 +26,6 @@ export async function getBlogPostList() {
       ...frontmatter,
     });
   }
-  // Error, hay que coregir el orden de los posts
-  // Old version of sort, still unsure if it works well now with the new one
-  // return blogPosts.sort((p1, p2) => (p1.lastEdited < p2.lastEdited ? 1 : -1));
 
   return blogPosts.sort((p1, p2) => {
     const date1 = parseDate(p1.lastEdited);
@@ -50,13 +47,3 @@ export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
   const { data: frontmatter, content } = matter(rawContent);
   return { frontmatter, content };
 });
-
-// Lo mismo pero sin React.cache
-// export async function loadBlogPost(slug) {
-//   const filePath = path.join(process.cwd(), "/blog-mdx-files/", `${slug}.mdx`);
-//   const rawContent = await fs.readFile(filePath, "utf8");
-
-//   const { data: frontmatter, content } = matter(rawContent);
-
-//   return { frontmatter, content };
-// };
