@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from "./Formulario.module.css";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Formulario() {
   const [form, setForm] = useState({
@@ -49,7 +50,17 @@ export default function Formulario() {
       className={styles.container}
     >
       <div className={`wrapper ${styles.formulario}`}>
-        <div className={`flow ${styles.contenido}`}>
+        <motion.div
+          initial={{ opacity: 0, x: "-100%" }}
+          whileInView={{ opacity: 1, x: "0%" }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 10,
+            duration: 5,
+          }}
+          className={`flow ${styles.contenido}`}
+        >
           <h2>Vamos a ver sí juntos podemos hacer que funcione...</h2>
           <p>
             Si estás buscando a un desarrollador frontend junior con quién te
@@ -62,8 +73,16 @@ export default function Formulario() {
               LinkedIn
             </Link>
           </div>
-        </div>
-        <form
+        </motion.div>
+        <motion.form
+          initial={{ opacity: 0, x: "100%" }}
+          whileInView={{ opacity: 1, x: "0%" }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 10,
+            duration: 5,
+          }}
           onSubmit={handleSubmitForm}
           className={styles.form}
         >
@@ -120,7 +139,7 @@ export default function Formulario() {
           />
           <p className={styles.formMessage}>{form.formMessage}</p>
           <button className={styles.button}>Enviar mensaje, gracias</button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );
