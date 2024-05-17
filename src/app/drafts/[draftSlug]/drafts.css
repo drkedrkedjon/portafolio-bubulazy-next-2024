@@ -30,6 +30,10 @@
     font-stretch: var(--f-str-125);
   }
 
+  & pre {
+    font-size: var(--fs-300);
+  }
+
   & .draft-details {
     text-align: right;
   }

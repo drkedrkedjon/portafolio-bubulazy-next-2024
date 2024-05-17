@@ -7,6 +7,7 @@ import { Code } from "bright";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 Code.theme = "dracula-soft";
+Code.lineNumbers = true;
 
 //  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
 export async function generateMetadata({ params }) {

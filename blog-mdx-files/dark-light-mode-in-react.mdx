@@ -3,7 +3,7 @@ title: How I Solved Dark/Light Mode in React.
 abstract: My solution to the dark/light theme with CSS, JS, and React. You can read about my thought process and how I implemented it, along with code examples. There are better ways to achieve the same result, but this is my approach given my current level of programming knowledge.
 language: en
 initialDate: 01-05-2024
-lastEdited: 10-05-2024
+lastEdited: 17-05-2024
 stage: First version, could be improved
 certainty: Far from glory, the code is functional
 importance: Personal
@@ -26,7 +26,6 @@ In a progressive enhancement sense, this is the flow:
 - If the browser is a modern buddy and it gets the `prefers-color-scheme` CSS query, we detect what the user's operating system preferences are and then with CSS apply the corresponding variation of custom properties values, either light or dark theme. Up until here, we do not need JS at all.
 - After the initial load, the header component will be hydrated. Once done, we use React's useEffect() hook to ask the same question: What theme version is your OS default? This time, however, we utilise JavaScript instead of CSS. Once we know the answer, we update the React state and with that, we synchronise the user's OS preferences with the app state, ensuring that they are the same.
 - The final piece is a button that offers the user option to toggle the theme from light to dark and vice versa if he wants and at any moment. This action triggers another useEffect() and a re-render, flipping values in our colours custom properties with JS...
-
 
 ## Code
 
@@ -65,22 +64,22 @@ If the user has JS enabled, the header component will hydrate, and we can use th
 Using the React useEffect() hook, we check via JS the default user OS theme. We do that to synchronise our app state with the user's OS preference and with what is applied on the page by CSS.
 
 ```jsx
-  const [isMenuOpen, toggleMenuOpen] = useToggle(false);
-  const [darkMode, setDarkMode] = useState(false);
-  
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setDarkMode(true);
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches
-    ) {
-      setDarkMode(false);
-    }
-  }, []);
+const [isMenuOpen, toggleMenuOpen] = useToggle(false);
+const [darkMode, setDarkMode] = useState(false);
+
+useEffect(() => {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    setDarkMode(true);
+  } else if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+  ) {
+    setDarkMode(false);
+  }
+}, []);
 ```
 
 Once we are all good and synchronised, if the user wants to endlessly click the button that switches the theme, let’s give him that pleasure.
@@ -119,4 +118,3 @@ And I do not want to set any sweet cookies because I’m in the EU and that GDPR
 Lastly, I am unable to notice any flash of unstyled HTML or the wrong theme. That doesn’t mean I’m 100% sure that there is no flash of white nirvana in different circumstances.
 
 Thanks for visiting.
-
