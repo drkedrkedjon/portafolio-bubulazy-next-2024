@@ -18,26 +18,45 @@ export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
+  const [firstLoad, setFirstLoad] = useState(true);
 
   const pathname = usePathname();
   const id = useId();
 
   // Dark mode stuff
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setDarkMode(true);
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches
-    ) {
-      setDarkMode(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   ) {
+  //     setDarkMode(true);
+  //   } else if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: light)").matches
+  //   ) {
+  //     setDarkMode(false);
+  //   }
+  // }, []);
 
   useEffect(() => {
+    if (firstLoad) {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        setFirstLoad(false);
+        setDarkMode(true);
+        return;
+      } else if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+      ) {
+        setFirstLoad(false);
+        setDarkMode(false);
+        return;
+      }
+    }
+
     const root = document.querySelector(":root");
     if (darkMode) {
       root.style.setProperty("--clr-primario", "198 37% 15%");
@@ -54,7 +73,7 @@ export default function Header() {
       root.style.setProperty("--clr-texto", "130 5% 24%");
       root.style.setProperty("--clr-fondo", "0 0% 96%");
     }
-  }, [darkMode]);
+  }, [darkMode, firstLoad]);
 
   return (
     <header className={styles.header}>
