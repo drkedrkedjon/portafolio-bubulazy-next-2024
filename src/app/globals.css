@@ -207,6 +207,7 @@ body {
   background-color: hsl(var(--clr-fondo));
   color: hsl(var(--clr-texto));
   min-height: 100vh;
+  /* overflow: hidden; */
 }
 
 :is(h1, h2, h3) {
