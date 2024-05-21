@@ -18,7 +18,7 @@ export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
-  const [firstLoad, setFirstLoad] = useState(true);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const pathname = usePathname();
   const id = useId();
@@ -39,22 +39,20 @@ export default function Header() {
   // }, []);
 
   useEffect(() => {
-    if (firstLoad) {
+    if (isFirstRender) {
       if (
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        setFirstLoad(false);
         setDarkMode(true);
-        return;
       } else if (
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: light)").matches
       ) {
-        setFirstLoad(false);
         setDarkMode(false);
-        return;
       }
+      setIsFirstRender(false);
+      return;
     }
 
     const root = document.querySelector(":root");
@@ -73,7 +71,7 @@ export default function Header() {
       root.style.setProperty("--clr-texto", "130 5% 24%");
       root.style.setProperty("--clr-fondo", "0 0% 96%");
     }
-  }, [darkMode, firstLoad]);
+  }, [darkMode, isFirstRender]);
 
   return (
     <header className={styles.header}>

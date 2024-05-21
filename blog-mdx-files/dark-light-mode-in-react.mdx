@@ -113,37 +113,39 @@ First, I use two useEffect() hooks. That could be squeezed into one with an if s
 
 > A week later...
 >
-> I've done it; placed all in one useEffect() and it looks to me that it works better, here is the code:
+> I've done it; placed all in one useEffect() and it looks to me that it works better, here is the final code:
 
 ```jsx
+const [isFirstRender, setIsFirstRender] = useState(true);
+
 useEffect(() => {
-    if (firstLoad) {
+    if (isFirstRender) {
       if (
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        setFirstLoad(false);
         setDarkMode(true);
-        return;
       } else if (
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: light)").matches
       ) {
-        setFirstLoad(false);
         setDarkMode(false);
-        return;
       }
+      setIsFirstRender(false);
+      return;
     }
 
     const root = document.querySelector(":root");
     if (darkMode) {
       root.style.setProperty("--clr-primario", "198 37% 15%");
+      root.style.setProperty("--clr-secundario", "198 31% 17%");
       ...
     } else {
       root.style.setProperty("--clr-primario", "175 42% 90%");
+      root.style.setProperty("--clr-secundario", "161 40% 90%");
       ...
     }
-  }, [darkMode, firstLoad]);
+  }, [darkMode, isFirstRender]);
 ```
 
 The second one is to set a cookie in local storage with user theme preferences and to load that cookie on subsequent visits. But, it complicates things. And I wonder, how many users prefer a different theme to their own OS default. In my opinion, not many.
