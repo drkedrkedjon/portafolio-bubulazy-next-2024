@@ -3,8 +3,8 @@ title: How I Solved Dark/Light Mode in React.
 abstract: My solution to the dark/light theme with CSS, JS, and React. You can read about my thought process and how I implemented it, along with code examples. There are better ways to achieve the same result, but this is my approach given my current level of programming knowledge.
 language: en
 initialDate: 01-05-2024
-lastEdited: 17-05-2024
-stage: First version, could be improved
+lastEdited: 24-05-2024
+stage: Finished, for the moment
 certainty: Far from glory, the code is functional
 importance: Personal
 ---
@@ -82,7 +82,7 @@ useEffect(() => {
 }, []);
 ```
 
-Once we are all good and synchronised, if the user wants to endlessly click the button that switches the theme, let’s give him that pleasure.
+Once we are all good and synchronised, and if the user wants to endlessly click the button that switches the theme, let’s give him that pleasure.
 
 Inside the second `useEffect()` hook, and using the JS `.setProperty()` method, we flip the theme."
 
@@ -105,11 +105,11 @@ That’s about it...
 
 ## Final words
 
-We know that this can be done much better, but let’s reserve that for future adventures once I progress more with my knowledge.
+I know that this can be done much better, but let’s reserve that for future adventures once I progress more with my knowledge.
 
 ### Doubts
 
-First, I use two useEffect() hooks. That could be squeezed into one with an if statement inside and another useState() named isFirstRender(true). In that case, the code from the first hook where we sync the state could be placed inside the second hook. I’ll try that soon to see what happens afterwards.
+First, I use two useEffect() hooks. (Edit: Changed to one...) That could be squeezed into one with an if statement inside and another useState() named isFirstRender(true). In that case, the code from the first hook where we sync the state will be placed inside the second hook. I’ll try that soon to see what happens afterwards.
 
 > A week later...
 >
@@ -148,10 +148,12 @@ useEffect(() => {
   }, [darkMode, isFirstRender]);
 ```
 
-The second one is to set a cookie in local storage with user theme preferences and to load that cookie on subsequent visits. But, it complicates things. And I wonder, how many users prefer a different theme to their own OS default. In my opinion, not many.
+The second doubt is about setting a cookie in the browser with user theme preferences and loading that cookie on subsequent visits. However, this complicates things.
 
-And I do not want to set any sweet cookies because I’m in the EU and that GDPR Cookie Banner thingy that pops up everywhere, I do not want that on my personal site. No tracking, no need for cookie banner.
+I wonder how many users prefer a different theme to their OS default. In my opinion, not many. If this blog were a large app used daily, then setting a cookie would be fine. But for my needs, it is overkill.
 
-Lastly, I am unable to notice any flash of unstyled HTML or the wrong theme. That doesn’t mean I’m 100% sure that there is no flash of white nirvana in different circumstances.
+Additionally, I do not want to set any cookies because I’m located in the EU, and I do not want that cookie banner thing to pop up on my personal site. No tracking, no cookies, no legal need for a cookie banner.
 
-Thanks for visiting.
+Lastly, I have not noticed any flash of unstyled HTML or the wrong theme. That doesn’t mean I’m 100% sure there is no flash at all.
+
+Thanks.
