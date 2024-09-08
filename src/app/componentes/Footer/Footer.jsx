@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./footer.module.css";
 import { HAMBURGER_LINKS } from "@/app/utilities/constants";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import memoji from "@/app/assets/images/generales/footer-memoji.png";
 
 const thisYear = new Date().getFullYear();
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`wrapper ${styles.container}`}>
@@ -73,3 +74,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+const PureFooter = React.memo(Footer);
+export default PureFooter;
