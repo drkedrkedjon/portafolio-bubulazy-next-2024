@@ -5,13 +5,19 @@ import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "framer-motion";
 import { HAMBURGER_LINKS } from "@/app/[locale]/utilities/constants";
-import Link from "next/link";
+// import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { usePathname } from "next/navigation";
 
 export default function NavMenu({ toggleMenuOpen }) {
   const [hoveredHamburgerLink, setHoveredHamburgerLink] = useState(null);
   const pathname = usePathname();
   const id = useId();
+  // next-intl stuff
+  const t = useTranslations("DesktopLinks");
+  const tt = useTranslations("Header");
+  const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
   useEffect(() => {
     const elementoEnfocadoAntesAbrirlo = document.activeElement;
@@ -63,14 +69,14 @@ export default function NavMenu({ toggleMenuOpen }) {
           >
             <div className={styles.menuLinks}>
               <ul onMouseLeave={() => setHoveredHamburgerLink(null)}>
-                {HAMBURGER_LINKS.map(({ href, slug, label }) => (
+                {desktopLinksKeys.map((key) => (
                   <li
-                    key={slug}
+                    key={key}
                     style={{
-                      zIndex: hoveredHamburgerLink === slug ? 1 : 2,
+                      zIndex: hoveredHamburgerLink === key ? 1 : 2,
                     }}
                   >
-                    {hoveredHamburgerLink === slug && (
+                    {hoveredHamburgerLink === key && (
                       <motion.div
                         layoutId={id}
                         className={styles.hoveredFondo}
@@ -82,13 +88,15 @@ export default function NavMenu({ toggleMenuOpen }) {
                     )}
                     <Link
                       onClick={toggleMenuOpen}
-                      onMouseEnter={() => setHoveredHamburgerLink(slug)}
+                      onMouseEnter={() => setHoveredHamburgerLink(key)}
                       className={
-                        pathname === href ? styles.hamburgerActiveLinks : ""
+                        pathname === t(`${key}.href`)
+                          ? styles.hamburgerActiveLinks
+                          : ""
                       }
-                      href={href}
+                      href={t(`${key}.href`)}
                     >
-                      {label}
+                      {t(`${key}.label`)}
                     </Link>
                   </li>
                 ))}
@@ -103,7 +111,7 @@ export default function NavMenu({ toggleMenuOpen }) {
                 aria-hidden="true"
                 focusable="false"
               />
-              Cerrar menu
+              {tt("NavMenuCloseBtn")}
             </button>
           </motion.div>
         </RemoveScroll>

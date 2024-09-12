@@ -95,38 +95,33 @@ export default function Header() {
           >
             {/* Iteramos y creamos Desktop Links */}
 
-            {desktopLinksKeys.map(
-              (key) => (
-                console.log(key),
-                (
-                  <li key={key}>
-                    {hoveredDesktopLink === key && (
-                      <motion.div
-                        layoutId={id}
-                        className={styles.hoveredFondo}
-                        initial={false}
-                        animate={{
-                          borderRadius: "var(--border-radius)",
-                        }}
-                      />
-                    )}
-                    <Link
-                      onMouseEnter={() => setHoveredDesktopLink(key)}
-                      className={`${styles.desktopLinks} ${
-                        pathname.includes(t(`${key}.href`)) &&
-                        t(`${key}.href`) !== "/"
-                          ? styles.desktopActiveLink
-                          : ""
-                        // pathname === "/" ? styles.desktopActiveLink : ""
-                      }`}
-                      href={t(`${key}.href`)}
-                    >
-                      {t(`${key}.label`)}
-                    </Link>
-                  </li>
-                )
-              )
-            )}
+            {desktopLinksKeys.map((key) => (
+              <li key={key}>
+                {hoveredDesktopLink === key && (
+                  <motion.div
+                    layoutId={id}
+                    className={styles.hoveredFondo}
+                    initial={false}
+                    animate={{
+                      borderRadius: "var(--border-radius)",
+                    }}
+                  />
+                )}
+                <Link
+                  onMouseEnter={() => setHoveredDesktopLink(key)}
+                  className={`${styles.desktopLinks} ${
+                    pathname.includes(t(`${key}.href`)) &&
+                    t(`${key}.href`) !== "/"
+                      ? styles.desktopActiveLink
+                      : ""
+                    // pathname === "/" ? styles.desktopActiveLink : ""
+                  }`}
+                  href={t(`${key}.href`)}
+                >
+                  {t(`${key}.label`)}
+                </Link>
+              </li>
+            ))}
 
             {/* Old desktop links */}
 

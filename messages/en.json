@@ -16,5 +16,8 @@
       "label": "Drafts",
       "href": "/drafts"
     }
+  },
+  "Header": {
+    "NavMenuCloseBtn": "Close menu"
   }
 }
