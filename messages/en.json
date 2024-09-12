@@ -17,6 +17,24 @@
       "href": "/drafts"
     }
   },
+  "HamburgerLinks": {
+    "home": {
+      "label": "Home",
+      "href": "/"
+    },
+    "projects": {
+      "label": "Projects",
+      "href": "/proyectos"
+    },
+    "cv": {
+      "label": "Curriculum",
+      "href": "/cv"
+    },
+    "drafts": {
+      "label": "Drafts",
+      "href": "/drafts"
+    }
+  },
   "Header": {
     "NavMenuCloseBtn": "Close menu"
   },

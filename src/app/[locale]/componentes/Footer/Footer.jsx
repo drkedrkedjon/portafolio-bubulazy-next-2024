@@ -13,6 +13,8 @@ const thisYear = new Date().getFullYear();
 function Footer() {
   const [lang, setLang] = useState("en");
   const t = useTranslations("Footer");
+  const tt = useTranslations("HamburgerLinks");
+  const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
   useEffect(() => {
     setLang(document.documentElement.lang);
@@ -25,9 +27,9 @@ function Footer() {
           <div className="flow">
             <h3 className={styles.h3}> {t("leftTitle")} </h3>
             <ul className="flow">
-              {HAMBURGER_LINKS.map((link) => (
-                <li key={link.slug}>
-                  <Link href={link.href}>{link.label}</Link>
+              {desktopLinksKeys.map((key) => (
+                <li key={key}>
+                  <Link href={tt(`${key}.href`)}>{tt(`${key}.label`)}</Link>
                 </li>
               ))}
             </ul>
