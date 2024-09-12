@@ -1,8 +1,20 @@
 {
-  "Header": {
-    "Home": "Home",
-    "Projects": "Proyects",
-    "CV": "CV",
-    "Drafts": "Drafts"
+  "DesktopLinks": {
+    "home": {
+      "label": "Home",
+      "href": "/"
+    },
+    "projects": {
+      "label": "Projects",
+      "href": "/proyectos"
+    },
+    "cv": {
+      "label": "CV",
+      "href": "/cv"
+    },
+    "drafts": {
+      "label": "Drafts",
+      "href": "/drafts"
+    }
   }
 }

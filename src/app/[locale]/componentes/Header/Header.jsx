@@ -9,7 +9,7 @@ import VisualyHidden from "../../utilities/VisualyHidden";
 import useToggle from "../../utilities/useToggle";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { DESKTOP_LINKS } from "@/app/[locale]/utilities/constants";
+// import { DESKTOP_LINKS } from "@/app/[locale]/utilities/constants";
 import { useState, useId, useEffect, use } from "react";
 import { motion } from "framer-motion";
 import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-video.webp";
@@ -23,7 +23,8 @@ export default function Header() {
 
   const pathname = usePathname();
   const id = useId();
-  const t = useTranslations("Header");
+  const t = useTranslations("DesktopLinks");
+  const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
   useEffect(() => {
     if (isFirstRender) {
@@ -94,7 +95,42 @@ export default function Header() {
           >
             {/* Iteramos y creamos Desktop Links */}
 
-            {DESKTOP_LINKS.map(({ href, slug, label }) => (
+            {desktopLinksKeys.map(
+              (key) => (
+                console.log(key),
+                (
+                  <li key={key}>
+                    {hoveredDesktopLink === key && (
+                      <motion.div
+                        layoutId={id}
+                        className={styles.hoveredFondo}
+                        initial={false}
+                        animate={{
+                          borderRadius: "var(--border-radius)",
+                        }}
+                      />
+                    )}
+                    <Link
+                      onMouseEnter={() => setHoveredDesktopLink(key)}
+                      className={`${styles.desktopLinks} ${
+                        pathname.includes(t(`${key}.href`)) &&
+                        t(`${key}.href`) !== "/"
+                          ? styles.desktopActiveLink
+                          : ""
+                        // pathname === "/" ? styles.desktopActiveLink : ""
+                      }`}
+                      href={t(`${key}.href`)}
+                    >
+                      {t(`${key}.label`)}
+                    </Link>
+                  </li>
+                )
+              )
+            )}
+
+            {/* Old desktop links */}
+
+            {/* {DESKTOP_LINKS.map(({ href, slug, label }) => (
               <li key={slug}>
                 {hoveredDesktopLink === slug && (
                   <motion.div
@@ -119,7 +155,7 @@ export default function Header() {
                   {label}
                 </Link>
               </li>
-            ))}
+            ))} */}
           </ul>
 
           {/* Greupo de botones de color y rss */}
