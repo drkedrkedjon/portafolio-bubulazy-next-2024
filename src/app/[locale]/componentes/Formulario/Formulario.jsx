@@ -1,8 +1,10 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import styles from "./Formulario.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Formulario() {
   const [form, setForm] = useState({
@@ -11,6 +13,7 @@ export default function Formulario() {
     mensaje: "",
     formMessage: "",
   });
+  const t = useTranslations("Formulario");
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -33,13 +36,13 @@ export default function Formulario() {
           name: "",
           email: "",
           mensaje: "",
-          formMessage: "Mensaje enviado, gracias",
+          formMessage: t("msgEnviado"),
         });
       })
       .catch((error) => {
         setForm({
           ...form,
-          formMessage: "Ha ocurido un error, prueba de nuevo. Lo siento.",
+          formMessage: t("msgError"),
         });
       });
   };
@@ -61,12 +64,8 @@ export default function Formulario() {
           }}
           className={`flow ${styles.contenido}`}
         >
-          <h2>Vamos a ver sí juntos podemos hacer que funcione...</h2>
-          <p>
-            Si estás buscando a un desarrollador frontend junior con quién te
-            gustaría trabajar o simplemente deseas conectarte/hacer una
-            pregunta, no dudes en escribirme.
-          </p>
+          <h2>{t("title")}</h2>
+          <p>{t("parafo")}</p>
           <div className={styles.misEnlaces}>
             <Link href="https://github.com/drkedrkedjon">GitHub</Link> |{" "}
             <Link href="https://www.linkedin.com/in/sasa-savic-perusina/">
@@ -99,7 +98,7 @@ export default function Formulario() {
             type="text"
             name="Nombre"
             id="name"
-            placeholder="¿Cómo te gustaría que te llamara?"
+            placeholder={t("nombrePlhol")}
           />
           <label
             className={styles.label}
@@ -114,7 +113,7 @@ export default function Formulario() {
             type="text"
             id="email"
             name="Email"
-            placeholder="¿Cuál es tu dirección de correo?"
+            placeholder={t("emailPlhol")}
           />
           <label
             className={styles.label}
@@ -135,10 +134,10 @@ export default function Formulario() {
             id="mensaje"
             cols="30"
             rows="6"
-            placeholder="Escribe aquí tu mensaje..."
+            placeholder={t("mensajePlhol")}
           />
           <p className={styles.formMessage}>{form.formMessage}</p>
-          <button className={styles.button}>Enviar mensaje, gracias</button>
+          <button className={styles.button}>{t("btnEnviar")}</button>
         </motion.form>
       </div>
     </section>

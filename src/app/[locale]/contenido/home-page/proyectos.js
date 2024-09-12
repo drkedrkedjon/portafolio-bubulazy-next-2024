@@ -6,7 +6,73 @@ import blancodent from "./images/blancodent-card.jpg";
 import listillo from "./images/listillo-card.png";
 import pacMan from "./images/pacman-card.png";
 
-export const PROYECTOS = [
+export const PROYECTOS_EN = [
+  {
+    id: "016",
+    titulo: "Multipage Web Form",
+    descripcion:
+      "This application serves as an exercise project aimed at building a multi-page form with Firebase authentication, storage, and database integration as the backend. Essentially, it simulates the job application process.",
+    imageSrc: multiPageWebForm,
+    url: "/proyectos/multipage-web-form",
+    linkText: "View the detailed description of the project and my work =>",
+  },
+  {
+    id: "015",
+    titulo: "Portafolio y Blog personal",
+    descripcion:
+      "This project is a web application that has been developed and designed using Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote, and Figma. The main objective of this project is to showcase my web development and user interface design skills.",
+    imageSrc: bubulazyPortafolio,
+    url: "/proyectos/portafolio",
+    linkText: "View the detailed description of the project and my work =>",
+  },
+  {
+    id: "014",
+    titulo: "App de Recordatorios para moviles",
+    descripcion:
+      "Inspired by the iOS Reminders app. Using the following technologies: React, React Router, Firebase Realtime DB, Auth, and Storage. Basic functionality implemented, various ideas for improving functionality will be implemented over time.",
+    imageSrc: recordatorios,
+    url: "/proyectos/recordatorios",
+    linkText: "View the detailed description of the project and my work =>",
+  },
+  {
+    id: "013",
+    titulo: "Sarajevo Tours",
+    descripcion:
+      "Project for a fictitious online store. Made with React, React Router + Firebase Firestore and Auth as the backend. Custom design with Figma. Uses: Flexbox, Grid, Container Query, Nested Routes, Relative Path, Query parameters, Stateful Forms, useEffect, useState, createContext, useRef, etc...",
+    imageSrc: sarajevoTours,
+    url: "/proyectos/sarajevo-tours",
+    linkText: "View the detailed description of the project and my work =>",
+  },
+  {
+    id: "012",
+    titulo: "Clínica dental Blancodent",
+    descripcion:
+      "Website for a dental clinic (commercial client) design + UX/UI using Figma. A new code of CSS, HTML, and a bit of JS. The original website was on Squarespace and we have transferred it to Netlify. In the next phase, it will be moved to use NEXT.js and React.js while maintaining the original design.",
+    imageSrc: blancodent,
+    url: "/proyectos/clinica-dental-blancodent",
+    linkText: "View the detailed description of the project and my work =>",
+  },
+  {
+    id: "011",
+    titulo: "ChatGPT API - Chat App",
+    descripcion:
+      "Connection with the OpenAI API (3.5-turbo model) to create a chatbot. Firebase Realtime Database for backend & Auth. Netlify environment variables to protect the API key. Netlify functions to connect with the OpenAI API and obtain responses.",
+    imageSrc: listillo,
+    url: "https://listillo-openai-api.netlify.app/",
+    linkText: "Enlace a la app =>",
+  },
+  {
+    id: "010",
+    titulo: "Juego de PacMan",
+    descripcion:
+      "One of my first projects in JavaScript, learning to manipulate the DOM, inserting CSS from JS, using the modulus operator, etc... You will need a keyboard, so you should do it from a computer.",
+    imageSrc: pacMan,
+    url: "https://drkedrkedjon.github.io/juego-pac-man/",
+    linkText: "Link to the game page",
+  },
+];
+
+export const PROYECTOS_ES = [
   {
     id: "016",
     titulo: "Multipage Web Form",

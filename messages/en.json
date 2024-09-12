@@ -19,5 +19,26 @@
   },
   "Header": {
     "NavMenuCloseBtn": "Close menu"
+  },
+  "HomePage": {
+    "title": "Hi! I'm Sasha FrontEnd Developer",
+    "alt": "My memoji siting in front of open laptop"
+  },
+  "Formulario": {
+    "title": "Let's see if we can make it work together...",
+    "parafo": "If you are looking for a junior frontend developer to work with or simply want to connect/ask a question, do not hesitate to write to me.",
+    "msgEnviado": "Message sent, thank you",
+    "msgError": "An error has occurred, please try again. Sorry.",
+    "nombrePlhol": "What would you like to be called?",
+    "emailPlhol": "What is your email address?",
+    "mensajePlhol": "Write your message here...",
+    "btnEnviar": "Send message, thank you"
+  },
+  "Footer": {
+    "leftTitle": "Menu",
+    "centerTitle": "bubulazy.com",
+    "description": "Developed and designed by Sasha using Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote and next-intl for i18n.",
+    "rightTitle": "Social",
+    "copyRight": "Made in the Canary Islands:"
   }
 }

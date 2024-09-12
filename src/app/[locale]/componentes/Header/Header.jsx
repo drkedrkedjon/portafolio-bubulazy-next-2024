@@ -20,7 +20,7 @@ export default function Header() {
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
   const [isFirstRender, setIsFirstRender] = useState(true);
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState("en");
 
   const pathname = usePathname();
   const router = useRouter();

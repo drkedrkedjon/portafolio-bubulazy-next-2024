@@ -1,4 +1,5 @@
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import styles from "./SubHero.module.css";
 
 // type: single, single-link, doble-una-lista, doble-tres-listas,
