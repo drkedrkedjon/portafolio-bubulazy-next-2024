@@ -1,16 +1,16 @@
 "use client";
 import styles from "./Header.module.css";
 import { Sun, Moon, Menu, Rss } from "react-feather";
-// import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
+// import Link from "next/link";
 import NavMenu from "../NavMenu";
 import VisualyHidden from "../../utilities/VisualyHidden";
 import useToggle from "../../utilities/useToggle";
 import { AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 // import { DESKTOP_LINKS } from "@/app/[locale]/utilities/constants";
-import { useState, useId, useEffect, use } from "react";
+import { useState, useId, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-video.webp";
 import Image from "next/image";
@@ -20,8 +20,10 @@ export default function Header() {
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [lang, setLang] = useState("es");
 
   const pathname = usePathname();
+  const router = useRouter();
   const id = useId();
   const t = useTranslations("DesktopLinks");
   const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
@@ -60,6 +62,14 @@ export default function Header() {
       root.style.setProperty("--clr-fondo", "0 0% 96%");
     }
   }, [darkMode, isFirstRender]);
+
+  useEffect(() => {
+    setLang(document.documentElement.lang);
+  }, []);
+
+  function handleLangChange() {
+    router.replace(pathname, { locale: lang === "es" ? "en" : "es" });
+  }
 
   return (
     <header className={styles.header}>
@@ -174,6 +184,12 @@ export default function Header() {
               <Rss className={styles.iconSvg} />
               <VisualyHidden>RSS Feed</VisualyHidden>
             </Link>
+            <button
+              onClick={handleLangChange}
+              className={styles.langBtn}
+            >
+              {lang === "es" ? "EN" : "ES"}
+            </button>
           </div>
 
           {/* Navegacion */}
