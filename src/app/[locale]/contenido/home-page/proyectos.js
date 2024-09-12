@@ -1,10 +1,10 @@
-import multiPageWebForm from "@/app/[locale]/contenido/home-page/images/multipage-card.png";
-import bubulazyPortafolio from "@/app/[locale]/contenido/home-page/images/bubulazy-card.jpg";
-import recordatorios from "@/app/[locale]/contenido/home-page/images/recordatorios-card.jpg";
-import sarajevoTours from "@/app/[locale]/contenido/home-page/images/sarajevo-tours-card.png";
-import blancodent from "@/app/[locale]/contenido/home-page/images/blancodent-card.jpg";
-import listillo from "@/app/[locale]/contenido/home-page/images/listillo-card.png";
-import pacMan from "@/app/[locale]/contenido/home-page/images/pacman-card.png";
+import multiPageWebForm from "./images/multipage-card.png";
+import bubulazyPortafolio from "./images/bubulazy-card.jpg";
+import recordatorios from "./images/recordatorios-card.jpg";
+import sarajevoTours from "./images/sarajevo-tours-card.png";
+import blancodent from "./images/blancodent-card.jpg";
+import listillo from "./images/listillo-card.png";
+import pacMan from "./images/pacman-card.png";
 
 export const PROYECTOS = [
   {

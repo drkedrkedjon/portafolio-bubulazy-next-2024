@@ -1,8 +1,8 @@
-import mainDesktop from "@/app/contenido/clinica-dental-blancodent/images/proyecto-primera-grande.png";
-import mainMovil from "@/app/contenido/clinica-dental-blancodent/images/proyecto-primera-peque.jpg";
-import mainUltima from "@/app/contenido/clinica-dental-blancodent/images/proyecto-ultima.jpg";
-import asideDesktop from "@/app/contenido/clinica-dental-blancodent/images/problemas-largo.png";
-import asideMovil from "@/app/contenido/clinica-dental-blancodent/images/problemas-corto.png";
+import mainDesktop from "./images/proyecto-primera-grande.png";
+import mainMovil from "./images/proyecto-primera-peque.jpg";
+import mainUltima from "./images/proyecto-ultima.jpg";
+import asideDesktop from "./images/problemas-largo.png";
+import asideMovil from "./images/problemas-corto.png";
 
 export const contenidoDePagina = {
   id: "012",

@@ -1,8 +1,8 @@
-import proyectoGrande from "@/app/contenido/multipage-web-form/images/proyecto-primera-grande.png";
-import proyectoPequeno from "@/app/contenido/multipage-web-form/images/proyecto-primera-peque.png";
-import proyectoUltima from "@/app/contenido/multipage-web-form/images/proyecto-ultima.png";
-import problemasLargo from "@/app/contenido/multipage-web-form/images/problemas-largo.png";
-import problemasCorto from "@/app/contenido/multipage-web-form/images/problemas-corto.png";
+import proyectoGrande from "./images/proyecto-primera-grande.png";
+import proyectoPequeno from "./images/proyecto-primera-peque.png";
+import proyectoUltima from "./images/proyecto-ultima.png";
+import problemasLargo from "./images/problemas-largo.png";
+import problemasCorto from "./images/problemas-corto.png";
 
 export const contenidoDePagina = {
   id: "015",

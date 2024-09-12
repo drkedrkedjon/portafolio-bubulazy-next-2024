@@ -1,8 +1,8 @@
-import mainDesktop from "@/app/contenido/portafolio/images/proyecto-primera-grande.png";
-import mainMovil from "@/app/contenido/portafolio/images/proyecto-primera-peque.png";
-import mainUltima from "@/app/contenido/portafolio/images/proyecto-ultima.png";
-import asideDesktop from "@/app/contenido/portafolio/images/problemas-largo.png";
-import asideMovil from "@/app/contenido/portafolio/images/problemas-corto.png";
+import mainDesktop from "./images/proyecto-primera-grande.png";
+import mainMovil from "./images/proyecto-primera-peque.png";
+import mainUltima from "./images/proyecto-ultima.png";
+import asideDesktop from "./images/problemas-largo.png";
+import asideMovil from "./images/problemas-corto.png";
 
 export const contenidoDePagina = {
   id: "016",

@@ -53,7 +53,7 @@ export default async function RootLayout({ children, params: { locale } }) {
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          {children};
+          {children}
           <Footer />
         </NextIntlClientProvider>
       </body>
