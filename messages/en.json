@@ -69,5 +69,8 @@
     "description": "Developed and designed by Sasha using Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote and next-intl for i18n.",
     "rightTitle": "Social",
     "copyRight": "Made in the Canary Islands:"
+  },
+  "SubHero": {
+    "liveBtn": "Visit"
   }
 }

@@ -4,7 +4,7 @@ import mainUltima from "./images/proyecto-ultima.png";
 import asideDesktop from "./images/problemas-largo.png";
 import asideMovil from "./images/problemas-corto.png";
 
-export const contenidoDePagina = {
+export const contenidoDePagina_ES = {
   id: "016",
   hero: {
     about: "Proyecto:",
@@ -93,8 +93,102 @@ export const contenidoDePagina = {
   infoLink: {
     titulo: "Vamos a trabajar juntos",
     content:
-      "Si estás buscando a un desarrollador junior con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
+      "Si estás buscando a un desarrollador FrontEnd con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
     url: "/#contact-form",
     urlText: "Contáctame",
+  },
+};
+export const contenidoDePagina_EN = {
+  id: "016",
+  hero: {
+    about: "Project:",
+    title: "Personal portfolio and blog",
+  },
+  subHero: {
+    tituloSuperior: "Introduction",
+    contenidoSuperior:
+      "Although it is recommended 'not to include' the same portfolio, the reason it is included is that this project is not a simple Squarespace template, but the next step in my learning and I would like to show it. The most important thing I am going to learn is NEXT.js, SSR rendering, APP Router and next-mdx-remote to load markdown files from the Node server.",
+    tituloInferior: ["Type:", "Tools:", "Live:"],
+    contenidoInferior: {
+      colUno: ["Web App", "Optimised for mobile", "Portfolio & Blog"],
+      colDos: [
+        "CSS & HTML",
+        "React 18",
+        "NEXT.js",
+        "Next-mdx-remote",
+        "Framer-motion",
+        "Git & GitHub",
+        "Vercel",
+      ],
+      colTres: ["https://portafolio-bubulazy-next-2024.vercel.app"],
+    },
+  },
+  main: {
+    bloqueUno: {
+      title: "Purpose of the project",
+      contenido: [
+        "Create a personal space on the internet, controlled by myself and outside commercial silos, a place where I can showcase my programming skills and write about what interests me.",
+        "To present myself properly for potential job opportunities.",
+        "It is also a blog, to write about things that interest me and share it with the world.",
+      ],
+    },
+    bloqueDos: {
+      title: "My role in the project",
+      contenido: [
+        "Using the Figma application, I created the design and user interface.",
+        "Some ideas come from the React course 'Joy of React' by Joshua Comeau. The course gave me a good foundation to start with NEXT.js and SSR rendering.",
+        "Except for that and the CSS reset part, all the code has been written by me. Reading the documentation and figuring things out on my own. Surely that's why there are beginner mistakes, but the website works well and I have learned a lot.",
+      ],
+    },
+    bloqueTres: {
+      imgUno: mainDesktop,
+      imgDos: mainMovil,
+    },
+    bloqueCuatro: {
+      title: "Web stack and explanation",
+      contenido: [
+        "Workspace: Visual Studio Code. Framework NEXT.js.",
+        "Figma: UI and UX design.",
+        "CSS: The transformation of the design into a real application was done using modern CSS APIs. For the layout, I used flexbox, grid, and container query, which was really fun to learn and use.",
+        "NEXT APP Router: Relative routes, nested routes, etc.",
+        "React: Reusable components, props. Use of conditional rendering. Form control with state through value and onChange. useEffect for some other opportunities. useState, useRef.",
+        "Next-mdx-remote: To be implemented for the blog as the next step, the idea is to read markdown files from the same server.",
+        "Vercel: Continuous deployment through GitHub.",
+        "Extras: Framer Motion for animations, React-Icons for icons.",
+        "Git: Commits, Branches, Merge, Restore, Push.",
+      ],
+    },
+    bloqueCinco: {
+      imgUno: mainUltima,
+    },
+  },
+  aside: {
+    bloqueUno: {
+      title: "Problems and solutions",
+      contenido: [
+        "As always, problems appeared everywhere during development. But thanks to good documentation, I have gradually solved them.",
+        "More than once I reached a dead end and had to go back to a previous commit in git or delete the branch and start again.",
+        "The most I have learned from this whole process of going back and forth is to obtain a mental concept about the creative process of solving a problem, which I think is a fundamental knowledge in programming.",
+      ],
+    },
+    bloqueDos: {
+      imgUno: asideDesktop,
+      imgDos: asideMovil,
+    },
+    bloqueTres: {
+      title: "Lessons learned",
+      contenido: [
+        "Working alone. Being critical of oneself, reevaluating ideas. Accepting that you are not the smartest in the world. Recognising when you do not know.",
+        "Looking for solutions on the web. Connecting key points of documentation to adapt to the needs of this project. Making decisions about the next steps.",
+        "Refactoring and improving the code. Writing it in a way that is understandable. Spending time on details, especially in CSS. Writing semantic HTML and thus accessible to screen readers.",
+      ],
+    },
+  },
+  infoLink: {
+    titulo: "Let's work together",
+    content:
+      "If you are looking for a FrontEnd developer to work with or simply want to connect or ask a question, feel free to write to me.",
+    url: "/#contact-form",
+    urlText: "Contact me",
   },
 };

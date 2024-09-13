@@ -4,11 +4,11 @@ import proyectoUltima from "./images/proyecto-ultima.png";
 import problemasLargo from "./images/problemas-largo.png";
 import problemasCorto from "./images/problemas-corto.png";
 
-export const contenidoDePagina = {
+export const contenidoDePagina_ES = {
   id: "015",
   hero: {
-    about: "Proyecto:",
-    title: "Formulario web de varias paginas",
+    about: "Project:",
+    title: "Multi-page web form",
   },
   subHero: {
     tituloSuperior: "Introducción",
@@ -23,11 +23,11 @@ export const contenidoDePagina = {
   },
   main: {
     bloqueUno: {
-      title: "Propósito del proyecto",
+      title: "Project Purpose",
       contenido: [
-        "Inspirado por multitud de formularios complejos que usuarios tienen que rellenar a la hora de aplicar a un trabajo, he creado esta simple app que expresa la manera como yo creo que deberia ser el proceso.",
-        "El flujo de UX esta dividido en dos caminos, si el usuario es nuevo va por registro y solicitud y si ya esta registrado, por login y chequeo si ya solicito el puesto",
-        "Al final existe opcion de borrar todos los datos y solicitudes por el mismo usuario.",
+        "Inspired by the multitude of complex forms that users have to fill out when applying for a job, I created this simple app that expresses how I believe the process should be.",
+        "The UX flow is divided into two paths: if the user is new, they go through registration and application, and if they are already registered, they go through login and check if they have already applied for the position.",
+        "In the end, there is an option to delete all data and applications by the same user.",
       ],
     },
     bloqueDos: {
@@ -84,8 +84,93 @@ export const contenidoDePagina = {
   infoLink: {
     titulo: "Vamos a trabajar juntos",
     content:
-      "Si estás buscando a un desarrollador junior con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
+      "Si estás buscando a un desarrollador FrontEnd con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
     url: "/#contact-form",
     urlText: "Contáctame",
+  },
+};
+export const contenidoDePagina_EN = {
+  id: "015",
+  hero: {
+    about: "Project:",
+    title: "Multi-page web form",
+  },
+  subHero: {
+    tituloSuperior: "Introduction",
+    contenidoSuperior:
+      "This application serves as an exercise project aimed at building a multi-page form with Firebase authentication, storage, and database integration as the backend. Essentially, it simulates the process of applying for a job opportunity.",
+    tituloInferior: ["Type:", "Tools:", "Live:"],
+    contenidoInferior: {
+      colUno: ["Web App", "Responsive Design"],
+      colDos: ["CSS & HTML", "React 18", "Firebase", "Git & GitHub", "Netlify"],
+      colTres: ["https://multipage-form-sasa.netlify.app/"],
+    },
+  },
+  main: {
+    bloqueUno: {
+      title: "Project Purpose",
+      contenido: [
+        "Inspired by the multitude of complex forms that users have to fill out when applying for a job, I created this simple app that expresses how I believe the process should be.",
+        "The UX flow is divided into two paths: if the user is new, they go through registration and application, and if they are already registered, they go through login and check if they have already applied for the position.",
+        "In the end, there is an option to delete all data and applications by the same user.",
+      ],
+    },
+    bloqueDos: {
+      title: "My Role in the Project",
+      contenido: [
+        "Using the Figma app, the design and UI of the app were created.",
+        "Subsequently, step by step, the structure of the app and the UX flow were built. The connection with Firebase was used as the backend. Then, different features were added. Finally, Netlify was used via GitHub for deployment.",
+        "The idea is to continue adding new features and improving the design.",
+      ],
+    },
+    bloqueTres: {
+      imgUno: proyectoGrande,
+      imgDos: proyectoPequeno,
+    },
+    bloqueCuatro: {
+      title: "Web stack and explanation",
+      contenido: [
+        "Workspace: Visual Studio Code. I used Vite as a fast development environment along with EsLint and Prettier to maintain clean and consistent code.",
+        "Figma: I used Figma to design and create attractive user interfaces, focusing on user experience and user interface.",
+        "CSS: I transformed designs into functional applications using modern CSS. I made use of Flexbox, Grid, and the new container query to achieve a fluid and responsive design.",
+        "React: Reusable components, props. Use of conditional rendering. Form control with state through value and onChange. useEffect for network requests and some other opportunities. useState.",
+        "Firebase: I implemented user registration, data submission to the real-time database, login and logout, as well as functionality to delete data.",
+        "Netlify: I achieved continuous and seamless deployment through GitHub, ensuring constant updates.",
+        "Extras: I integrated react-markdown and react-feather to enhance the functionality and visual appeal of the application. Also packages like remove-scroll and focus-lock to optimize accessibility and user experience.",
+        "Git: I effectively managed version control using commits, branches, merge, restore, and push to collaborate effectively in teams and maintain a coherent change history.",
+      ],
+    },
+    bloqueCinco: {
+      imgUno: proyectoUltima,
+    },
+  },
+  aside: {
+    bloqueUno: {
+      title: "Problems and solutions",
+      contenido: [
+        "Throughout the development process, I encountered a series of challenges that arose at various stages.",
+        "On numerous occasions, I faced blocking points where progress seemed to come to a complete halt. At those times, I had to resort to strategies such as reverting to previous commits to start again from a more solid point.",
+        "A valuable lesson I take from this continuous process of overcoming obstacles is the acquisition of a mental approach to problem-solving.",
+      ],
+    },
+    bloqueDos: {
+      imgUno: problemasLargo,
+      imgDos: problemasCorto,
+    },
+    bloqueTres: {
+      title: "Lessons learned",
+      contenido: [
+        "Working in a team. Sharing ideas. Accepting that the other person is right. Respecting when one does not know.",
+        "Finding solutions on the web. Connecting key points of documentation to adapt to the needs of this project. Making decisions about next steps.",
+        "Refactoring and improving the code. Writing it in a way that is understandable. Dedicating time to details, especially in CSS. Writing semantic HTML and making it accessible for screen readers.",
+      ],
+    },
+  },
+  infoLink: {
+    titulo: "Let's work together",
+    content:
+      "If you are looking for a FronEnd developer to work with or simply want to connect or ask a question, feel free to write to me.",
+    url: "/#contact-form",
+    urlText: "Contact me",
   },
 };

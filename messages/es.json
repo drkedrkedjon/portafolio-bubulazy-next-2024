@@ -69,5 +69,8 @@
     "description": "Desarollado y diseñado por Sasha utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y next-intl para i18n.",
     "rightTitle": "Social",
     "copyRight": "Hecho en Canarias:"
+  },
+  "SubHero": {
+    "liveBtn": "Visitar"
   }
 }

@@ -1,9 +1,11 @@
 // import Link from "next/link";
 import { Link } from "@/i18n/routing";
 import styles from "./SubHero.module.css";
+import { useTranslations } from "next-intl";
 
 // type: single, single-link, doble-una-lista, doble-tres-listas,
 export default function SubHero({ type, contenido }) {
+  const t = useTranslations("SubHero");
   const {
     tituloSuperior,
     contenidoSuperior,
@@ -75,7 +77,7 @@ export default function SubHero({ type, contenido }) {
                       target="_blank"
                       href={item}
                     >
-                      Visitar
+                      {t("liveBtn")}
                     </a>
                   </li>
                 ))}

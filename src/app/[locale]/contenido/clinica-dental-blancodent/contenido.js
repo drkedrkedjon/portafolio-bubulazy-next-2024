@@ -4,7 +4,7 @@ import mainUltima from "./images/proyecto-ultima.jpg";
 import asideDesktop from "./images/problemas-largo.png";
 import asideMovil from "./images/problemas-corto.png";
 
-export const contenidoDePagina = {
+export const contenidoDePagina_ES = {
   id: "012",
   hero: {
     about: "Proyecto:",
@@ -86,8 +86,95 @@ export const contenidoDePagina = {
   infoLink: {
     titulo: "Vamos a trabajar juntos",
     content:
-      "Si estás buscando a un desarrollador junior con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
+      "Si estás buscando a un desarrollador FrontEnd con quién te gustaría trabajar o simplemente deseas conectarte o hacer una pregunta, no dudes en escribirme.",
     url: "/#contact-form",
     urlText: "Contáctame",
+  },
+};
+export const contenidoDePagina_EN = {
+  id: "012",
+  hero: {
+    about: "Project:",
+    title: "Blancodent Dental Clinic",
+  },
+  subHero: {
+    tituloSuperior: "Introduction",
+    contenidoSuperior:
+      "The Blancodent dental clinic website was published on Squarespace with one of its templates and the design well modified. The client's desire was to move the website to another platform while maintaining the design, a new code base, and in the process make changes to the organisation of the content (completed), implement a blog with a new CMS (upcoming), and finally introduce an online store (final phase) to offer customers discounts and online service sales.",
+    tituloInferior: ["Type:", "Tools:", "Live:"],
+    contenidoInferior: {
+      colUno: ["Website", "Optimised for mobiles", "Commercial client"],
+      colDos: ["CSS & HTML", "Git & GitHub", "Netlify"],
+      colTres: ["https://blancodent.com"],
+    },
+  },
+  main: {
+    bloqueUno: {
+      title: "Purpose of the project",
+      contenido: [
+        "The project has been divided into three phases:",
+        "In the first phase (completed), the existing design in Squarespace was simply copied over to Netlify and a new base code was created. In the process, a new hero segment with several offers was added.",
+        "In the second phase (currently working on this), the base code will be transferred to Eleventy (static site generator), which will help with the reorganisation of the website and implementation of a CMS.",
+        "In the third phase (to be done), a shopping cart will be created and connected to the Stripe payment gateway.",
+      ],
+    },
+    bloqueDos: {
+      title: "My role in the project",
+      contenido: [
+        "Using the Figma app, I created the design and UI.",
+        "There are two of us working on the project.",
+        "My role in this project has been to analyse the current design and transfer it to the new code using the latest CSS technologies.",
+        "Subsequently, review and debug all the code to eliminate errors. With this, we have managed to improve the website in a complete and efficient manner.",
+        "Collaborate with my project partner to develop the design and structure to make the page accessible and fast above all.",
+      ],
+    },
+    bloqueTres: {
+      imgUno: mainDesktop,
+      imgDos: mainMovil,
+    },
+    bloqueCuatro: {
+      title: "Web stack and explanation",
+      contenido: [
+        "Having the existing design in the first phase, we have focused on the following:",
+        "HTML: The use of semantic tags such as section, main, article, nav... with the intention of making the page accessible from the first lines of the new code.",
+        "CSS: Use of Flexbox and Grid by default to organise layout and transfer the design. Intensive use of CSS variables (with default values) and utility classes. New pseudo-classes such as :where() and :clamp().",
+        "Use of modern properties such as backdrop-filter, margin-inline, aspect-ratio…",
+        "JS: Implementation of hamburger navigation on small screens via aria-hidden: and aria-selected: attributes to make it accessible via keyboard. Also implementation of a carousel in the hero section with promotions.",
+        "Git and GitHub: Continuous use of git with several main/development branches and with pull requests via GitHub.",
+        "Netlify: Connection and deployment via GitHub.",
+      ],
+    },
+    bloqueCinco: {
+      imgUno: mainUltima,
+    },
+  },
+  aside: {
+    bloqueUno: {
+      title: "Problems and solutions",
+      contenido: [
+        "Initially it was a static website but the client changed their mind and also wanted to implement a blog. This led us to decide to implement the second phase (coming soon) using Eleventy SSG which is ideal for a not very complex blog.",
+        "We will also use a plug-in for images that will automate delivery in different sizes and formats.",
+        "In conversation with the SEO agent, some points were found and corrected to improve the website's search engine positioning without affecting its accessibility.",
+      ],
+    },
+    bloqueDos: {
+      imgUno: asideDesktop,
+      imgDos: asideMovil,
+    },
+    bloqueTres: {
+      title: "Lessons learned",
+      contenido: [
+        "The way to work efficiently and intelligently, to achieve better productivity and better results and better team unity.",
+        "Frequently review if we are moving in the right direction that our clients need or if we need to adapt to them.",
+        "Learning from each lesson is one of the most important aspects of programming, as this way the mistakes and successes of the projects are recorded to be used in future initiatives, and in this way continuous improvement is learned.",
+      ],
+    },
+  },
+  infoLink: {
+    titulo: "Let's work together",
+    content:
+      "If you are looking for a FrontEnd developer you would like to work with or simply want to connect or ask a question, feel free to write to me.",
+    url: "/#contact-form",
+    urlText: "Contact me",
   },
 };

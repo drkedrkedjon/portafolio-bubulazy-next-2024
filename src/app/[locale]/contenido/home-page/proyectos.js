@@ -59,7 +59,7 @@ export const PROYECTOS_EN = [
       "Connection with the OpenAI API (3.5-turbo model) to create a chatbot. Firebase Realtime Database for backend & Auth. Netlify environment variables to protect the API key. Netlify functions to connect with the OpenAI API and obtain responses.",
     imageSrc: listillo,
     url: "https://listillo-openai-api.netlify.app/",
-    linkText: "Enlace a la app =>",
+    linkText: "Link to the app =>",
   },
   {
     id: "010",
