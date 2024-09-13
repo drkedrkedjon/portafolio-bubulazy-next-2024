@@ -35,7 +35,10 @@ export default async function DraftPage({ params }) {
   const { frontmatter, content } = draftsPostData;
 
   return (
-    <main className="wrapper drafts-styles">
+    <main
+      lang={frontmatter.language}
+      className="wrapper drafts-styles"
+    >
       <h1>{frontmatter.title}</h1>
       <div className="draft-details">
         <time>

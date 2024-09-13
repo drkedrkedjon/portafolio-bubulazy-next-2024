@@ -39,8 +39,8 @@
     "NavMenuCloseBtn": "Cerrar menu"
   },
   "HomePage": {
-    "title": "Hola, soy Sasha desarrollador FrontEnd",
-    "alt": "My memoji frente a un portátil abierto"
+    "heroTitle": "Hola, soy Sasha desarrollador FrontEnd",
+    "heroAlt": "My memoji frente a un portátil abierto"
   },
   "HomeProyects": {
     "title": "Últimos proyectos",
