@@ -39,8 +39,15 @@
     "NavMenuCloseBtn": "Close menu"
   },
   "HomePage": {
-    "title": "Hi! I'm Sasha FrontEnd Developer",
-    "alt": "My memoji siting in front of open laptop"
+    "heroTitle": "Hi! I'm Sasha FrontEnd Developer",
+    "heroAlt": "My memoji siting in front of open laptop"
+  },
+  "HomeProyects": {
+    "title": "Latest projects",
+    "subTitle": "Other projects",
+    "button": "View all projects",
+    "fullHeroAbout": "FrontEnd Works",
+    "fullHeroTitle": "All the Projects"
   },
   "Formulario": {
     "title": "Let's see if we can make it work together...",
@@ -51,6 +58,10 @@
     "emailPlhol": "What is your email address?",
     "mensajePlhol": "Write your message here...",
     "btnEnviar": "Send message, thank you"
+  },
+  "CV": {
+    "heroTitle": "Curriculum Vitae: Sasha Savic Perusina",
+    "heroAlt": "My foto, portrait or mugshot"
   },
   "Footer": {
     "leftTitle": "Menu",

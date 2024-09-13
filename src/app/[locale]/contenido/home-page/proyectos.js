@@ -18,7 +18,7 @@ export const PROYECTOS_EN = [
   },
   {
     id: "015",
-    titulo: "Portafolio y Blog personal",
+    titulo: "Portfolio and personal blog",
     descripcion:
       "This project is a web application that has been developed and designed using Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote, and Figma. The main objective of this project is to showcase my web development and user interface design skills.",
     imageSrc: bubulazyPortafolio,
@@ -27,7 +27,7 @@ export const PROYECTOS_EN = [
   },
   {
     id: "014",
-    titulo: "App de Recordatorios para moviles",
+    titulo: "Reminder App for mobiles",
     descripcion:
       "Inspired by the iOS Reminders app. Using the following technologies: React, React Router, Firebase Realtime DB, Auth, and Storage. Basic functionality implemented, various ideas for improving functionality will be implemented over time.",
     imageSrc: recordatorios,
@@ -45,7 +45,7 @@ export const PROYECTOS_EN = [
   },
   {
     id: "012",
-    titulo: "Clínica dental Blancodent",
+    titulo: "Blancodent Dental Clinic",
     descripcion:
       "Website for a dental clinic (commercial client) design + UX/UI using Figma. A new code of CSS, HTML, and a bit of JS. The original website was on Squarespace and we have transferred it to Netlify. In the next phase, it will be moved to use NEXT.js and React.js while maintaining the original design.",
     imageSrc: blancodent,
@@ -63,7 +63,7 @@ export const PROYECTOS_EN = [
   },
   {
     id: "010",
-    titulo: "Juego de PacMan",
+    titulo: "Pac-Man Game",
     descripcion:
       "One of my first projects in JavaScript, learning to manipulate the DOM, inserting CSS from JS, using the modulus operator, etc... You will need a keyboard, so you should do it from a computer.",
     imageSrc: pacMan,

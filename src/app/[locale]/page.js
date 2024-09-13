@@ -24,8 +24,8 @@ export default function Home({ params: { locale } }) {
       <Hero
         type="con-imagen"
         image={sasaMemoji}
-        title={t("title")}
-        alt={t("alt")}
+        title={t("heroTitle")}
+        alt={t("heroAlt")}
       />
 
       {/* type: single, single-link, doble-una-lista, doble-tres-listas, */}
