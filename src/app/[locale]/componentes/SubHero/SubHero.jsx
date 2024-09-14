@@ -53,7 +53,7 @@ export default function SubHero({ type, contenido }) {
         <section className={styles.sectionInferior}>
           <div className={`wrapper ${styles.wrapperInferiorTresListas}`}>
             <div>
-              <h2 className={styles.tresListasH2}>{tituloInferior[0]}</h2>
+              <h3 className={styles.tresListasH2}>{tituloInferior[0]}</h3>
               <ul className={styles.tresListasUl}>
                 {contenidoInferior.colUno.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -61,7 +61,7 @@ export default function SubHero({ type, contenido }) {
               </ul>
             </div>
             <div>
-              <h2 className={styles.tresListasH2}>{tituloInferior[1]}</h2>
+              <h3 className={styles.tresListasH2}>{tituloInferior[1]}</h3>
               <ul className={styles.tresListasUl}>
                 {contenidoInferior.colDos.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -69,7 +69,7 @@ export default function SubHero({ type, contenido }) {
               </ul>
             </div>
             <div>
-              <h2 className={styles.tresListasH2}>{tituloInferior[2]}</h2>
+              <h3 className={styles.tresListasH2}>{tituloInferior[2]}</h3>
               <ul className={styles.tresListasUl}>
                 {contenidoInferior.colTres.map((item, index) => (
                   <li key={index}>

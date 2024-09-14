@@ -3,13 +3,10 @@ import styles from "./Header.module.css";
 import { Sun, Moon, Menu, Rss } from "react-feather";
 import { useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
-// import Link from "next/link";
 import NavMenu from "../NavMenu";
 import VisualyHidden from "../../utilities/VisualyHidden";
 import useToggle from "../../utilities/useToggle";
 import { AnimatePresence } from "framer-motion";
-// import { usePathname } from "next/navigation";
-// import { DESKTOP_LINKS } from "@/app/[locale]/utilities/constants";
 import { useState, useId, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-video.webp";
@@ -103,8 +100,6 @@ export default function Header() {
             onMouseLeave={() => setHoveredDesktopLink(null)}
             className={styles.desktopNav}
           >
-            {/* Iteramos y creamos Desktop Links */}
-
             {desktopLinksKeys.map((key) => (
               <li key={key}>
                 {hoveredDesktopLink === key && (
@@ -124,7 +119,6 @@ export default function Header() {
                     t(`${key}.href`) !== "/"
                       ? styles.desktopActiveLink
                       : ""
-                    // pathname === "/" ? styles.desktopActiveLink : ""
                   }`}
                   href={t(`${key}.href`)}
                 >
@@ -132,38 +126,7 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-
-            {/* Old desktop links */}
-
-            {/* {DESKTOP_LINKS.map(({ href, slug, label }) => (
-              <li key={slug}>
-                {hoveredDesktopLink === slug && (
-                  <motion.div
-                    layoutId={id}
-                    className={styles.hoveredFondo}
-                    initial={false}
-                    animate={{
-                      borderRadius: "var(--border-radius)",
-                    }}
-                  />
-                )}
-                <Link
-                  onMouseEnter={() => setHoveredDesktopLink(slug)}
-                  className={`${styles.desktopLinks} ${
-                    pathname.includes(href) && href !== "/"
-                      ? styles.desktopActiveLink
-                      : ""
-                    // pathname === "/" ? styles.desktopActiveLink : ""
-                  }`}
-                  href={href}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))} */}
           </ul>
-
-          {/* Greupo de botones de color y rss */}
 
           <div className={styles.icons}>
             <button
@@ -191,8 +154,6 @@ export default function Header() {
               {lang === "es" ? "EN" : "ES"}
             </button>
           </div>
-
-          {/* Navegacion */}
 
           <nav
             role="navigation"

@@ -1,5 +1,4 @@
 import styles from "./DraftsCard.module.css";
-// import Link from "next/link";
 import { Link } from "@/i18n/routing";
 import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 
@@ -11,7 +10,7 @@ export default function DraftsCard({
   language,
 }) {
   return (
-    <div>
+    <section>
       <Link
         aria-label={slug}
         href={`/drafts/${slug}`}
@@ -30,6 +29,6 @@ export default function DraftsCard({
       >
         {abstract}
       </p>
-    </div>
+    </section>
   );
 }

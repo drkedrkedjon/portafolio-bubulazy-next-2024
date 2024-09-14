@@ -1,4 +1,3 @@
-// import Link from "next/link";
 import { Link } from "@/i18n/routing";
 import Card from "@/app/[locale]/componentes/Card";
 import Hero from "@/app/[locale]/componentes/Hero";

@@ -4,8 +4,6 @@ import { X as Close } from "react-feather";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "framer-motion";
-import { HAMBURGER_LINKS } from "@/app/[locale]/utilities/constants";
-// import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { usePathname } from "next/navigation";

@@ -1,5 +1,4 @@
 "use client";
-// import Link from "next/link";
 import { Link } from "@/i18n/routing";
 import styles from "./Formulario.module.css";
 import { useState } from "react";

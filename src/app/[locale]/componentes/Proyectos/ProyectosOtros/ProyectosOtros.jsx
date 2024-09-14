@@ -1,6 +1,7 @@
-import Card from "@/app/[locale]/componentes/Card";
+// import Card from "@/app/[locale]/componentes/Card";
 import styles from "./proyectosOtros.module.css";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+// import Link from "next/link";
 
 export default function Otros({ contenido, id }) {
   let firstProyectID = "";

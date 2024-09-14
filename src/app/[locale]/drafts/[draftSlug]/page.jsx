@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import { Code } from "bright";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;

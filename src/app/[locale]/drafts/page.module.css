@@ -5,3 +5,10 @@
   .container {
     padding-block: var(--padding-block-grande);
   }
+
+  .h1 {
+    font-size: var(--fs-hero);
+    font-weight: var(--f-wei-900);
+    font-stretch: var(--f-str-125);
+    color: hsl(var(--clr-acentado-color));
+  }

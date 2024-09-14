@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./footer.module.css";
-import { HAMBURGER_LINKS } from "@/app/[locale]/utilities/constants";
-// import Link from "next/link";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
