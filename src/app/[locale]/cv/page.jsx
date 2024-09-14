@@ -23,12 +23,21 @@ export default function CvPage({ params: { locale } }) {
             <div>
               <h3 className={styles.h3}>Profesión</h3>
               <p>
-                <span className="bold-text">Desarrollador Web Front-End</span>{" "}
-                junior con conocimientos de{" "}
-                <span className="bold-text">React, NEXTjs, React Router</span>,
-                JavaScript, CSS, HTML, Firebase y{" "}
-                <span className="bold-text">Accesibilidad web</span>, Web Design
-                y Figma.
+                <span className="bold-text">Desarrollador Web FrontEnd</span>{" "}
+                con habilidades de{" "}
+                <span className="bold-text">NEXTjs, React,</span> JavaScript,{" "}
+                <span className="bold-text">CSS, HTML, a11y, i18n</span>,{" "}
+                Firebase, Lit Element, Web Components, Git, GitHub, Figma, Jest
+                testing...
+              </p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>Interés especial</h3>{" "}
+              <p>
+                <span className="bold-text">Accesibilidad web</span>, CSS
+                moderno y HTML semántico, Diseño Web de UI & UX con Figma y
+                desarollo con NEXTjs. Páginas resposivas optimizadas para
+                diferentes dispositivos. Trabajo en equipo con gusto.
               </p>
             </div>
             <div>
@@ -37,8 +46,8 @@ export default function CvPage({ params: { locale } }) {
                 <p>
                   Me inicié en FrontEnd en 1996 y hasta el 2008 he trabajado
                   ocasionalmente como freelancer. Luego he cambiado mi profesión
-                  a turísmo y ahora regreso con muchas ganas de llevar a cabo
-                  todo lo nuevo aprendido en diferentes cursos.
+                  y en 2020 he vuelto a FrontEnd con muchas ganas de llevar a
+                  cabo todo lo nuevo aprendido en diferentes cursos.
                 </p>
                 <p>
                   {" "}
@@ -46,8 +55,8 @@ export default function CvPage({ params: { locale } }) {
                   demostrado una firme determinación para alcanzar mis
                   objetivos. Aprendo con rapidez y estoy comprometido a seguir
                   evolucionando en este campo, buscando oportunidades como
-                  desarrollador Front-End en una empresa que comparta mis
-                  valores y donde pueda continuar aprendiendo y aportando.
+                  desarrollador FrontEnd en una empresa que comparta mis valores
+                  y donde pueda continuar aprendiendo y aportando.
                 </p>
               </div>
             </div>
@@ -61,8 +70,9 @@ export default function CvPage({ params: { locale } }) {
             <div>
               <h3 className={styles.h3}>Conocimientos:</h3>
               <p>
-                React, NEXT.js, React Router, JavaScript, CSS, HTML, Firebase,
-                Git, GitHub, Accesibilidad Web, Web Design y Figma{" "}
+                React, NEXT.js, React Router, JavaScript, CSS, HTML, a11y, i18n,
+                Firebase, LitElement, Web Components Git, GitHub, Accesibilidad
+                Web, Web Design con Figma y Jest testing{" "}
               </p>
             </div>
             <div className={styles.cvLinks}>
@@ -89,8 +99,10 @@ export default function CvPage({ params: { locale } }) {
             </div>
             <div>
               <h3 className={styles.h3}>Úbicacion:</h3>
-              <p>Las Palmas de Gran Canaria, España</p>
-              <p>Disponibilidad geografica: Unión Europea y España imediata</p>
+              <p>Actualmente en Las Palmas de Gran Canaria, España</p>
+              <p>
+                Disponibilidad geografica: Unión Europea y España casi imediata
+              </p>
             </div>
           </div>
         </div>
@@ -101,14 +113,14 @@ export default function CvPage({ params: { locale } }) {
           <h2 className={styles.h2}>Experencia laboral</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div>
-              <h3 className={styles.h3}>Holiday World Centro de Ocio</h3>
-              <p>Encargado de Departamento | 2008 - Actualidad</p>
-              <p>Sector de turismo.</p>
+              <h3 className={styles.h3}>Freelance Web Developer</h3>
+              <p>Part Time Freelancer | 1996 / 2008 y de 2020 / Actualidad</p>
+              <p>Desarrollo FrontEnd. Proyectos comerciales.</p>
             </div>
             <div>
-              <h3 className={styles.h3}>Freelance Web Developer</h3>
-              <p>Freelance | 1996 / 2008 y de 2022 - Actualidad</p>
-              <p>Desarrollo FrontEnd. Proyectos comerciales.</p>
+              <h3 className={styles.h3}>Holiday World Centro de Ocio</h3>
+              <p>Encargado de Departamento | 2008 - 2024</p>
+              <p>Sector de turismo.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Gran Canaria Segway Tours</h3>
@@ -169,7 +181,7 @@ export default function CvPage({ params: { locale } }) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>
-                Practical Accessibility for developers by Sara Soueidan
+                a11y - Practical Accessibility for developers by Sara Soueidan
               </h3>
               <p>Curso Online - USA | 2024 - Actualidad</p>
               <p>
@@ -321,30 +333,38 @@ export default function CvPage({ params: { locale } }) {
             <div>
               <h3 className={styles.h3}>Profession</h3>
               <p>
-                <span className="bold-text">
-                  Junior Front-End Web Developer
-                </span>{" "}
-                with knowledge of{" "}
-                <span className="bold-text">React, NEXTjs, React Router</span>,
-                JavaScript, CSS, HTML, Firebase and{" "}
-                <span className="bold-text">Web Accessibility</span>, Web Design
-                and Figma.
+                <span className="bold-text">FrontEnd Web Developer</span> with
+                skills in <span className="bold-text">NEXTjs, React,</span>{" "}
+                JavaScript,{" "}
+                <span className="bold-text">CSS, HTML, a11y, i18n</span>,{" "}
+                Firebase, Lit Element, Web Components, Git, GitHub, Figma, Jest
+                testing...
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Sobre mi</h3>
+              <h3 className={styles.h3}>Special Interest</h3>{" "}
+              <p>
+                <span className="bold-text">Web Accessibility</span>, modern CSS
+                and semantic HTML, UI & UX Web Design with Figma and development
+                with NEXTjs. Responsive pages optimised for different devices.
+                Enjoy working in a team.
+              </p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>About Me</h3>
               <div className="flow">
                 <p>
                   I started in FrontEnd in 1996 and until 2008 I worked
-                  occasionally as a freelancer. Then I changed my profession to
-                  tourism and now I return with great enthusiasm to apply
-                  everything new I have learned in various courses.
+                  occasionally as a freelancer. Then I changed my profession and
+                  in 2020 I returned to FrontEnd with great enthusiasm to apply
+                  everything new I learned in various courses.
                 </p>
                 <p>
+                  {" "}
                   Throughout my personal and professional career, I have
                   demonstrated a strong determination to achieve my goals. I
                   learn quickly and am committed to continuing to evolve in this
-                  field, seeking opportunities as a Front-End developer in a
+                  field, seeking opportunities as a FrontEnd developer in a
                   company that shares my values and where I can continue
                   learning and contributing.
                 </p>
@@ -402,14 +422,14 @@ export default function CvPage({ params: { locale } }) {
           <h2 className={styles.h2}>Work Experience</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div>
-              <h3 className={styles.h3}>Holiday World Leisure Centre</h3>
-              <p>Department Manager | 2008 - Present</p>
-              <p>Tourism sector.</p>
+              <h3 className={styles.h3}>Freelance Web Developer</h3>
+              <p>Part Time Freelance | 1996 / 2008 and from 2020 / Present</p>
+              <p>Front-End Development. Commercial projects.</p>
             </div>
             <div>
-              <h3 className={styles.h3}>Freelance Web Developer</h3>
-              <p>Freelance | 1996 / 2008 and from 2022 - Present</p>
-              <p>Front-End Development. Commercial projects.</p>
+              <h3 className={styles.h3}>Holiday World Leisure Centre</h3>
+              <p>Department Manager | 2008 - 2024</p>
+              <p>Tourism sector.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Gran Canaria Segway Tours</h3>
@@ -470,7 +490,7 @@ export default function CvPage({ params: { locale } }) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>
-                Practical Accessibility for Developers by Sara Soueidan
+                a11y - Practical Accessibility for Developers by Sara Soueidan
               </h3>
               <p>Online Course - USA | 2024 - Present</p>
               <p>
