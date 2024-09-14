@@ -23,7 +23,7 @@ function Footer() {
       <div className={`wrapper ${styles.container}`}>
         <div className={styles.left}>
           <div className="flow">
-            <h3 className={styles.h3}> {t("leftTitle")} </h3>
+            <h2 className={styles.h3}> {t("leftTitle")} </h2>
             <ul className="flow">
               {desktopLinksKeys.map((key) => (
                 <li key={key}>
@@ -35,7 +35,7 @@ function Footer() {
         </div>
         <div className={styles.center}>
           <div className={`flow ${styles.innerCenter}`}>
-            <h3 className={styles.h3}>{t("centerTitle")}</h3>
+            <h2 className={styles.h3}>{t("centerTitle")}</h2>
             <Image
               className={styles.memoji}
               src={memoji}
@@ -45,7 +45,7 @@ function Footer() {
           </div>
         </div>
         <div className={`flow ${styles.right}`}>
-          <h3 className={styles.h3}>{t("rightTitle")}</h3>
+          <h2 className={styles.h3}>{t("rightTitle")}</h2>
           <ul className="flow">
             <li>
               <Link
