@@ -46,12 +46,12 @@
     "title": "Latest projects",
     "subTitle": "Other projects",
     "button": "View all projects",
-    "fullHeroAbout": "FrontEnd Works",
-    "fullHeroTitle": "All the Projects"
+    "fullHeroAbout": "All the Projects",
+    "fullHeroTitle": "FrontEnd Works"
   },
   "Formulario": {
     "title": "Let's see if we can make it work together...",
-    "parafo": "If you are looking for a junior frontend developer to work with or simply want to connect/ask a question, do not hesitate to write to me.",
+    "parafo": "If you are looking for a FrontEnd developer to work with or simply want to connect/ask a question, do not hesitate to write to me.",
     "msgEnviado": "Message sent, thank you",
     "msgError": "An error has occurred, please try again. Sorry.",
     "nombrePlhol": "What would you like to be called?",
@@ -67,9 +67,10 @@
     "title": "Stuff I type sometimes into the void..."
   },
   "Footer": {
+    "title": "Links",
     "leftTitle": "Menu",
     "centerTitle": "bubulazy.com",
-    "description": "Developed and designed by Sasha using Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote and next-intl for i18n.",
+    "description": "Developed in VSC and designed in Figma by Sasha using Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote and next-intl for i18n.",
     "rightTitle": "Social",
     "copyRight": "Made in the Canary Islands:"
   },

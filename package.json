@@ -13,8 +13,8 @@
     "bright": "^0.8.5",
     "framer-motion": "^11.5.4",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.8",
-    "next-intl": "^3.19.1",
+    "next": "^14.2.11",
+    "next-intl": "^3.19.3",
     "next-mdx-remote": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -24,8 +24,8 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.8",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.11",
     "eslint-config-prettier": "^9.1.0"
   }
 }

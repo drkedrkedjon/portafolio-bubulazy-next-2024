@@ -46,12 +46,12 @@
     "title": "Últimos proyectos",
     "subTitle": "Otros proyectos",
     "button": "Ver todos los proyectos",
-    "fullHeroAbout": "Prácticas de FrontEnd",
-    "fullHeroTitle": "Todos los trabajos"
+    "fullHeroAbout": "Todos los Proyectos",
+    "fullHeroTitle": "Prácticas de FrontEnd"
   },
   "Formulario": {
     "title": "Vamos a ver sí juntos podemos hacer que funcione...",
-    "parafo": "Si estás buscando a un desarrollador frontend junior con quién te gustaría trabajar o simplemente deseas conectarte/hacer una pregunta, no dudes en escribirme.",
+    "parafo": "Si estás buscando a un desarrollador FrontEnd con quién te gustaría trabajar o simplemente deseas conectarte/hacer una pregunta, no dudes en escribirme.",
     "msgEnviado": "Mensaje enviado, gracias",
     "msgError": "Ha ocurido un error, prueba de nuevo. Lo siento.",
     "nombrePlhol": "¿Cómo te gustaría que te llamara?",
@@ -67,9 +67,10 @@
     "title": "Las cosas que a veces tecleo..."
   },
   "Footer": {
+    "title": "Enlaces",
     "leftTitle": "Menú",
     "centerTitle": "bubulazy.com",
-    "description": "Desarollado y diseñado por Sasha utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y next-intl para i18n.",
+    "description": "Desarollado en VSC y diseñado en Figma por Sasha utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y next-intl para i18n.",
     "rightTitle": "Social",
     "copyRight": "Hecho en Canarias:"
   },

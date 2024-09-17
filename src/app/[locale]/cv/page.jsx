@@ -27,17 +27,18 @@ export default function CvPage({ params: { locale } }) {
                 con habilidades de{" "}
                 <span className="bold-text">NEXTjs, React,</span> JavaScript,{" "}
                 <span className="bold-text">CSS, HTML, a11y, i18n</span>,{" "}
-                Firebase, Lit Element, Web Components, Git, GitHub, Figma, Jest
-                testing...
+                Firebase, Lit Element, Web Components, Git, GitHub, Figma y Jest
+                testing.
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Interés especial</h3>{" "}
+              <h3 className={styles.h3}>Interés especial:</h3>{" "}
               <p>
                 <span className="bold-text">Accesibilidad web</span>, CSS
                 moderno y HTML semántico, Diseño Web de UI & UX con Figma y
                 desarollo con NEXTjs. Páginas resposivas optimizadas para
-                diferentes dispositivos. Trabajo en equipo con gusto.
+                diferentes dispositivos. Trabajo en equipo con gusto. Formacion
+                continua para estar al día con últimas tecnologías.
               </p>
             </div>
             <div>
@@ -47,7 +48,9 @@ export default function CvPage({ params: { locale } }) {
                   Me inicié en FrontEnd en 1996 y hasta el 2008 he trabajado
                   ocasionalmente como freelancer. Luego he cambiado mi profesión
                   y en 2020 he vuelto a FrontEnd con muchas ganas de llevar a
-                  cabo todo lo nuevo aprendido en diferentes cursos.
+                  cabo todo lo nuevo aprendido en diferentes cursos como en Joy
+                  of React de Josh W.Comeau, Practical Accessibility de Sara
+                  Soueidan, FreeCodeCamp, y Scrimba entre otros.
                 </p>
                 <p>
                   {" "}
@@ -67,14 +70,6 @@ export default function CvPage({ params: { locale } }) {
         <div className={`${styles.flexContainer} ${styles.invertedCard}`}>
           <h2 className={styles.h2}>Detalles</h2>
           <div className={`flow ${styles.jobDetails}`}>
-            <div>
-              <h3 className={styles.h3}>Conocimientos:</h3>
-              <p>
-                React, NEXT.js, React Router, JavaScript, CSS, HTML, a11y, i18n,
-                Firebase, LitElement, Web Components Git, GitHub, Accesibilidad
-                Web, Web Design con Figma y Jest testing{" "}
-              </p>
-            </div>
             <div className={styles.cvLinks}>
               <h3 className={styles.h3}>Datos de contacto:</h3>
               <p>
@@ -100,9 +95,7 @@ export default function CvPage({ params: { locale } }) {
             <div>
               <h3 className={styles.h3}>Úbicacion:</h3>
               <p>Actualmente en Las Palmas de Gran Canaria, España</p>
-              <p>
-                Disponibilidad geografica: Unión Europea y España casi imediata
-              </p>
+              <p>Disponibilidad geografica: Unión Europea y España: imediata</p>
             </div>
           </div>
         </div>
@@ -114,13 +107,13 @@ export default function CvPage({ params: { locale } }) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>Freelance Web Developer</h3>
-              <p>Part Time Freelancer | 1996 / 2008 y de 2020 / Actualidad</p>
+              <p>Part Time Freelancer | 2020 / Actualidad</p>
               <p>Desarrollo FrontEnd. Proyectos comerciales.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Holiday World Centro de Ocio</h3>
               <p>Encargado de Departamento | 2008 - 2024</p>
-              <p>Sector de turismo.</p>
+              <p>Sector turismo.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Gran Canaria Segway Tours</h3>
@@ -130,12 +123,17 @@ export default function CvPage({ params: { locale } }) {
             <div>
               <h3 className={styles.h3}>Holiday World Centro de Ocio</h3>
               <p>Informático, Recepción. | 2003 / 2006</p>
-              <p>Sector de turismo.</p>
+              <p>Sector turismo.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Clínica Dental Blancodent</h3>
               <p>Informático. Relaciones publicas. | 2000 / 2003</p>
-              <p>Sector de Salud.</p>
+              <p>Sector Salud.</p>
+            </div>
+            <div>
+              <h3 className={styles.h3}>Freelance Web Developer</h3>
+              <p>Part Time Freelancer | 1996 / 2008</p>
+              <p>Desarrollo FrontEnd. Proyectos comerciales.</p>
             </div>
           </div>
         </div>
@@ -151,7 +149,7 @@ export default function CvPage({ params: { locale } }) {
                 Desarollo FrontEnd:{" "}
                 <Link
                   about="_blank"
-                  href="https://bubulazy.com/proyectos"
+                  href="/proyectos"
                 >
                   Proyectos
                 </Link>
@@ -179,6 +177,21 @@ export default function CvPage({ params: { locale } }) {
         <div className={`${styles.flexContainer} ${styles.regularCard}`}>
           <h2 className={styles.h2}>Formacíon</h2>
           <div className={`flow ${styles.jobDetails}`}>
+            <div>
+              <h3 className={styles.h3}>
+                CSS for JS Developers by Josh W Comeau: CSS
+              </h3>
+              <p>Curso Online - Canada | 2024 - Actualidad</p>
+              <p>
+                CSS:{" "}
+                <Link
+                  about="_blank"
+                  href="https://css-for-js.dev/"
+                >
+                  Web site
+                </Link>
+              </p>
+            </div>
             <div>
               <h3 className={styles.h3}>
                 a11y - Practical Accessibility for developers by Sara Soueidan
@@ -303,9 +316,9 @@ export default function CvPage({ params: { locale } }) {
                 senderismo.
               </p>
               <p>
-                Disfruto de la lectura, especialmente historia y filosofía.
+                Disfruto de la lectura, especialmente ciencias y filosofía.
                 También sobre temas interesantes relacionados con la
-                documentación de todo aquello que estoy aprendiendo.
+                documentación de todo lo que estoy aprendiendo.
               </p>
               <p>
                 Toco la guitarra, hago fotografías, grabo vídeos y edito los
@@ -337,31 +350,33 @@ export default function CvPage({ params: { locale } }) {
                 skills in <span className="bold-text">NEXTjs, React,</span>{" "}
                 JavaScript,{" "}
                 <span className="bold-text">CSS, HTML, a11y, i18n</span>,{" "}
-                Firebase, Lit Element, Web Components, Git, GitHub, Figma, Jest
-                testing...
+                Firebase, Lit Element, Web Components, Git, GitHub, Figma and
+                Jest testing.
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Special Interest</h3>{" "}
+              <h3 className={styles.h3}>Special Interest:</h3>{" "}
               <p>
                 <span className="bold-text">Web Accessibility</span>, modern CSS
                 and semantic HTML, UI & UX Web Design with Figma and development
-                with NEXTjs. Responsive pages optimised for different devices.
-                Enjoy working in a team.
+                with NEXTjs. Responsive pages optimised for different screen
+                sizes. Enjoy working in a team. Continuous learning to stay
+                up-to-date with the latest technologies.
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>About Me</h3>
               <div className="flow">
                 <p>
-                  I started in FrontEnd in 1996 and until 2008 I worked
-                  occasionally as a freelancer. Then I changed my profession and
-                  in 2020 I returned to FrontEnd with great enthusiasm to apply
-                  everything new I learned in various courses.
+                  I started in FrontEnd in 1996 and until 2008 I part time
+                  worked as a freelancer. Then I changed my profession and in
+                  2020 I returned to FrontEnd development with great enthusiasm
+                  to apply everything new I learned in various courses such as
+                  Joy of React by Josh W. Comeau, Practical Accessibility by
+                  Sara Soueidan, FreeCodeCamp, and Scrimba among others.
                 </p>
                 <p>
-                  {" "}
-                  Throughout my personal and professional career, I have
+                  Throughout my personal and professional journey, I have
                   demonstrated a strong determination to achieve my goals. I
                   learn quickly and am committed to continuing to evolve in this
                   field, seeking opportunities as a FrontEnd developer in a
@@ -377,13 +392,6 @@ export default function CvPage({ params: { locale } }) {
         <div className={`${styles.flexContainer} ${styles.invertedCard}`}>
           <h2 className={styles.h2}>Detalles</h2>
           <div className={`flow ${styles.jobDetails}`}>
-            <div>
-              <h3 className={styles.h3}>Knowledge:</h3>
-              <p>
-                React, NEXT.js, React Router, JavaScript, CSS, HTML, Firebase,
-                Git, GitHub, Web Accessibility, Web Design and Figma{" "}
-              </p>
-            </div>
             <div className={styles.cvLinks}>
               <h3 className={styles.h3}> Contact Information:</h3>
               <p>
@@ -423,7 +431,7 @@ export default function CvPage({ params: { locale } }) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>Freelance Web Developer</h3>
-              <p>Part Time Freelance | 1996 / 2008 and from 2020 / Present</p>
+              <p>Part Time Freelance | from 2020 / Present</p>
               <p>Front-End Development. Commercial projects.</p>
             </div>
             <div>
@@ -446,6 +454,11 @@ export default function CvPage({ params: { locale } }) {
               <p>IT. Public relations. | 2000 / 2003</p>
               <p>Health sector.</p>
             </div>
+            <div>
+              <h3 className={styles.h3}>Freelance Web Developer</h3>
+              <p>Part Time Freelance | 1996 / 2008</p>
+              <p>Front-End Development. Commercial projects.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -460,7 +473,7 @@ export default function CvPage({ params: { locale } }) {
                 Front-End Development:{" "}
                 <Link
                   about="_blank"
-                  href="https://bubulazy.com/proyectos"
+                  href="/proyectos"
                 >
                   Projects
                 </Link>
@@ -488,6 +501,21 @@ export default function CvPage({ params: { locale } }) {
         <div className={`${styles.flexContainer} ${styles.regularCard}`}>
           <h2 className={styles.h2}>Formacíon</h2>
           <div className={`flow ${styles.jobDetails}`}>
+            <div>
+              <h3 className={styles.h3}>
+                CSS for JS Developers by Josh W Comeau: CSS
+              </h3>
+              <p>Online Course - Canada | 2024 - Actualidad</p>
+              <p>
+                CSS:{" "}
+                <Link
+                  about="_blank"
+                  href="https://css-for-js.dev/"
+                >
+                  Web site
+                </Link>
+              </p>
+            </div>
             <div>
               <h3 className={styles.h3}>
                 a11y - Practical Accessibility for Developers by Sara Soueidan
@@ -612,7 +640,7 @@ export default function CvPage({ params: { locale } }) {
                 hiking.
               </p>
               <p>
-                I enjoy reading, especially history and philosophy. Also, I am
+                I enjoy reading, especially science and philosophy. Also, I am
                 interested in topics related to documenting everything I am
                 learning.
               </p>
