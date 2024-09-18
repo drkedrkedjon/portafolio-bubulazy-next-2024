@@ -654,6 +654,5 @@ export default function CvPage({ params: { locale } }) {
       </section>
     </main>
   );
-
   return locale === "es" ? CV_ES : CV_EN;
 }
