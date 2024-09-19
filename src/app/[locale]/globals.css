@@ -208,6 +208,8 @@ body {
   color: hsl(var(--clr-texto));
   min-height: 100vh;
   /* overflow: hidden; */
+  /* background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240, 29.82272599305329%, 95.75572624165316%, 0)'/><path d='M-10 5l20 10L30 5l20 10'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(230.8, 24.369908945176245%, 56.8081762570924%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-24,-18)' fill='url(%23a)'/></svg>"); */
+  /* background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='120' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240, 6.699999999999995%, 17.600000000000005%, 0)'/><path d='M-50.129 12.685C-33.346 12.358-16.786 4.918 0 5c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685'  stroke-width='0.5' stroke='hsla(231, 24.000000000000007%, 56.99999999999999%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>"); */
 }
 
 :is(h1, h2, h3) {
