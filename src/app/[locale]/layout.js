@@ -8,7 +8,7 @@ import { getMessages } from "next-intl/server";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
-  display: "swap",
+  display: "fallback",
 });
 
 export const metadata = BASE_METADATA;
