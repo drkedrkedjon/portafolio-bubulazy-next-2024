@@ -36,7 +36,7 @@ export default function CvPage({ params: { locale } }) {
               <p>
                 <span className="bold-text">Accesibilidad web</span>, CSS
                 moderno y HTML semántico, Diseño Web de UI & UX con Figma y
-                desarollo con NEXTjs. Páginas resposivas optimizadas para
+                desarrollo con NEXTjs. Páginas resposivas optimizadas para
                 diferentes dispositivos. Trabajo en equipo con gusto. Formacion
                 continua para estar al día con últimas tecnologías.
               </p>
