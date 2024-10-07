@@ -14,7 +14,6 @@ export async function GET() {
   // Use the same helper we use on the homepage, to gather
   // information about each blog post, as a sorted array:
   const blogPosts = await getBlogPostList();
-  console.log(blogPosts);
 
   // For each blog post, create a new item in our RSS feed:
   blogPosts.forEach((post) => {
