@@ -3,6 +3,11 @@ import styles from "./page.module.css";
 import sasaFoto from "@/app/[locale]/assets/images/generales/sasa-mugshot-cv.jpg";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { BASE_METADATA } from "../utilities/constants";
+
+export const metadata = {
+  title: `Alejandro Sasha S. Perusina CV • ${BASE_METADATA.title}`,
+};
 
 export default function CvPage({ params: { locale } }) {
   const t = useTranslations("CV");

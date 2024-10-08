@@ -2,6 +2,11 @@ import styles from "./page.module.css";
 import { getBlogPostList } from "../utilities/node-helpers/node-fs-helpers";
 import DraftsCard from "../componentes/DraftsCard";
 import { getTranslations } from "next-intl/server";
+import { BASE_METADATA } from "../utilities/constants";
+
+export const metadata = {
+  title: `Drafts Posts Listing • ${BASE_METADATA.title}`,
+};
 
 export default async function BlogPostList() {
   const t = await getTranslations("DraftsPage");
