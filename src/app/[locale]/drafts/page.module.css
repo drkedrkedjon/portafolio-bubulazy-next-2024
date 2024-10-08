@@ -7,8 +7,9 @@
   }
 
   .h1 {
-    font-size: var(--fs-hero);
+    font-size: var(--fs-700);
     font-weight: var(--f-wei-900);
     font-stretch: var(--f-str-125);
     color: hsl(var(--clr-acentado-color));
+    text-align: right;
   }
