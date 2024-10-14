@@ -5,6 +5,7 @@ import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import { Code } from "bright";
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;
@@ -60,6 +61,7 @@ export default async function DraftPage({ params }) {
           components={{
             pre: Code,
             a: Link,
+            Image,
           }}
         />
       </article>
