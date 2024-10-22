@@ -12,7 +12,7 @@ export default function PhotoGallerySmall({ children }) {
   return (
     <div
       className={`${styles.gridContainer} ${
-        activeImgIndex === null ? "" : styles.expanded
+        activeImgIndex !== null ? styles.expanded : ""
       }`}
     >
       {children.map((image, index) => (
@@ -21,6 +21,7 @@ export default function PhotoGallerySmall({ children }) {
           className={`exclude_margin  ${styles.photoContainer} ${
             activeImgIndex === index ? styles.active : ""
           }`}
+          onClick={() => handleImageClick(index)}
         >
           {image}
         </div>
