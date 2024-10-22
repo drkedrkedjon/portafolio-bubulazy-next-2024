@@ -4,11 +4,12 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import { Code } from "bright";
-import { Link } from "@/i18n/routing";
-import Image from "next/image";
-import { notFound } from "next/navigation";
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;
+import { Link } from "@/i18n/routing";
+import Image from "next/image";
+import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
+import { notFound } from "next/navigation";
 
 //  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
 export async function generateMetadata({ params }) {
@@ -61,7 +62,8 @@ export default async function DraftPage({ params }) {
           components={{
             pre: Code,
             a: Link,
-            Image,
+            img: Image,
+            PhotoGallerySmall,
           }}
         />
       </article>
