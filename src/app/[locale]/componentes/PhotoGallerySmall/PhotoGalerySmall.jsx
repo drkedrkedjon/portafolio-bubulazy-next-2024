@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, Children } from "react";
 import styles from "./PhotoGallerySmall.module.css";
 
 export default function PhotoGallerySmall({ children }) {
@@ -15,7 +15,7 @@ export default function PhotoGallerySmall({ children }) {
         activeImgIndex !== null ? styles.expanded : ""
       }`}
     >
-      {children.map((image, index) => (
+      {Children.map(children, (image, index) => (
         <div
           key={index}
           className={`exclude_margin  ${styles.photoContainer} ${
