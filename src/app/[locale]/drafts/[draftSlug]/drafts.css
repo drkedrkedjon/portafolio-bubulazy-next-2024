@@ -35,9 +35,9 @@
   }
 
   & code {
-    font-weight: var(--f-wei-00);
-    font-stretch: var(--f-str-125);
-    color: tomato;
+    font-weight: var(--f-wei-900);
+    font-stretch: var(--f-str-100);
+    color: green;
   }
 
   & .draft-details {
