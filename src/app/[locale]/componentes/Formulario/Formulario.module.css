@@ -35,7 +35,6 @@
 
 .input {
   margin-bottom: var(--gap-base);
-  background-color: hsl(var(--clr-blanco));
   border-radius: 0.3rem;
   font-size: var(--fs-400);
   color: hsl(var(--clr-negro));

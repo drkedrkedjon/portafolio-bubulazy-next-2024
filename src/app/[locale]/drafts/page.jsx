@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import { getBlogPostList } from "../utilities/node-helpers/node-fs-helpers";
-import DraftsCard from "../componentes/DraftsCard";
 import { getTranslations } from "next-intl/server";
 import { BASE_METADATA } from "../utilities/constants";
+import DraftsPaginationList from "../componentes/DraftsPaginationList";
 
 export const metadata = {
   title: `Drafts Posts Listing • ${BASE_METADATA.title}`,
@@ -15,12 +15,7 @@ export default async function BlogPostList() {
   return (
     <main className={`wrapper ${styles.draftsFlow} ${styles.container}`}>
       <h1 className={styles.h1}>{t("title")}</h1>
-      {draftPostList.map((draft) => (
-        <DraftsCard
-          key={draft.slug}
-          {...draft}
-        />
-      ))}
+      <DraftsPaginationList drafts={draftPostList} />
     </main>
   );
 }
