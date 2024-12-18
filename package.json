@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
     "@vercel/speed-insights": "^1.0.12",
     "bright": "^0.8.5",
     "framer-motion": "^11.11.1",

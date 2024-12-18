@@ -6,44 +6,78 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 export default function Formulario() {
+  const [status, setStatus] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
     mensaje: "",
-    formMessage: "",
+    // formMessage: "",
   });
   const t = useTranslations("Formulario");
 
-  const handleSubmitForm = (e) => {
+  // const handleSubmitForm = (e) => {
+  //   e.preventDefault();
+  //   const toSend = {
+  //     name: form.name,
+  //     email: form.email,
+  //     mensaje: form.mensaje,
+  //   };
+  //   fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify(toSend),
+  //   })
+  //     .then((response) => response.json())
+  //     .then(() => {
+  //       setForm({
+  //         name: "",
+  //         email: "",
+  //         mensaje: "",
+  //         formMessage: t("msgEnviado"),
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       setForm({
+  //         ...form,
+  //         formMessage: t("msgError"),
+  //       });
+  //     });
+  // };
+
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
-    const toSend = {
-      name: form.name,
-      email: form.email,
-      mensaje: form.mensaje,
-    };
-    fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(toSend),
-    })
-      .then((response) => response.json())
-      .then(() => {
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch("/api/sendgrid", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...form,
+          sender: "jobsearch@bubulazy.com",
+          recipient: "jobsearch@bubulazy.com",
+        }),
+      });
+
+      if (res.status === 200) {
+        setStatus("Email sent successfully!");
         setForm({
           name: "",
           email: "",
           mensaje: "",
-          formMessage: t("msgEnviado"),
         });
-      })
-      .catch((error) => {
-        setForm({
-          ...form,
-          formMessage: t("msgError"),
-        });
-      });
+      } else {
+        setStatus("Failed to send email.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("An error occurred.");
+    }
   };
 
   return (
@@ -135,7 +169,8 @@ export default function Formulario() {
             rows="6"
             placeholder={t("mensajePlhol")}
           />
-          <p className={styles.formMessage}>{form.formMessage}</p>
+          <p className={styles.formMessage}>{status}</p>
+          {/* <p className={styles.formMessage}>{form.formMessage}</p> */}
           <button className={styles.button}>{t("btnEnviar")}</button>
         </motion.form>
       </div>

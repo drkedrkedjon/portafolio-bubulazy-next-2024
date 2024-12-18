@@ -88,6 +88,7 @@ export default function Header() {
             />
           </video> */}
           <Image
+            unoptimized
             src={logo}
             alt="Logo, una animación de memoji sonriendo"
             width={60}
