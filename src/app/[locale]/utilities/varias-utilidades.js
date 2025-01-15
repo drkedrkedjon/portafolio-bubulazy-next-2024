@@ -9,7 +9,8 @@ export const formatDate = (dateString, language) => {
   } else if (language === "es") {
     return date.toLocaleDateString("es-ES", options);
   } else if (language === "ba") {
-    return date.toLocaleDateString("bs-BA", options);
+    // Fix this shit with Bosnian "bs-BA" that does not format well on Hydratation
+    return date.toLocaleDateString("en-UK", options);
   } else {
     return date.toLocaleDateString("en-UK", options);
   }
