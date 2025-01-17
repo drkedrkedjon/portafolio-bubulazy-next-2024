@@ -62,7 +62,7 @@ export default async function DraftPage({ params }) {
           components={{
             pre: Code,
             a: Link,
-            img: Image,
+            // img: Image,
             PhotoGallerySmall,
           }}
         />
