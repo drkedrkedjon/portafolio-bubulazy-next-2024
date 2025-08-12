@@ -49,6 +49,10 @@ export default async function RootLayout({ children, params: { locale } }) {
           rel="manifest"
           href="/site.webmanifest"
         />
+        <meta
+          name="fediverse:creator"
+          content="@Drkedrkedjon@mastodon.social"
+        ></meta>
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
