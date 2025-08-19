@@ -10,17 +10,17 @@ export default function Formulario() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    mensaje: "",
+    messages: "",
     // formMessage: "",
   });
   const t = useTranslations("Formulario");
 
-  // const handleSubmitForm = (e) => {
+  // const handleSubmitForm = (e) => { // THIS IS FIRST SLOW SHIT
   //   e.preventDefault();
   //   const toSend = {
   //     name: form.name,
   //     email: form.email,
-  //     mensaje: form.mensaje,
+  //     messages: form.messages,
   //   };
   //   fetch("https://formsubmit.co/ajax/3dd87c5da201e54a5dd5ed1df893dbeb", {
   //     method: "POST",
@@ -35,7 +35,7 @@ export default function Formulario() {
   //       setForm({
   //         name: "",
   //         email: "",
-  //         mensaje: "",
+  //         messages: "",
   //         formMessage: t("msgEnviado"),
   //       });
   //     })
@@ -47,36 +47,55 @@ export default function Formulario() {
   //     });
   // };
 
-  const handleSubmitForm = async (e) => {
+  // const handleSubmitForm = async (e) => { // THIS IS SECOND SENDGRID SHIT
+  //   e.preventDefault();
+  //   setStatus("Sending...");
+
+  //   try {
+  //     const res = await fetch("/api/sendgrid", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         ...form,
+  //         sender: "jobsearch@bubulazy.com",
+  //         recipient: "jobsearch@bubulazy.com",
+  //       }),
+  //     });
+
+  //     if (res.status === 200) {
+  //       setStatus("Email sent successfully!");
+  //       setForm({
+  //         name: "",
+  //         email: "",
+  //         messages: "",
+  //       });
+  //     } else {
+  //       setStatus("Failed to send email.");
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     setStatus("An error occurred.");
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
+    // THIS IS NEW MAILJET SHIT, HOPE IT WORKS
     e.preventDefault();
     setStatus("Sending...");
 
-    try {
-      const res = await fetch("/api/sendgrid", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...form,
-          sender: "jobsearch@bubulazy.com",
-          recipient: "jobsearch@bubulazy.com",
-        }),
-      });
+    const res = await fetch("/api/mailjet", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
-      if (res.status === 200) {
-        setStatus("Email sent successfully!");
-        setForm({
-          name: "",
-          email: "",
-          mensaje: "",
-        });
-      } else {
-        setStatus("Failed to send email.");
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus("An error occurred.");
+    if (res.ok) {
+      setStatus("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    } else {
+      setStatus("Error sending message.");
     }
   };
 
@@ -115,7 +134,7 @@ export default function Formulario() {
             damping: 10,
             duration: 5,
           }}
-          onSubmit={handleSubmitForm}
+          onSubmit={handleSubmit}
           className={styles.form}
         >
           <label
@@ -125,6 +144,7 @@ export default function Formulario() {
             Nombre:
           </label>
           <input
+            required
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             className={styles.input}
@@ -140,17 +160,18 @@ export default function Formulario() {
             Email:
           </label>
           <input
+            required
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className={styles.input}
-            type="text"
+            type="email"
             id="email"
             name="Email"
             placeholder={t("emailPlhol")}
           />
           <label
             className={styles.label}
-            htmlFor="mensaje"
+            htmlFor="messages"
           >
             Mensaje:
           </label>
@@ -160,11 +181,12 @@ export default function Formulario() {
             style={{ display: "none" }}
           ></input>
           <textarea
-            value={form.mensaje}
-            onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
+            required
+            value={form.messages}
+            onChange={(e) => setForm({ ...form, messages: e.target.value })}
             className={styles.input}
             name="Mensaje"
-            id="mensaje"
+            id="messages"
             cols="30"
             rows="6"
             placeholder={t("mensajePlhol")}
