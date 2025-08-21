@@ -12,7 +12,8 @@ import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
 import { notFound } from "next/navigation";
 
 //  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const draftPostData = await loadBlogPost(params.draftSlug);
 
   if (!draftPostData) {
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function DraftPage({ params }) {
+export default async function DraftPage(props) {
+  const params = await props.params;
   const draftsPostData = await loadBlogPost(params.draftSlug);
 
   if (!draftsPostData) {

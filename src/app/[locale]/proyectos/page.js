@@ -9,7 +9,13 @@ export const metadata = {
   title: `Proyects • ${BASE_METADATA.title}`,
 };
 
-export default function ProyectosPage({ params: { locale } }) {
+export default async function ProyectosPage(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const PROYECTOS = locale === "es" ? PROYECTOS_ES : PROYECTOS_EN;
 
   return (

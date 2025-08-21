@@ -1,3 +1,4 @@
+import { use } from "react";
 import Hero from "@/app/[locale]/componentes/Hero";
 import styles from "./page.module.css";
 import sasaFoto from "@/app/[locale]/assets/images/generales/sasa-mugshot-cv.jpg";
@@ -9,7 +10,13 @@ export const metadata = {
   title: `Alejandro Sasha S. Perusina CV • ${BASE_METADATA.title}`,
 };
 
-export default function CvPage({ params: { locale } }) {
+export default function CvPage(props) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   const t = useTranslations("CV");
 
   const CV_ES = (

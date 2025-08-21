@@ -13,7 +13,17 @@ const monaSansFont = localFont({
 
 export const metadata = BASE_METADATA;
 
-export default async function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
+  const {
+    children
+  } = props;
+
   const messages = await getMessages();
 
   return (

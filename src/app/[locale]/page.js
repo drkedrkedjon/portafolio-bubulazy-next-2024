@@ -1,3 +1,4 @@
+import { use } from "react";
 import Hero from "./componentes/Hero";
 import sasaMemoji from "@/app/[locale]/assets/images/generales/sasa-memoji.png";
 import SubHero from "./componentes/SubHero";
@@ -13,7 +14,13 @@ import {
 import Formulario from "./componentes/Formulario";
 import { useTranslations } from "next-intl";
 
-export default function Home({ params: { locale } }) {
+export default function Home(props) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   const SOBRE_MI = locale === "es" ? SOBRE_MI_ES : SOBRE_MI_EN;
   const PROYECTOS = locale === "es" ? PROYECTOS_ES : PROYECTOS_EN;
   const t = useTranslations("HomePage");

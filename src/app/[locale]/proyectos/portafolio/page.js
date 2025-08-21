@@ -13,7 +13,13 @@ import ProyectosAside from "@/app/[locale]/componentes/Proyectos/ProyectosAside"
 import ProyectosOtros from "@/app/[locale]/componentes/Proyectos/ProyectosOtros";
 import InfoLink from "@/app/[locale]/componentes/InfoLink";
 
-export default function Page({ params: { locale } }) {
+export default async function Page(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const PROYECTOS = locale === "es" ? PROYECTOS_ES : PROYECTOS_EN;
   const contenidoDePagina =
     locale === "es" ? contenidoDePagina_ES : contenidoDePagina_EN;
