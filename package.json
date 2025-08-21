@@ -9,15 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sendgrid/mail": "^8.1.4",
-    "@vercel/speed-insights": "^1.0.12",
     "bright": "^0.8.5",
     "framer-motion": "^11.11.1",
     "gray-matter": "^4.0.3",
     "next": "^14.2.14",
     "next-intl": "^3.20.0",
     "next-mdx-remote": "^5.0.0",
-    "node-mailjet": "^6.0.9",
     "nodemailer": "^7.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
