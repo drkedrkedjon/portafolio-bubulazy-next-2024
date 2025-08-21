@@ -10,7 +10,7 @@ export default function Formulario() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    messages: "",
+    message: "",
     // formMessage: "",
   });
   const t = useTranslations("Formulario");
@@ -80,12 +80,31 @@ export default function Formulario() {
   //   }
   // };
 
+  // const handleSubmit = async (e) => {
+  //   // THIS IS NEW MAILJET SHIT, HOPE IT WORKS
+  //   e.preventDefault();
+  //   setStatus("Sending...");
+
+  //   const res = await fetch("/api/mailjet", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(form),
+  //   });
+
+  //   if (res.ok) {
+  //     setStatus("Message sent successfully!");
+  //     setForm({ name: "", email: "", message: "" });
+  //   } else {
+  //     setStatus("Error sending message.");
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
-    // THIS IS NEW MAILJET SHIT, HOPE IT WORKS
+    // THIS IS NEW GMAIL SHIT, HOPE IT WORKS NOW - IT DOES...
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("/api/mailjet", {
+    const res = await fetch("/api/nodemailer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -171,7 +190,7 @@ export default function Formulario() {
           />
           <label
             className={styles.label}
-            htmlFor="messages"
+            htmlFor="message"
           >
             Mensaje:
           </label>
@@ -182,11 +201,11 @@ export default function Formulario() {
           ></input>
           <textarea
             required
-            value={form.messages}
-            onChange={(e) => setForm({ ...form, messages: e.target.value })}
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
             className={styles.input}
             name="Mensaje"
-            id="messages"
+            id="message"
             cols="30"
             rows="6"
             placeholder={t("mensajePlhol")}
