@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import sasaFoto from "@/app/[locale]/assets/images/generales/sasa-mugshot-cv.jpg";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { BASE_METADATA } from "../utilities/constants";
 
 export const metadata = {
@@ -14,6 +15,9 @@ export default function CvPage(props) {
   const params = use(props.params);
 
   const { locale } = params;
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   const t = useTranslations("CV");
 

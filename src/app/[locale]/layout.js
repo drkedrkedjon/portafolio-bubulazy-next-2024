@@ -6,6 +6,7 @@ import Footer from "./componentes/Footer";
 import { getMessages } from "next-intl/server";
 // import { NextIntlClientProvider } from "next-intl";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -15,6 +16,11 @@ const monaSansFont = localFont({
 });
 
 export const metadata = BASE_METADATA;
+
+// Static rendering shit only here in Layout
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({ children, params }) {
   // antes solo RootLayout(props)
@@ -28,6 +34,9 @@ export default async function RootLayout({ children, params }) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  // Enable static rendering - all pages
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 

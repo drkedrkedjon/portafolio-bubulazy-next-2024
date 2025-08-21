@@ -13,16 +13,19 @@ import {
 } from "@/app/[locale]/contenido/home-page/proyectos";
 import Formulario from "./componentes/Formulario";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
 export default function Home(props) {
   const params = use(props.params);
 
-  const {
-    locale
-  } = params;
+  const { locale } = params;
 
   const SOBRE_MI = locale === "es" ? SOBRE_MI_ES : SOBRE_MI_EN;
   const PROYECTOS = locale === "es" ? PROYECTOS_ES : PROYECTOS_EN;
+
+  // Enable static rendering - all pages
+  setRequestLocale(locale);
+
   const t = useTranslations("HomePage");
 
   return (

@@ -4,6 +4,7 @@ import {
   PROYECTOS_ES,
 } from "@/app/[locale]/contenido/home-page/proyectos";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata = {
   title: `Proyects • ${BASE_METADATA.title}`,
@@ -12,11 +13,12 @@ export const metadata = {
 export default async function ProyectosPage(props) {
   const params = await props.params;
 
-  const {
-    locale
-  } = params;
+  const { locale } = params;
 
   const PROYECTOS = locale === "es" ? PROYECTOS_ES : PROYECTOS_EN;
+
+  // Enable static rendering - all pages
+  setRequestLocale(locale);
 
   return (
     <>
