@@ -5,7 +5,7 @@ import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 
 export default function NavMenu({ toggleMenuOpen }) {

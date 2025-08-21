@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import styles from "./infoLink.module.css";
 
 export default function InfoLink({ contenido, type }) {

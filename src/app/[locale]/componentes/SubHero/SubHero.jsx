@@ -1,5 +1,5 @@
 // import Link from "next/link";
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import styles from "./SubHero.module.css";
 import { useTranslations } from "next-intl";
 

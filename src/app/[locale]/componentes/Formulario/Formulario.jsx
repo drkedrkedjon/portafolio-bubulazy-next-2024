@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import styles from "./Formulario.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";

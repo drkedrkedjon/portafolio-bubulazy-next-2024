@@ -1,5 +1,5 @@
 import styles from "./DraftsCard.module.css";
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 
 export default function DraftsCard({

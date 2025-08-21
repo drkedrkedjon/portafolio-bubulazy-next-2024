@@ -6,7 +6,7 @@ import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import { Code } from "bright";
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
 import { notFound } from "next/navigation";

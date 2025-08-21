@@ -2,7 +2,7 @@
 import styles from "./Header.module.css";
 import { Sun, Moon, Menu, Rss } from "react-feather";
 import { useTranslations } from "next-intl";
-import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import NavMenu from "../NavMenu";
 import VisualyHidden from "../../utilities/VisualyHidden";
 import useToggle from "../../utilities/useToggle";

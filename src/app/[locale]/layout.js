@@ -3,8 +3,11 @@ import localFont from "next/font/local";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
-import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+// import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
@@ -13,16 +16,18 @@ const monaSansFont = localFont({
 
 export const metadata = BASE_METADATA;
 
-export default async function RootLayout(props) {
-  const params = await props.params;
+export default async function RootLayout({ children, params }) {
+  // antes solo RootLayout(props)
+  // const params = await props.params;
 
-  const {
-    locale
-  } = params;
+  // const { locale } = params;
+  // const { children } = props;
 
-  const {
-    children
-  } = props;
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
   const messages = await getMessages();
 

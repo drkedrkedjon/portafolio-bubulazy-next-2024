@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import Card from "@/app/[locale]/componentes/Card";
 import Hero from "@/app/[locale]/componentes/Hero";
 import styles from "./homeProyects.module.css";

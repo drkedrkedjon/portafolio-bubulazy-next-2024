@@ -1,6 +1,6 @@
 // import Card from "@/app/[locale]/componentes/Card";
 import styles from "./proyectosOtros.module.css";
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 // import Link from "next/link";
 
 export default function Otros({ contenido, id }) {

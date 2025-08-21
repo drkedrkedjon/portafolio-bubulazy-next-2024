@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import styles from "./Card.module.css";
 import Image from "next/image";
 
