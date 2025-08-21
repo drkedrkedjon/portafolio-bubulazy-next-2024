@@ -27,7 +27,7 @@
       "href": "/proyectos"
     },
     "cv": {
-      "label": "Curículum",
+  "label": "Currículum",
       "href": "/cv"
     },
     "drafts": {
@@ -36,10 +36,10 @@
     }
   },
   "Header": {
-    "NavMenuCloseBtn": "Cerrar menu"
+    "NavMenuCloseBtn": "Cerrar menú"
   },
   "HomePage": {
-    "heroTitle": "Hola, soy Sasha desarrollador FrontEnd",
+  "heroTitle": "Hola, soy Sasha, desarrollador FrontEnd",
     "heroAlt": "My memoji frente a un portátil abierto"
   },
   "HomeProyects": {
@@ -50,10 +50,10 @@
     "fullHeroTitle": "Prácticas de FrontEnd"
   },
   "Formulario": {
-    "title": "Vamos a ver sí juntos podemos hacer que funcione...",
-    "parafo": "Si estás buscando a un desarrollador FrontEnd con quién te gustaría trabajar o simplemente deseas conectarte/hacer una pregunta, no dudes en escribirme.",
+  "title": "Vamos a ver si juntos podemos hacer que funcione...",
+  "parafo": "Si estás buscando a un desarrollador FrontEnd con quien te gustaría trabajar o simplemente deseas conectarte/hacer una pregunta, no dudes en escribirme.",
     "msgEnviado": "Mensaje enviado, gracias",
-    "msgError": "Ha ocurido un error, prueba de nuevo. Lo siento.",
+  "msgError": "Ha ocurrido un error, prueba de nuevo. Lo siento.",
     "nombrePlhol": "¿Cómo te gustaría que te llamara?",
     "emailPlhol": "¿Cuál es tu dirección de correo?",
     "mensajePlhol": "Escribe aquí tu mensaje...",
@@ -70,7 +70,7 @@
     "title": "Enlaces",
     "leftTitle": "Menú",
     "centerTitle": "bubulazy.com",
-    "description": "Desarollado en VSC y diseñado en Figma por Sasha utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y next-intl para i18n.",
+  "description": "Desarrollado en VSC y diseñado en Figma por Sasha utilizando Next.js, React.js, Vanilla CSS, framer-motion, next-mdx-remote y next-intl para i18n.",
     "rightTitle": "Social",
     "copyRight": "Hecho en Canarias:"
   },

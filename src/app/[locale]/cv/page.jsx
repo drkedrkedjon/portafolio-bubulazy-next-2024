@@ -42,28 +42,27 @@ export default function CvPage(props) {
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Interés especial:</h3>{" "}
+              <h3 className={styles.h3}>Interés especial:</h3>
               <p>
                 <span className="bold-text">Accesibilidad web</span>, CSS
-                moderno y HTML semántico, Diseño Web de UI & UX con Figma y
-                desarrollo con NEXTjs. Páginas resposivas optimizadas para
-                diferentes dispositivos. Trabajo en equipo con gusto. Formacion
-                continua para estar al día con últimas tecnologías.
+                moderno y HTML semántico, diseño web de UI & UX con Figma y
+                desarrollo con NEXTjs. Páginas responsivas optimizadas para
+                diferentes dispositivos. Disfruto trabajar en equipo. Formación
+                continua para estar al día con las últimas tecnologías.
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Sobre mi</h3>
+              <h3 className={styles.h3}>Sobre mí</h3>
               <div className="flow">
                 <p>
-                  Me inicié en FrontEnd en 1996 y hasta el 2008 he trabajado
-                  ocasionalmente como freelancer. Luego he cambiado mi profesión
-                  y en 2020 he vuelto a FrontEnd con muchas ganas de llevar a
-                  cabo todo lo nuevo aprendido en diferentes cursos como en Joy
-                  of React de Josh W.Comeau, Practical Accessibility de Sara
-                  Soueidan, FreeCodeCamp, y Scrimba entre otros.
+                  Me inicié en FrontEnd en 1996 y hasta 2008 trabajé
+                  ocasionalmente como freelancer. Luego cambié de profesión y en
+                  2020 volví a FrontEnd con muchas ganas de aplicar todo lo
+                  nuevo aprendido en diferentes cursos como Joy of React de Josh
+                  W. Comeau, Practical Accessibility de Sara Soueidan,
+                  FreeCodeCamp y Scrimba, entre otros.
                 </p>
                 <p>
-                  {" "}
                   A lo largo de mi trayectoria personal y profesional, he
                   demostrado una firme determinación para alcanzar mis
                   objetivos. Aprendo con rapidez y estoy comprometido a seguir
@@ -103,9 +102,11 @@ export default function CvPage(props) {
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Úbicacion:</h3>
+              <h3 className={styles.h3}>Ubicación:</h3>
               <p>Actualmente en Las Palmas de Gran Canaria, España</p>
-              <p>Disponibilidad geografica: Unión Europea y España: imediata</p>
+              <p>
+                Disponibilidad geográfica: Unión Europea y España: inmediata
+              </p>
             </div>
           </div>
         </div>
@@ -113,7 +114,7 @@ export default function CvPage(props) {
 
       <section className={`wrapper ${styles.containerQuery}`}>
         <div className={`${styles.flexContainer} ${styles.regularCard}`}>
-          <h2 className={styles.h2}>Experencia laboral</h2>
+          <h2 className={styles.h2}>Experiencia laboral</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>Freelance Web Developer</h3>
@@ -137,8 +138,8 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>Clínica Dental Blancodent</h3>
-              <p>Informático. Relaciones publicas. | 2000 / 2003</p>
-              <p>Sector Salud.</p>
+              <p>Informático. Relaciones públicas. | 2000 / 2003</p>
+              <p>Sector salud.</p>
             </div>
             <div>
               <h3 className={styles.h3}>Freelance Web Developer</h3>
@@ -156,7 +157,7 @@ export default function CvPage(props) {
               <h3 className={styles.h3}>En mi portafolio personal</h3>
               <p>2021 - Actualidad</p>
               <p>
-                Desarollo FrontEnd:{" "}
+                Desarrollo FrontEnd:{" "}
                 <Link
                   about="_blank"
                   href="/proyectos"
@@ -167,11 +168,11 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>
-                Web development proyectos en mi GitHub
+                Proyectos de desarrollo web en mi GitHub
               </h3>
               <p>2017 - Actualidad</p>
               <p>
-                Desarollo FrontEnd:{" "}
+                Desarrollo FrontEnd:{" "}
                 <Link
                   about="_blank"
                   href="https://github.com/drkedrkedjon"
@@ -185,95 +186,94 @@ export default function CvPage(props) {
       </section>
       <section className={`wrapper ${styles.containerQuery}`}>
         <div className={`${styles.flexContainer} ${styles.regularCard}`}>
-          <h2 className={styles.h2}>Formacíon</h2>
+          <h2 className={styles.h2}>Formación</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>
-                CSS for JS Developers by Josh W Comeau: CSS
+                CSS for JS Developers by Josh W. Comeau: CSS
               </h3>
-              <p>Curso Online - Canada | 2024 - Actualidad</p>
+              <p>Curso online - Canadá | 2024 - Actualidad</p>
               <p>
                 CSS:{" "}
                 <Link
                   about="_blank"
                   href="https://css-for-js.dev/"
                 >
-                  Web site
+                  Sitio web
                 </Link>
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>
-                a11y - Practical Accessibility for developers by Sara Soueidan
+                a11y - Practical Accessibility for Developers by Sara Soueidan
               </h3>
-              <p>Curso Online - USA | 2024 - Actualidad</p>
+              <p>Curso online - EE.UU. | 2024 - Actualidad</p>
               <p>
-                Accesibilidad Web:{" "}
+                Accesibilidad web:{" "}
                 <Link
                   about="_blank"
                   href="http://practical-accessibility.today"
                 >
-                  Web site
+                  Sitio web
                 </Link>
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>
-                Joy of React by Josh W Comeau: React Framework
+                Joy of React by Josh W. Comeau: React Framework
               </h3>
-              <p>Curso Online - Canada | 2023 - Actualidad</p>
+              <p>Curso online - Canadá | 2023 - Actualidad</p>
               <p>
                 React framework:{" "}
                 <Link
                   about="_blank"
                   href="https://www.joyofreact.com"
                 >
-                  Web site
+                  Sitio web
                 </Link>
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>
-                Scrimba FrontEnd bootcamp: React / React Router / JS / HTML /
+                Scrimba FrontEnd Bootcamp: React / React Router / JS / HTML /
                 CSS
               </h3>
-              <p>Bootcamp Online - Norway | 2021 - 2023</p>
+              <p>Bootcamp online - Noruega | 2021 - 2023</p>
               <p>
                 Web Developer Bootcamp:{" "}
                 <Link
                   about="_blank"
                   href="https://scrimba.com"
                 >
-                  Web site
+                  Sitio web
                 </Link>
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>
-                FreeCodeCamp FrontEnd developer: React / JavaScript / HTML / CSS
+                FreeCodeCamp FrontEnd Developer: React / JavaScript / HTML / CSS
               </h3>
-              <p>Cursos Online - USA | 2020 - 2023</p>
+              <p>Cursos online - EE.UU. | 2020 - 2023</p>
               <p>
                 Web Developer Bootcamp:{" "}
                 <Link
                   about="_blank"
                   href="https://www.freecodecamp.org"
                 >
-                  Web site
+                  Sitio web
                 </Link>
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>
-                Grado de Industrial & Product Design
+                Grado en Diseño Industrial y de Producto
               </h3>
               <p>
                 The Academy of Fine Arts, University of Sarajevo - Bosnia | 1988
                 - 1991
               </p>
               <p>
-                Completado la mitad de los créditos, sin terminar por razones de
-                la guerra.
+                Completé la mitad de los créditos; no finalicé por la guerra.
               </p>
               <p>
                 Product Design:{" "}
@@ -281,7 +281,7 @@ export default function CvPage(props) {
                   about="_blank"
                   href="https://alu.unsa.ba/"
                 >
-                  Web site
+                  Sitio web
                 </Link>
               </p>
             </div>
@@ -294,7 +294,7 @@ export default function CvPage(props) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>Castellano</h3>
-              <p>Nivel Avanzado</p>
+              <p>Nivel avanzado - Bilingüe</p>
               <p>Vivo en España desde 1995 - Actualidad</p>
             </div>
             <div>
@@ -303,15 +303,15 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>Alemán</h3>
-              <p>Nivel basico, conversacional</p>
+              <p>Nivel básico, conversacional</p>
             </div>
             <div>
               <h3 className={styles.h3}>Bosnio</h3>
               <p>Nativo</p>
             </div>
             <div>
-              <h3 className={styles.h3}>Croata & Serbio</h3>
-              <p>Bilingüe</p>
+              <h3 className={styles.h3}>Croata y Serbio</h3>
+              <p>Bilingual</p>
             </div>
           </div>
         </div>
@@ -322,17 +322,17 @@ export default function CvPage(props) {
           <div className={`flow ${styles.jobDetails}`}>
             <div className="flow">
               <p>
-                Practico varios deportes: esquí alpino, ciclismo de touring y
+                Practico varios deportes: esquí alpino, ciclismo de ruta y
                 senderismo.
               </p>
               <p>
-                Disfruto de la lectura, especialmente ciencias y filosofía.
-                También sobre temas interesantes relacionados con la
-                documentación de todo lo que estoy aprendiendo.
+                Disfruto de la lectura, especialmente de ciencia y filosofía.
+                También me interesan temas relacionados con documentar todo lo
+                que estoy aprendiendo.
               </p>
               <p>
-                Toco la guitarra, hago fotografías, grabo vídeos y edito los
-                mismos con DaVinci Resolve y Pixelmator Pro.
+                Toco la guitarra, hago fotografías, grabo vídeos y los edito con
+                DaVinci Resolve y Pixelmator Pro.
               </p>
             </div>
           </div>
@@ -358,37 +358,38 @@ export default function CvPage(props) {
               <p>
                 <span className="bold-text">FrontEnd Web Developer</span> with
                 skills in <span className="bold-text">NEXTjs, React,</span>{" "}
-                JavaScript,{" "}
-                <span className="bold-text">CSS, HTML, a11y, i18n</span>,{" "}
-                Firebase, Lit Element, Web Components, Git, GitHub, Figma and
+                JavaScript,
+                <span className="bold-text">CSS, HTML, a11y, i18n</span>,
+                Firebase, Lit Element, Web Components, Git, GitHub, Figma, and
                 Jest testing.
               </p>
             </div>
             <div>
-              <h3 className={styles.h3}>Special Interest:</h3>{" "}
+              <h3 className={styles.h3}>Special Interest:</h3>
               <p>
                 <span className="bold-text">Web Accessibility</span>, modern CSS
-                and semantic HTML, UI & UX Web Design with Figma and development
-                with NEXTjs. Responsive pages optimised for different screen
-                sizes. Enjoy working in a team. Continuous learning to stay
-                up-to-date with the latest technologies.
+                and semantic HTML, UI & UX Web Design with Figma, and
+                development with NEXTjs. Responsive pages optimized for
+                different screen sizes. I enjoy working in a team. Continuous
+                learning to stay up to date with the latest technologies.
               </p>
             </div>
             <div>
               <h3 className={styles.h3}>About Me</h3>
               <div className="flow">
                 <p>
-                  I started in FrontEnd in 1996 and until 2008 I part time
-                  worked as a freelancer. Then I changed my profession and in
-                  2020 I returned to FrontEnd development with great enthusiasm
-                  to apply everything new I learned in various courses such as
-                  Joy of React by Josh W. Comeau, Practical Accessibility by
-                  Sara Soueidan, FreeCodeCamp, and Scrimba among others.
+                  I started in FrontEnd in 1996 and until 2008 I worked
+                  part-time as a freelancer. Then I changed my profession, and
+                  in 2020 I returned to FrontEnd development with great
+                  enthusiasm to apply everything new I learned in various
+                  courses such as Joy of React by Josh W. Comeau, Practical
+                  Accessibility by Sara Soueidan, FreeCodeCamp, and Scrimba,
+                  among others.
                 </p>
                 <p>
                   Throughout my personal and professional journey, I have
                   demonstrated a strong determination to achieve my goals. I
-                  learn quickly and am committed to continuing to evolve in this
+                  learn quickly and am committed to continuing to grow in this
                   field, seeking opportunities as a FrontEnd developer in a
                   company that shares my values and where I can continue
                   learning and contributing.
@@ -400,10 +401,10 @@ export default function CvPage(props) {
       </section>
       <section className={`wrapper ${styles.containerQuery}`}>
         <div className={`${styles.flexContainer} ${styles.invertedCard}`}>
-          <h2 className={styles.h2}>Detalles</h2>
+          <h2 className={styles.h2}>Details</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div className={styles.cvLinks}>
-              <h3 className={styles.h3}> Contact Information:</h3>
+              <h3 className={styles.h3}>Contact Information:</h3>
               <p>
                 <Link href="/#contact-form">Contact Form</Link>
               </p>
@@ -428,7 +429,7 @@ export default function CvPage(props) {
               <h3 className={styles.h3}>Location:</h3>
               <p>Las Palmas de Gran Canaria, Spain</p>
               <p>
-                Geographical availability: European Union and Spain immediately
+                Geographical availability: European Union and Spain, immediate
               </p>
             </div>
           </div>
@@ -441,7 +442,7 @@ export default function CvPage(props) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>Freelance Web Developer</h3>
-              <p>Part Time Freelance | from 2020 / Present</p>
+              <p>Part-time Freelance | 2020 / Present</p>
               <p>Front-End Development. Commercial projects.</p>
             </div>
             <div>
@@ -451,7 +452,7 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>Gran Canaria Segway Tours</h3>
-              <p>Self-employed, Bussines owner. | 2006 / 2008</p>
+              <p>Self-employed, Business owner | 2006 / 2008</p>
               <p>Tourist excursions with Segways.</p>
             </div>
             <div>
@@ -461,7 +462,7 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>Blancodent Dental Clinic</h3>
-              <p>IT. Public relations. | 2000 / 2003</p>
+              <p>IT, Public Relations | 2000 / 2003</p>
               <p>Health sector.</p>
             </div>
             <div>
@@ -477,7 +478,7 @@ export default function CvPage(props) {
           <h2 className={styles.h2}>Various Projects</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div>
-              <h3 className={styles.h3}>In my personal portfolio</h3>
+              <h3 className={styles.h3}>In My Personal Portfolio</h3>
               <p>2021 - Present</p>
               <p>
                 Front-End Development:{" "}
@@ -491,7 +492,7 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>
-                Web development projects on my GitHub
+                Web Development Projects on My GitHub
               </h3>
               <p>2017 - Present</p>
               <p>
@@ -509,20 +510,20 @@ export default function CvPage(props) {
       </section>
       <section className={`wrapper ${styles.containerQuery}`}>
         <div className={`${styles.flexContainer} ${styles.regularCard}`}>
-          <h2 className={styles.h2}>Formacíon</h2>
+          <h2 className={styles.h2}>Education</h2>
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>
-                CSS for JS Developers by Josh W Comeau: CSS
+                CSS for JS Developers by Josh W. Comeau: CSS
               </h3>
-              <p>Online Course - Canada | 2024 - Actualidad</p>
+              <p>Online Course - Canada | 2024 - Present</p>
               <p>
                 CSS:{" "}
                 <Link
                   about="_blank"
                   href="https://css-for-js.dev/"
                 >
-                  Web site
+                  Website
                 </Link>
               </p>
             </div>
@@ -543,7 +544,7 @@ export default function CvPage(props) {
             </div>
             <div>
               <h3 className={styles.h3}>
-                Joy of React by Josh W Comeau: React Framework
+                Joy of React by Josh W. Comeau: React Framework
               </h3>
               <p>Online Course - Canada | 2023 - Present</p>
               <p>
@@ -597,7 +598,7 @@ export default function CvPage(props) {
                 - 1991
               </p>
               <p>
-                Completed half of the credits, did not finish due to the war.
+                Completed half of the credits; did not finish due to the war.
               </p>
               <p>
                 Product Design:{" "}
@@ -618,12 +619,12 @@ export default function CvPage(props) {
           <div className={`flow ${styles.jobDetails}`}>
             <div>
               <h3 className={styles.h3}>Spanish</h3>
-              <p>Advanced Level</p>
+              <p>Advanced level - Bilingual</p>
               <p>Living in Spain since 1995 - Present</p>
             </div>
             <div>
               <h3 className={styles.h3}>English</h3>
-              <p>C1 Level</p>
+              <p>C1 level</p>
             </div>
             <div>
               <h3 className={styles.h3}>German</h3>
@@ -650,7 +651,7 @@ export default function CvPage(props) {
                 hiking.
               </p>
               <p>
-                I enjoy reading, especially science and philosophy. Also, I am
+                I enjoy reading, especially science and philosophy. I am also
                 interested in topics related to documenting everything I am
                 learning.
               </p>

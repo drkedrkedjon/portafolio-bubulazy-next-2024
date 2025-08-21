@@ -39,14 +39,14 @@
     "NavMenuCloseBtn": "Close menu"
   },
   "HomePage": {
-    "heroTitle": "Hi! I'm Sasha FrontEnd Developer",
-    "heroAlt": "My memoji siting in front of open laptop"
+    "heroTitle": "Hi! I'm Sasha, FrontEnd Developer",
+    "heroAlt": "My memoji sitting in front of open laptop"
   },
   "HomeProyects": {
     "title": "Latest projects",
     "subTitle": "Other projects",
     "button": "View all projects",
-    "fullHeroAbout": "All the Projects",
+    "fullHeroAbout": "All the projects",
     "fullHeroTitle": "FrontEnd Works"
   },
   "Formulario": {
@@ -61,10 +61,10 @@
   },
   "CV": {
     "heroTitle": "Curriculum Vitae: Alejandro Sasha S. Perusina",
-    "heroAlt": "My foto, portrait or mugshot"
+    "heroAlt": "My photo, portrait or mugshot"
   },
   "DraftsPage": {
-    "title": "Stuff I type sometimes into the void..."
+    "title": "Stuff I sometimes type into the void..."
   },
   "Footer": {
     "title": "Links",
