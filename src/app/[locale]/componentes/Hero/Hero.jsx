@@ -23,6 +23,7 @@ export default function Hero({ type, image, alt, title, about }) {
             <Image
               src={image}
               alt={alt}
+              loading="eager"
             />
           </motion.div>
           <h1 className={styles.h1}>{title}</h1>

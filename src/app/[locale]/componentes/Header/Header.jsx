@@ -90,6 +90,7 @@ export default function Header() {
           <Image
             unoptimized
             src={logo}
+            loading="eager"
             alt="Logo, una animación de memoji sonriendo"
             width={60}
             height={60}
