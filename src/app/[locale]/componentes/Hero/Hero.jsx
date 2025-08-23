@@ -1,7 +1,7 @@
 "use client";
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // con-imagen, sin-imagen
 export default function Hero({ type, image, alt, title, about }) {

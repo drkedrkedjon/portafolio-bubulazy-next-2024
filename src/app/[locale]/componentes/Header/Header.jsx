@@ -6,9 +6,9 @@ import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import NavMenu from "../NavMenu";
 import VisualyHidden from "../../utilities/VisualyHidden";
 import useToggle from "../../utilities/useToggle";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import { useState, useId, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-video.webp";
 import Image from "next/image";
 
