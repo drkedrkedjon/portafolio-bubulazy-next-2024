@@ -12,7 +12,8 @@ import { routing } from "@/i18n/routing";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
-  display: "fallback",
+  // display: "fallback",
+  display: "swap",
 });
 
 export const metadata = BASE_METADATA;
