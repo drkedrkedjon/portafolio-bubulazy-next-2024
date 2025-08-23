@@ -7,7 +7,6 @@ import { Code } from "bright";
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
 import { notFound } from "next/navigation";
 
@@ -64,7 +63,6 @@ export default async function DraftPage(props) {
           components={{
             pre: Code,
             a: Link,
-            // img: Image,
             PhotoGallerySmall,
           }}
         />
