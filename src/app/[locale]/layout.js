@@ -9,6 +9,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { MotionConfig } from "motion/react";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
@@ -80,11 +81,13 @@ export default async function RootLayout({ children, params }) {
         ></meta>
       </head>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+        <MotionConfig reducedMotion="user">
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
+        </MotionConfig>
       </body>
     </html>
   );
