@@ -9,7 +9,7 @@ import useToggle from "../../utilities/useToggle";
 import { AnimatePresence } from "motion/react";
 import { useState, useId, useEffect } from "react";
 import { motion } from "motion/react";
-import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji.webp";
+import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-small.webp";
 import Image from "next/image";
 
 export default function Header() {
