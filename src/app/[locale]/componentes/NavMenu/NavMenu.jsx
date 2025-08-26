@@ -1,4 +1,5 @@
 import { useEffect, useState, useId } from "react";
+import { createPortal } from "react-dom";
 import styles from "./NavMenu.module.css";
 import { X as Close } from "react-feather";
 import FocusLock from "react-focus-lock";
@@ -10,6 +11,9 @@ import { usePathname } from "next/navigation";
 
 export default function NavMenu({ toggleMenuOpen }) {
   const [hoveredHamburgerLink, setHoveredHamburgerLink] = useState(null);
+  // next two are for portal rendering on client
+  const [mounted, setMounted] = useState(false);
+  const [portalRoot, setPortalRoot] = useState(null);
   const pathname = usePathname();
   const id = useId();
   // next-intl stuff
@@ -18,6 +22,9 @@ export default function NavMenu({ toggleMenuOpen }) {
   const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
   useEffect(() => {
+    // next two are for portal
+    setMounted(true);
+    setPortalRoot(document.getElementById("nav-menu-root"));
     const elementoEnfocadoAntesAbrirlo = document.activeElement;
     return () => {
       elementoEnfocadoAntesAbrirlo?.focus();
@@ -36,7 +43,9 @@ export default function NavMenu({ toggleMenuOpen }) {
     };
   }, [toggleMenuOpen]);
 
-  return (
+  if (!mounted || !portalRoot) return null;
+
+  return createPortal(
     <div className={styles.navContainer}>
       <motion.div
         initial={{ opacity: 0 }}
@@ -114,6 +123,7 @@ export default function NavMenu({ toggleMenuOpen }) {
           </motion.div>
         </RemoveScroll>
       </FocusLock>
-    </div>
+    </div>,
+    portalRoot
   );
 }
