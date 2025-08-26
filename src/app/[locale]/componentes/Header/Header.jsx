@@ -7,7 +7,7 @@ import NavMenu from "../NavMenu";
 import VisualyHidden from "../../utilities/VisualyHidden";
 import useToggle from "../../utilities/useToggle";
 import { AnimatePresence } from "motion/react";
-import { useState, useId, useEffect } from "react";
+import { useState, useId, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-small.webp";
 import Image from "next/image";
@@ -17,7 +17,11 @@ export default function Header() {
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [scrollDirection, setScrollDirection] = useState(null);
   const [lang, setLang] = useState("en");
+
+  const lastScrollY = useRef(null);
+  const lastDirection = useRef(null);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -68,32 +72,47 @@ export default function Header() {
     router.replace(pathname, { locale: lang === "es" ? "en" : "es" });
   }
 
+  // Hide on scroll down (stable handler using refs, passive listener)
+  useEffect(() => {
+    // initialize last positions
+    lastScrollY.current =
+      typeof window !== "undefined" ? window.pageYOffset : 0;
+    lastDirection.current = null;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const delta = scrollY - lastScrollY.current;
+      const direction = delta > 0 ? "down" : "up";
+
+      if (Math.abs(delta) > 10 && direction !== lastDirection.current) {
+        lastDirection.current = direction;
+        setScrollDirection(direction);
+      }
+
+      lastScrollY.current = scrollY > 0 ? scrollY : 0;
+    };
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection);
+    };
+  }, []);
+  //
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${styles[scrollDirection]}`}>
       <div className={` ${styles.container}`}>
         <Link
           aria-label="Logo, una animación de memoji sonriendo"
           href={"/"}
         >
-          {/* <video
-            className={styles.memojiVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <sources
-              src="/sasa-memoji-video.mp4"
-              type="video/mp4"
-            />
-          </video> */}
           <Image
             unoptimized
             src={logo}
             loading="eager"
             alt="Logo, una animación de memoji sonriendo"
-            width={60}
-            height={60}
+            width={56}
+            height={56}
             className={styles.memojiVideo}
           />
         </Link>
