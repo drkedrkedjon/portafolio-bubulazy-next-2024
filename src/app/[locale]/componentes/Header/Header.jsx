@@ -11,17 +11,18 @@ import { useState, useId, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import logo from "@/app/[locale]/contenido/header-footer/sasa-memoji-small.webp";
 import Image from "next/image";
+import { useHandleHeaderScroll, useToggleDarkMode } from "./utilities";
 
 export default function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const [hoveredDesktopLink, setHoveredDesktopLink] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
-  const [isFirstRender, setIsFirstRender] = useState(true);
-  const [scrollDirection, setScrollDirection] = useState(null);
+  // const [darkMode, setDarkMode] = useState(false);
+  // const [isFirstRender, setIsFirstRender] = useState(true);
+  // const [scrollDirection, setScrollDirection] = useState(null);
   const [lang, setLang] = useState("en");
 
-  const lastScrollY = useRef(null);
-  const lastDirection = useRef(null);
+  // const lastScrollY = useRef(null);
+  // const lastDirection = useRef(null);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -29,40 +30,40 @@ export default function Header() {
   const t = useTranslations("DesktopLinks");
   const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
-  useEffect(() => {
-    if (isFirstRender) {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setDarkMode(true);
-      } else if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: light)").matches
-      ) {
-        setDarkMode(false);
-      }
-      setIsFirstRender(false);
-      return;
-    }
+  // useEffect(() => {
+  //   if (isFirstRender) {
+  //     if (
+  //       window.matchMedia &&
+  //       window.matchMedia("(prefers-color-scheme: dark)").matches
+  //     ) {
+  //       setDarkMode(true);
+  //     } else if (
+  //       window.matchMedia &&
+  //       window.matchMedia("(prefers-color-scheme: light)").matches
+  //     ) {
+  //       setDarkMode(false);
+  //     }
+  //     setIsFirstRender(false);
+  //     return;
+  //   }
 
-    const root = document.querySelector(":root");
-    if (darkMode) {
-      root.style.setProperty("--clr-primario", "198 37% 15%");
-      root.style.setProperty("--clr-secundario", "198 31% 17%");
-      root.style.setProperty("--clr-acentado", "198 44% 22%");
-      root.style.setProperty("--clr-acentado-color", "7, 80%, 64%");
-      root.style.setProperty("--clr-texto", "0 0% 90%");
-      root.style.setProperty("--clr-fondo", "198 25% 10%");
-    } else {
-      root.style.setProperty("--clr-primario", "175 42% 90%");
-      root.style.setProperty("--clr-secundario", "161 40% 90%");
-      root.style.setProperty("--clr-acentado", "172 14% 78%");
-      root.style.setProperty("--clr-acentado-color", "7, 80%, 40%");
-      root.style.setProperty("--clr-texto", "130 5% 24%");
-      root.style.setProperty("--clr-fondo", "0 0% 96%");
-    }
-  }, [darkMode, isFirstRender]);
+  //   const root = document.querySelector(":root");
+  //   if (darkMode) {
+  //     root.style.setProperty("--clr-primario", "198 37% 15%");
+  //     root.style.setProperty("--clr-secundario", "198 31% 17%");
+  //     root.style.setProperty("--clr-acentado", "198 44% 22%");
+  //     root.style.setProperty("--clr-acentado-color", "7, 80%, 64%");
+  //     root.style.setProperty("--clr-texto", "0 0% 90%");
+  //     root.style.setProperty("--clr-fondo", "198 25% 10%");
+  //   } else {
+  //     root.style.setProperty("--clr-primario", "175 42% 90%");
+  //     root.style.setProperty("--clr-secundario", "161 40% 90%");
+  //     root.style.setProperty("--clr-acentado", "172 14% 78%");
+  //     root.style.setProperty("--clr-acentado-color", "7, 80%, 40%");
+  //     root.style.setProperty("--clr-texto", "130 5% 24%");
+  //     root.style.setProperty("--clr-fondo", "0 0% 96%");
+  //   }
+  // }, [darkMode, isFirstRender]);
 
   useEffect(() => {
     setLang(document.documentElement.lang);
@@ -72,32 +73,35 @@ export default function Header() {
     router.replace(pathname, { locale: lang === "es" ? "en" : "es" });
   }
 
-  // Hide on scroll down (stable handler using refs, passive listener)
-  useEffect(() => {
-    // initialize last positions
-    lastScrollY.current =
-      typeof window !== "undefined" ? window.pageYOffset : 0;
-    lastDirection.current = null;
+  // useEffect(() => {
+  //   // initialize last positions
+  //   lastScrollY.current =
+  //     typeof window !== "undefined" ? window.pageYOffset : 0;
+  //   lastDirection.current = null;
 
-    const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const delta = scrollY - lastScrollY.current;
-      const direction = delta > 0 ? "down" : "up";
+  //   const updateScrollDirection = () => {
+  //     const scrollY = window.pageYOffset;
+  //     const delta = scrollY - lastScrollY.current;
+  //     const direction = delta > 0 ? "down" : "up";
 
-      if (Math.abs(delta) > 10 && direction !== lastDirection.current) {
-        lastDirection.current = direction;
-        setScrollDirection(direction);
-      }
+  //     if (Math.abs(delta) > 10 && direction !== lastDirection.current) {
+  //       lastDirection.current = direction;
+  //       setScrollDirection(direction);
+  //     }
 
-      lastScrollY.current = scrollY > 0 ? scrollY : 0;
-    };
+  //     lastScrollY.current = scrollY > 0 ? scrollY : 0;
+  //   };
 
-    window.addEventListener("scroll", updateScrollDirection, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", updateScrollDirection);
-    };
-  }, []);
-  //
+  //   window.addEventListener("scroll", updateScrollDirection, { passive: true });
+  //   return () => {
+  //     window.removeEventListener("scroll", updateScrollDirection);
+  //   };
+  // }, []);
+
+  // Hide header on scroll down custom hook (stable handler using refs, passive listener)
+  const scrollDirection = useHandleHeaderScroll();
+
+  const [darkMode, toggleDarkMode] = useToggleDarkMode();
 
   return (
     <header className={`${styles.header} ${styles[scrollDirection]}`}>
@@ -153,7 +157,7 @@ export default function Header() {
             <button
               id="toggle-color-mode"
               aria-label="toggle color mode"
-              onClick={() => setDarkMode((darkMode) => !darkMode)}
+              onClick={() => toggleDarkMode()}
             >
               {darkMode ? (
                 <Sun className={styles.iconSvg} />
