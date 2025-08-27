@@ -113,13 +113,11 @@ meter {
   box-sizing: border-box;
 }
 
+
+
 /* ************************* */
 /*      Variables            */
 /* ************************* */
-
-
-
-
 
 /* @media (prefers-color-scheme: light) {
   :root {
@@ -195,6 +193,10 @@ meter {
     --clr-blanco: 180 14% 97%;
   }
 }
+
+/* @view-transition {
+  navigation: auto;
+} */
 
 /* **************************/
 /* Clases utiles */
