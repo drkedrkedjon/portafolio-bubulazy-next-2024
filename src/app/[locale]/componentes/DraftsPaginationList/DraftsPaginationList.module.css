@@ -1,4 +1,80 @@
 .controlsContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.prevNextContainer {
+  display: flex;
   justify-content: center;
+  gap: 2rem;
+}
+
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+.range:focus {
+  outline: none;
+}
+
+.range::-webkit-slider-runnable-track {
+  background: #053a5f;
+  height: 0.5rem;
+}
+
+.range::-moz-range-track {
+  background: #053a5f;
+  height: 0.5rem;
+}
+
+.range::-webkit-slider-thumb {
+  /* Override default look */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Centers thumb on the track */
+  margin-top: -14px;
+  background-color: #5cd5eb;
+  height: 2rem;
+  width: 1rem;
+  border-radius: 5px;
+}
+
+.range:focus::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+.range::-moz-range-thumb {
+  /*Removes extra border that FF applies*/
+  border: none;
+  /*Removes default border-radius that FF applies*/
+  border-radius: 0;
+  background-color: #5cd5eb;
+  height: 2rem;
+  width: 1rem;
+
+}
+
+.rangeinput[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+.rangeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ticksContainer {
+  display: flex;
+  justify-content: space-between;
 }
