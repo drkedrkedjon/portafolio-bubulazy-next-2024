@@ -64,7 +64,8 @@
     "heroAlt": "My photo, portrait or mugshot"
   },
   "DraftsPage": {
-    "title": "Stuff I sometimes type into the void..."
+    "title": "List of stuff I sometimes type into the void...",
+    "pagerTitle": "Go to page..."
   },
   "Footer": {
     "title": "Links",
