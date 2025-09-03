@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export function pagination() {
+export function usePagination() {
   const [pageNumber, setPageNumber] = useState(3);
   const [draftsPerPage, setDraftsPerPage] = useState(3);
 
