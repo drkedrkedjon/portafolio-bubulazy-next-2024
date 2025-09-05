@@ -39,7 +39,7 @@ export default function Formulario() {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("/api/nodemailer", {
+    const res = await fetch("/api/mailjet", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
