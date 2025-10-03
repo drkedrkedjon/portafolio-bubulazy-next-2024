@@ -25,7 +25,6 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  hyphens: auto;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -216,6 +215,11 @@ body {
   line-height: var(--lh-small);
   text-wrap: balance;
   text-transform: capitalize;
+}
+
+h1,
+p {
+  hyphens: auto;
 }
 
 *:focus-visible {
