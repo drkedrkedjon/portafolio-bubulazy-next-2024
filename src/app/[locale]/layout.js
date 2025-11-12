@@ -86,9 +86,9 @@ export default async function RootLayout({ children, params }) {
             <Header />
             {children}
             <Footer />
+            <div id="nav-menu-root"></div>
           </NextIntlClientProvider>
         </MotionConfig>
-        <div id="nav-menu-root"></div>
       </body>
     </html>
   );
