@@ -37,10 +37,11 @@ export default function NavMenu({ toggleMenuOpen }) {
         toggleMenuOpen();
       }
     }
-    window.addEventListener("keydown", handleEscapeKey);
-    return () => {
-      window.removeEventListener("keydown", handleEscapeKey);
-    };
+    // Old return to focus but now we have returnFocus on FocusLock directly
+    // window.addEventListener("keydown", handleEscapeKey);
+    // return () => {
+    //   window.removeEventListener("keydown", handleEscapeKey);
+    // };
   }, [toggleMenuOpen]);
 
   if (!mounted || !portalRoot) return null;
@@ -57,7 +58,7 @@ export default function NavMenu({ toggleMenuOpen }) {
         className={styles.navFondo}
         onClick={toggleMenuOpen}
       />
-      <FocusLock>
+      <FocusLock returnFocus={true}>
         <RemoveScroll>
           <motion.div
             animate={{
