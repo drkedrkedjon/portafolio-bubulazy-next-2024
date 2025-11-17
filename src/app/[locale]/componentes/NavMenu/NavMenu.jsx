@@ -11,8 +11,7 @@ import { usePathname } from "next/navigation";
 
 export default function NavMenu({ toggleMenuOpen }) {
   const [hoveredHamburgerLink, setHoveredHamburgerLink] = useState(null);
-  // next two are for portal rendering on client
-  const [mounted, setMounted] = useState(false);
+  // next is for portal rendering on client
   const [portalRoot, setPortalRoot] = useState(null);
   const pathname = usePathname();
   const id = useId();
@@ -22,13 +21,13 @@ export default function NavMenu({ toggleMenuOpen }) {
   const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
   useEffect(() => {
-    // next two are for portal
-    setMounted(true);
+    // this is for portal
     setPortalRoot(document.getElementById("nav-menu-root"));
-    const elementoEnfocadoAntesAbrirlo = document.activeElement;
-    return () => {
-      elementoEnfocadoAntesAbrirlo?.focus();
-    };
+    // Old return to focus but now we have returnFocus on FocusLock directly
+    // const elementoEnfocadoAntesAbrirlo = document.activeElement;
+    // return () => {
+    //   elementoEnfocadoAntesAbrirlo?.focus();
+    // };
   }, []);
 
   useEffect(() => {
@@ -37,14 +36,13 @@ export default function NavMenu({ toggleMenuOpen }) {
         toggleMenuOpen();
       }
     }
-    // Old return to focus but now we have returnFocus on FocusLock directly
-    // window.addEventListener("keydown", handleEscapeKey);
-    // return () => {
-    //   window.removeEventListener("keydown", handleEscapeKey);
-    // };
+    window.addEventListener("keydown", handleEscapeKey);
+    return () => {
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
   }, [toggleMenuOpen]);
 
-  if (!mounted || !portalRoot) return null;
+  if (!portalRoot) return null;
 
   return createPortal(
     <div className={styles.navContainer}>
