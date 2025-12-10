@@ -77,9 +77,9 @@
   z-index: -1;
 }
 
-.langBtn {
-  /* font-size: 24px; */
-}
+/* .langBtn {
+  font-size: 24px;
+} */
 
 @media (min-width: 43rem) {
   .desktopNav {
