@@ -1,6 +1,6 @@
 {
   "name": "portafolio-bubulazy-next-2024",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -11,14 +11,14 @@
   "dependencies": {
     "bright": "^1.0.0",
     "gray-matter": "^4.0.3",
-    "motion": "^12.23.26",
-    "next": "^16.0.10",
-    "next-intl": "^4.5.8",
+    "motion": "^12.33.0",
+    "next": "^16.1.6",
+    "next-intl": "^4.8.2",
     "next-mdx-remote": "^5.0.0",
     "node-mailjet": "^6.0.11",
-    "nodemailer": "^7.0.11",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "nodemailer": "^7.0.13",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-feather": "^2.0.10",
     "react-focus-lock": "^2.13.7",
     "react-remove-scroll": "^2.7.2",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
-    "eslint": "^9.39.1",
-    "eslint-config-next": "^16.0.10",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.8"
   }
 }
