@@ -1,12 +1,23 @@
-import multiPageWebForm from "./images/multipage-card.png";
+import blancodent from "./images/blancodent-card.jpg";
+import blancodentNew from "./images/blancodent-new-card.png";
 import bubulazyPortafolio from "./images/bubulazy-card.jpg";
+import multiPageWebForm from "./images/multipage-card.png";
 import recordatorios from "./images/recordatorios-card.jpg";
 import sarajevoTours from "./images/sarajevo-tours-card.png";
-import blancodent from "./images/blancodent-card.jpg";
+
 import listillo from "./images/listillo-card.png";
 import pacMan from "./images/pacman-card.png";
 
 export const PROYECTOS_EN = [
+  {
+    id: "017",
+    titulo: "Blancodent - Dental Clinic",
+    descripcion:
+      "Project under development. Tech stack: Nextjs, React, multilingual using next-intl library. Graphic design of the website, UX/UI, web accessibility. Figma. The link leads to the staging server.",
+    imageSrc: blancodentNew,
+    url: "https://blancodent-2025-sasa.vercel.app",
+    linkText: "Visit live staging server →",
+  },
   {
     id: "016",
     titulo: "Multipage Web Form",
@@ -73,6 +84,15 @@ export const PROYECTOS_EN = [
 ];
 
 export const PROYECTOS_ES = [
+  {
+    id: "017",
+    titulo: "Blancodent - Clínica Dental",
+    descripcion:
+      "Proyecto en proceso de desarollo. Tech stack: Nextjs, React, multilenguaje usando next-intl librería. Diseño gráfico de la web, UX/UI, accesibilidad web. Figma. El enlace lleva a staging server.",
+    imageSrc: blancodentNew,
+    url: "https://blancodent-2025-sasa.vercel.app",
+    linkText: "Visitar staging server en vivo →",
+  },
   {
     id: "016",
     titulo: "Multipage Web Form",
