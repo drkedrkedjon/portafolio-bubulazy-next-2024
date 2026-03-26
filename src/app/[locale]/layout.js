@@ -1,15 +1,15 @@
-import "./globals.css";
-import localFont from "next/font/local";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
-import Header from "./componentes/Header";
-import Footer from "./componentes/Footer";
 import { getMessages } from "next-intl/server";
+import localFont from "next/font/local";
+import Footer from "./componentes/Footer";
+import Header from "./componentes/Header";
+import "./globals.css";
 // import { NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { MotionConfig } from "motion/react";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { MotionConfig } from "motion/react";
 
 const monaSansFont = localFont({
   src: "./assets/Mona-Sans.woff2",
@@ -77,7 +77,7 @@ export default async function RootLayout({ children, params }) {
         />
         <meta
           name="fediverse:creator"
-          content="@Drkedrkedjon@mastodon.social"
+          content="@drkedrkedjon@mastodon.alexdebosnia.eu"
         ></meta>
       </head>
       <body>
