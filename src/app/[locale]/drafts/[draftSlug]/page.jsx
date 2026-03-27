@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import {
   getBlogPostList,
