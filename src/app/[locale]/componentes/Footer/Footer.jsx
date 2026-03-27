@@ -9,14 +9,14 @@ import styles from "./footer.module.css";
 const thisYear = new Date().getFullYear();
 
 function Footer() {
-  const [lang, setLang] = useState("en");
+  // const [, setLang] = useState("en");
   const t = useTranslations("Footer");
   const tt = useTranslations("HamburgerLinks");
   const desktopLinksKeys = ["home", "projects", "cv", "drafts"];
 
-  useEffect(() => {
-    setLang(document.documentElement.lang);
-  }, []);
+  // useEffect(() => {
+  //   setLang(document.documentElement.lang);
+  // }, []);
 
   return (
     <footer className={styles.footer}>
