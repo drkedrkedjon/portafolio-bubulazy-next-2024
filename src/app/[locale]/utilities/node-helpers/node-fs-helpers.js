@@ -1,26 +1,26 @@
 import fs from "fs/promises";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 import React from "react";
 import { parseDate } from "../varias-utilidades";
 
-function readFile(localPath) {
-  return fs.readFile(path.join(process.cwd(), localPath), "utf8");
+const BLOG_MDX_DIR = path.join(process.cwd(), "blog-mdx-files");
+
+function readFile(fileName) {
+  return fs.readFile(path.join(BLOG_MDX_DIR, fileName), "utf8");
 }
 
-function readDirectory(localPath) {
-  return fs.readdir(path.join(process.cwd(), localPath));
+function readDirectory() {
+  return fs.readdir(BLOG_MDX_DIR);
 }
 
 export async function getBlogPostList() {
-  const fileNames = await readDirectory("/blog-mdx-files");
+  const fileNames = await readDirectory();
   const blogPosts = [];
 
   for (let fileName of fileNames) {
-    const rawContent = await readFile(`/blog-mdx-files/${fileName}`);
-
+    const rawContent = await readFile(fileName);
     const { data: frontmatter } = matter(rawContent);
-
     blogPosts.push({
       slug: fileName.replace(".mdx", ""),
       ...frontmatter,
@@ -35,7 +35,7 @@ export async function getBlogPostList() {
 }
 
 export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
-  const filePath = path.join(process.cwd(), "/blog-mdx-files/", `${slug}.mdx`);
+  const filePath = path.join(BLOG_MDX_DIR, `${slug}.mdx`);
   let rawContent;
 
   try {
