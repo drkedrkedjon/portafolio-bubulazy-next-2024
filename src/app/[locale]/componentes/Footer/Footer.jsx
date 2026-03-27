@@ -3,7 +3,8 @@ import memoji from "@/app/[locale]/assets/images/generales/footer-memoji.png";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
+// import React, { useEffect, useState } from "react";
 import styles from "./footer.module.css";
 
 const thisYear = new Date().getFullYear();

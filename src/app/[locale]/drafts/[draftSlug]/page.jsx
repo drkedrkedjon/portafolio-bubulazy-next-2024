@@ -1,14 +1,14 @@
-import "./drafts.css";
-import { loadBlogPost } from "@/app/[locale]/utilities/node-helpers/node-fs-helpers.js";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
+import { loadBlogPost } from "@/app/[locale]/utilities/node-helpers/node-fs-helpers.js";
+import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
+import { Link } from "@/i18n/navigation";
 import { Code } from "bright";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
+import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
+import "./drafts.css";
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;
-import { Link } from "@/i18n/navigation";
-import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
-import { notFound } from "next/navigation";
 
 //  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
 export async function generateMetadata(props) {
@@ -24,6 +24,21 @@ export async function generateMetadata(props) {
   return {
     title: `${frontmatter.title} • ${BASE_METADATA.title}`,
     description: frontmatter.abstract,
+    openGraph: {
+      title: `${frontmatter.title} • ${BASE_METADATA.title}`,
+      description: `${frontmatter.abstract}`,
+      siteName: "Bubulazy.com",
+      publishedTime: `${frontmatter.initialDate}`,
+      author: "Drkedrkedjon",
+      images: [
+        {
+          url: "https://bubulazy.com/avatar-strong.png",
+          width: 870,
+          height: 870,
+        },
+      ],
+      type: "article",
+    },
   };
 }
 
