@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
 import {
   getBlogPostList,
@@ -39,7 +41,7 @@ export async function generateMetadata(props) {
       description: `${frontmatter.abstract}`,
       siteName: "Bubulazy.com",
       publishedTime: `${frontmatter.initialDate}`,
-      author: "Drkedrkedjon",
+      authors: [{ name: "Drkedrkedjon" }],
       images: [
         {
           url: "https://bubulazy.com/avatar-strong.png",
