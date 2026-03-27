@@ -1,5 +1,8 @@
 import { BASE_METADATA } from "@/app/[locale]/utilities/constants";
-import { loadBlogPost } from "@/app/[locale]/utilities/node-helpers/node-fs-helpers.js";
+import {
+  getBlogPostList,
+  loadBlogPost,
+} from "@/app/[locale]/utilities/node-helpers/node-fs-helpers.js";
 import { formatDate } from "@/app/[locale]/utilities/varias-utilidades";
 import { Link } from "@/i18n/navigation";
 import { Code } from "bright";
@@ -7,8 +10,15 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import PhotoGallerySmall from "../../componentes/PhotoGallerySmall";
 import "./drafts.css";
+
 Code.theme = "dracula-soft";
 Code.lineNumbers = true;
+
+// SSG: Generate static params for all blog post slugs
+export async function generateStaticParams() {
+  const posts = await getBlogPostList();
+  return posts.map((post) => ({ draftSlug: post.slug }));
+}
 
 //  Check lo de React.cache en node-helpers para no ejecutar dos veces la function
 export async function generateMetadata(props) {
