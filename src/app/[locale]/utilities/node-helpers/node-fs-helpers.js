@@ -40,7 +40,7 @@ export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
 
   try {
     rawContent = await fs.readFile(filePath, "utf8");
-  } catch (error) {
+  } catch {
     return null;
   }
 
