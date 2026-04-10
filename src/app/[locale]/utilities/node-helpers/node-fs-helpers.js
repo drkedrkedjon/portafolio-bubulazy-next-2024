@@ -5,11 +5,16 @@ import React from "react";
 import { parseDate } from "../varias-utilidades";
 
 function readFile(localPath) {
-  return fs.readFile(path.join(process.cwd(), localPath), "utf8");
+  return fs.readFile(
+    path.join(/*turbopackIgnore: true*/ process.cwd(), localPath),
+    "utf8",
+  );
 }
 
 function readDirectory(localPath) {
-  return fs.readdir(path.join(process.cwd(), localPath));
+  return fs.readdir(
+    path.join(/*turbopackIgnore: true*/ process.cwd(), localPath),
+  );
 }
 
 export async function getBlogPostList() {
@@ -35,7 +40,11 @@ export async function getBlogPostList() {
 }
 
 export const loadBlogPost = React.cache(async function loadBlogPost(slug) {
-  const filePath = path.join(process.cwd(), "/blog-mdx-files/", `${slug}.mdx`);
+  const filePath = path.join(
+    /*turbopackIgnore: true*/ process.cwd(),
+    "/blog-mdx-files/",
+    `${slug}.mdx`,
+  );
   let rawContent;
 
   try {
