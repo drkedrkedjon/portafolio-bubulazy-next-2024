@@ -1,13 +1,13 @@
 "use client";
-import styles from "./DraftsPaginationList.module.css";
-import { useState } from "react";
-import DraftsCard from "../DraftsCard";
-import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
+import DraftsCard from "../DraftsCard";
+import styles from "./DraftsPaginationList.module.css";
 
 export default function DraftsPaginationList({ drafts }) {
   const [pageNumber, setPageNumber] = useState(1);
-  const [draftsPerPage, setDraftsPerPage] = useState(4);
+  const [draftsPerPage] = useState(4);
 
   const initialSlice = (pageNumber - 1) * draftsPerPage;
   const finalSlice = initialSlice + draftsPerPage;
